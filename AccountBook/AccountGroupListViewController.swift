@@ -1,5 +1,5 @@
 //
-//  AllAccountViewController.swift
+//  AccountGroupListViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 3..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllAccountViewController: UITableViewController {
+class AccountGroupListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

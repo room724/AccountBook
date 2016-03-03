@@ -12,9 +12,14 @@
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
 		309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */; };
 		30C9A4A31C87241D00596CCC /* AccountBook_01.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4A21C87241D00596CCC /* AccountBook_01.xcdatamodel */; };
-		30C9A4AD1C8737C800596CCC /* FavoriteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AC1C8737C800596CCC /* FavoriteAccountViewController.swift */; };
-		30C9A4AF1C8737D500596CCC /* AllAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* AllAccountViewController.swift */; };
+		30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */; };
 		30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B01C8737DF00596CCC /* SettingViewController.swift */; };
+		30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */; };
+		30C9A4B71C88804800596CCC /* SettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B61C88804800596CCC /* SettingViewCell.swift */; };
+		30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B91C8880D500596CCC /* AccountGroupViewController.swift */; };
+		30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */; };
+		30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */; };
+		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +30,14 @@
 		309DCDD41C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309DCDD61C8721D00035B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C9A4A21C87241D00596CCC /* AccountBook_01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountBook_01.xcdatamodel; sourceTree = "<group>"; };
-		30C9A4AC1C8737C800596CCC /* FavoriteAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteAccountViewController.swift; sourceTree = "<group>"; };
-		30C9A4AE1C8737D500596CCC /* AllAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllAccountViewController.swift; sourceTree = "<group>"; };
+		30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupListViewController.swift; sourceTree = "<group>"; };
 		30C9A4B01C8737DF00596CCC /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupListViewCell.swift; sourceTree = "<group>"; };
+		30C9A4B61C88804800596CCC /* SettingViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewCell.swift; sourceTree = "<group>"; };
+		30C9A4B91C8880D500596CCC /* AccountGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewController.swift; sourceTree = "<group>"; };
+		30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewCell.swift; sourceTree = "<group>"; };
+		30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewHeaderView.swift; sourceTree = "<group>"; };
+		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +127,9 @@
 		30C9A4A61C87247B00596CCC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				30C9A4A91C87379300596CCC /* FavoriteAccount */,
-				30C9A4AA1C87379E00596CCC /* AllAccount */,
+				30C9A4AA1C87379E00596CCC /* AccountGroupList */,
+				30C9A4B81C88808700596CCC /* AccountGroup */,
+				30C9A4C21C88813600596CCC /* Account */,
 				30C9A4AB1C8737A600596CCC /* Setting */,
 			);
 			name = UI;
@@ -138,28 +149,72 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
-		30C9A4A91C87379300596CCC /* FavoriteAccount */ = {
+		30C9A4AA1C87379E00596CCC /* AccountGroupList */ = {
 			isa = PBXGroup;
 			children = (
-				30C9A4AC1C8737C800596CCC /* FavoriteAccountViewController.swift */,
+				30C9A4B21C88800100596CCC /* View */,
+				30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */,
 			);
-			name = FavoriteAccount;
-			sourceTree = "<group>";
-		};
-		30C9A4AA1C87379E00596CCC /* AllAccount */ = {
-			isa = PBXGroup;
-			children = (
-				30C9A4AE1C8737D500596CCC /* AllAccountViewController.swift */,
-			);
-			name = AllAccount;
+			name = AccountGroupList;
 			sourceTree = "<group>";
 		};
 		30C9A4AB1C8737A600596CCC /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				30C9A4B51C88802800596CCC /* View */,
 				30C9A4B01C8737DF00596CCC /* SettingViewController.swift */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		30C9A4B21C88800100596CCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		30C9A4B51C88802800596CCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30C9A4B61C88804800596CCC /* SettingViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		30C9A4B81C88808700596CCC /* AccountGroup */ = {
+			isa = PBXGroup;
+			children = (
+				30C9A4BB1C8880DB00596CCC /* View */,
+				30C9A4B91C8880D500596CCC /* AccountGroupViewController.swift */,
+			);
+			name = AccountGroup;
+			sourceTree = "<group>";
+		};
+		30C9A4BB1C8880DB00596CCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */,
+				30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		30C9A4C21C88813600596CCC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				30C9A4C51C8881AC00596CCC /* View */,
+				30C9A4C31C88818700596CCC /* AccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		30C9A4C51C8881AC00596CCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,11 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
+				30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */,
+				30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */,
 				30C9A4A31C87241D00596CCC /* AccountBook_01.xcdatamodel in Sources */,
-				30C9A4AD1C8737C800596CCC /* FavoriteAccountViewController.swift in Sources */,
-				30C9A4AF1C8737D500596CCC /* AllAccountViewController.swift in Sources */,
+				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
+				30C9A4B71C88804800596CCC /* SettingViewCell.swift in Sources */,
+				30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
+				30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

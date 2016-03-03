@@ -1,5 +1,5 @@
 //
-//  FavoriteAccountViewController.swift
+//  AccountGroupViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 3..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteAccountViewController: UITableViewController {
+class AccountGroupViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
