@@ -20,6 +20,8 @@
 		30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */; };
 		30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */; };
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
+		30C9A4C81C89E06200596CCC /* favorite_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4C61C89E06200596CCC /* favorite_checked@2x.png */; };
+		30C9A4C91C89E06200596CCC /* favorite_unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4C71C89E06200596CCC /* favorite_unchecked@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewCell.swift; sourceTree = "<group>"; };
 		30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewHeaderView.swift; sourceTree = "<group>"; };
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		30C9A4C61C89E06200596CCC /* favorite_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite_checked@2x.png"; sourceTree = "<group>"; };
+		30C9A4C71C89E06200596CCC /* favorite_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite_unchecked@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		30C9A49D1C87229000596CCC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30C9A4C61C89E06200596CCC /* favorite_checked@2x.png */,
+				30C9A4C71C89E06200596CCC /* favorite_unchecked@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 			files = (
 				309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */,
 				309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */,
+				30C9A4C91C89E06200596CCC /* favorite_unchecked@2x.png in Resources */,
+				30C9A4C81C89E06200596CCC /* favorite_checked@2x.png in Resources */,
 				309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
