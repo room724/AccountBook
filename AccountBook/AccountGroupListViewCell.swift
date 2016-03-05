@@ -9,10 +9,6 @@
 import UIKit
 
 class AccountGroupListViewCell: UITableViewCell {
-
-    @IBOutlet var equityLabel: UILabel!
-    @IBOutlet var debtLabel: UILabel!
-    @IBOutlet var assetLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

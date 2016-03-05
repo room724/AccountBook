@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PDg-m9-D7D" customClass="AccountGroupListViewCell" customModule="AccountBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountGroupListViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountGroupListViewCell" id="PDg-m9-D7D" customClass="AccountGroupListViewCell" customModule="AccountBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PDg-m9-D7D" id="eo4-T0-bHi">
@@ -122,11 +122,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.69756071990000001" green="0.48708370179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="assetLabel" destination="ciw-MA-FPO" id="nqG-ss-PmP"/>
-                                    <outlet property="debtLabel" destination="TDF-74-olM" id="IS4-sj-b3r"/>
-                                    <outlet property="equityLabel" destination="a4i-2z-hoR" id="jt4-Ip-gei"/>
-                                </connections>
+                                <accessibility key="accessibilityConfiguration" identifier="AccountGroupListViewCell"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,7 +133,7 @@
                     <navigationItem key="navigationItem" title="AccountGroup" id="lfT-My-q8f"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="fPX-VC-aFP" kind="show" action="showDetailViewController:sender:" id="cBF-Xk-nWp"/>
+                        <segue destination="fPX-VC-aFP" kind="show" identifier="PushAccountGroupViewController" action="showDetailViewController:sender:" id="cBF-Xk-nWp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3C-hd-LaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,7 +216,7 @@
                             <color key="backgroundColor" red="0.69756071990000001" green="0.48708370179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="odr-vX-rdx" customClass="AccountGroupViewCell" customModule="AccountBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountGroupViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountGroupViewCell" id="odr-vX-rdx" customClass="AccountGroupViewCell" customModule="AccountBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="172" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="odr-vX-rdx" id="Ry2-5L-Tgr">
@@ -255,7 +251,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="dAn-da-9aq" kind="show" action="showDetailViewController:sender:" id="NZE-IG-zop"/>
+                        <segue destination="dAn-da-9aq" kind="show" identifier="PushAccountViewController" action="showDetailViewController:sender:" id="NZE-IG-zop"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bef-e1-9GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,6 +281,15 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JF2-hc-Mvw">
                                 <rect key="frame" x="0.0" y="113" width="320" height="70"/>
                                 <color key="backgroundColor" red="0.58606382990000006" green="0.75743893110000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDD-nP-wUx" customClass="CheckButton" customModule="AccountBook" customModuleProvider="target">
+                                <rect key="frame" x="26" y="121" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="CheckButton"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="bbb"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -322,7 +327,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wgj-i7-zKx" customClass="SettingViewCell" customModule="AccountBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SettingViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingViewCell" id="wgj-i7-zKx" customClass="SettingViewCell" customModule="AccountBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wgj-i7-zKx" id="AVM-Js-bqY">
@@ -351,40 +356,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAn-FN-4FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1513" y="673"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="0Vc-9o-sWQ">
-            <objects>
-                <viewController id="f2S-g4-Kxq" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cdE-jr-Nj4"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mhj-sx-VIq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cEv-Qs-6dj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ANu-et-zu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9Sb-of-5If">
-            <objects>
-                <viewController id="3FE-57-rGR" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hwl-nA-YHM"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fhe-VT-FtU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uX5-HC-2rm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Gn-eN-sqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

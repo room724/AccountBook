@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301A19E01C8B2144002353A0 /* CheckButton_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 301A19DD1C8B2144002353A0 /* CheckButton_checked@2x.png */; };
+		301A19E11C8B2144002353A0 /* CheckButton_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 301A19DE1C8B2144002353A0 /* CheckButton_disabled@2x.png */; };
+		301A19E21C8B2144002353A0 /* CheckButton_unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 301A19DF1C8B2144002353A0 /* CheckButton_unchecked@2x.png */; };
+		301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19E31C8B2D86002353A0 /* UIView+Layout.swift */; };
 		309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DCDC71C8721D00035B6BE /* AppDelegate.swift */; };
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
@@ -20,11 +24,15 @@
 		30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */; };
 		30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */; };
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
-		30C9A4C81C89E06200596CCC /* favorite_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4C61C89E06200596CCC /* favorite_checked@2x.png */; };
-		30C9A4C91C89E06200596CCC /* favorite_unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4C71C89E06200596CCC /* favorite_unchecked@2x.png */; };
+		30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4EB1C8B08E400596CCC /* CheckButton.xib */; };
+		30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4ED1C8B090C00596CCC /* CheckButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301A19DD1C8B2144002353A0 /* CheckButton_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckButton_checked@2x.png"; sourceTree = "<group>"; };
+		301A19DE1C8B2144002353A0 /* CheckButton_disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckButton_disabled@2x.png"; sourceTree = "<group>"; };
+		301A19DF1C8B2144002353A0 /* CheckButton_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckButton_unchecked@2x.png"; sourceTree = "<group>"; };
+		301A19E31C8B2D86002353A0 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		309DCDC41C8721D00035B6BE /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309DCDC71C8721D00035B6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309DCDCC1C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,8 +48,8 @@
 		30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewCell.swift; sourceTree = "<group>"; };
 		30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewHeaderView.swift; sourceTree = "<group>"; };
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		30C9A4C61C89E06200596CCC /* favorite_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite_checked@2x.png"; sourceTree = "<group>"; };
-		30C9A4C71C89E06200596CCC /* favorite_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite_unchecked@2x.png"; sourceTree = "<group>"; };
+		30C9A4EB1C8B08E400596CCC /* CheckButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckButton.xib; sourceTree = "<group>"; };
+		30C9A4ED1C8B090C00596CCC /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301A19E51C8B3067002353A0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				30C9A4EB1C8B08E400596CCC /* CheckButton.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
 		309DCDBB1C8721D00035B6BE = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +98,7 @@
 				309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */,
 				309DCDD11C8721D00035B6BE /* Assets.xcassets */,
 				309DCDD61C8721D00035B6BE /* Info.plist */,
+				301A19E51C8B3067002353A0 /* Xib */,
 				30C9A49F1C8722EC00596CCC /* DB */,
 				30C9A49D1C87229000596CCC /* Resources */,
 			);
@@ -99,8 +116,9 @@
 		30C9A49D1C87229000596CCC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				30C9A4C61C89E06200596CCC /* favorite_checked@2x.png */,
-				30C9A4C71C89E06200596CCC /* favorite_unchecked@2x.png */,
+				301A19DD1C8B2144002353A0 /* CheckButton_checked@2x.png */,
+				301A19DE1C8B2144002353A0 /* CheckButton_disabled@2x.png */,
+				301A19DF1C8B2144002353A0 /* CheckButton_unchecked@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +162,7 @@
 		30C9A4A71C87248D00596CCC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				30C9A4ED1C8B090C00596CCC /* CheckButton.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -151,6 +170,7 @@
 		30C9A4A81C87249200596CCC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				301A19E31C8B2D86002353A0 /* UIView+Layout.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -281,11 +301,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */,
 				309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */,
 				309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */,
-				30C9A4C91C89E06200596CCC /* favorite_unchecked@2x.png in Resources */,
-				30C9A4C81C89E06200596CCC /* favorite_checked@2x.png in Resources */,
+				301A19E21C8B2144002353A0 /* CheckButton_unchecked@2x.png in Resources */,
+				301A19E11C8B2144002353A0 /* CheckButton_disabled@2x.png in Resources */,
 				309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */,
+				301A19E01C8B2144002353A0 /* CheckButton_checked@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +326,9 @@
 				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
 				30C9A4B71C88804800596CCC /* SettingViewCell.swift in Sources */,
 				30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */,
+				301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
+				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
 				30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
