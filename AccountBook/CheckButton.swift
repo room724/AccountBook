@@ -25,20 +25,37 @@ import UIKit
     }
     
     private func commonInit() {
-        nibName = "CheckButton"
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        updateNib()
     }
     
-    override func sizeToFit() {
+    /*
+    override func alignmentRectForFrame(frame: CGRect) -> CGRect {
+        return CGRect(x: frame.origin.x, y: frame.origin.y, width: 100, height: 24)
+    }
+    
+    override func frameForAlignmentRect(alignmentRect: CGRect) -> CGRect {
+        return CGRect(x: alignmentRect.origin.x, y: alignmentRect.origin.y, width: 100, height: 24)
+    }
+    */
+    
+    override func intrinsicContentSize() -> CGSize {
         if let nib = nib {
-            
-            nib.sizeToFit()
-            nib.width += nib.titleEdgeInsets.left + nib.titleEdgeInsets.right
-            
-            // todo
+            return nib.size
+        }
+        
+        return size
+    }
+    
+    @IBInspectable var nibName: String = "CheckButton" {
+        didSet {
+            updateNib()
         }
     }
     
-    @IBInspectable var title: String? {
+    @IBInspectable var title: String = "" {
         didSet {
             updateTitle()
         }
@@ -50,22 +67,23 @@ import UIKit
         }
     }
     
-    @IBInspectable var nibName: String? {
-        didSet {
-            nib?.removeFromSuperview()
-            nib = NSBundle(forClass: classForCoder).loadNibNamed(nibName, owner: self, options: nil).first as? UIButton
-            nib?.frame = bounds
-            addSubview(nib!)
-            
-            updateTitle()
-            updateChecked()
-        }
+    private func updateNib() {
+        nib?.removeFromSuperview()
+        nib = NSBundle(forClass: classForCoder).loadNibNamed(nibName, owner: self, options: nil).first as? UIButton
+        addSubview(nib!)
+        
+        updateTitle()
+        updateChecked()
     }
     
     private func updateTitle() {
-        nib?.setTitle(title, forState: .Normal)
-        
-        sizeToFit()
+        if let nib = nib {
+            nib.setTitle(title, forState: .Normal)
+            nib.sizeToFit()
+            nib.width += nib.titleEdgeInsets.left + nib.titleEdgeInsets.right
+            
+            invalidateIntrinsicContentSize()
+        }
     }
     
     private func updateChecked() {

@@ -41,7 +41,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAe-Ap-Jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="-655"/>
+            <point key="canvasLocation" x="1100" y="-654.99999999999989"/>
         </scene>
         <!--AccountGroupListNavigationController-->
         <scene sceneID="t8w-CK-RFa">
@@ -59,7 +59,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHn-HS-Aet" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="8"/>
+            <point key="canvasLocation" x="1100" y="7.9999999999999991"/>
         </scene>
         <!--AccountGroupListViewController-->
         <scene sceneID="DYN-z5-2oF">
@@ -133,12 +133,12 @@
                     <navigationItem key="navigationItem" title="AccountGroup" id="lfT-My-q8f"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="fPX-VC-aFP" kind="show" identifier="PushAccountGroupViewController" action="showDetailViewController:sender:" id="cBF-Xk-nWp"/>
+                        <segue destination="fPX-VC-aFP" kind="show" identifier="PushAccountGroupViewController" id="cBF-Xk-nWp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3C-hd-LaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="8"/>
+            <point key="canvasLocation" x="1513" y="7.9999999999999991"/>
         </scene>
         <!--AccountGroupViewController-->
         <scene sceneID="0CK-Tt-ChQ">
@@ -250,48 +250,26 @@
                             <outlet property="delegate" destination="fPX-VC-aFP" id="Xhy-39-oQP"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="SZS-wf-6uV"/>
                     <connections>
-                        <segue destination="dAn-da-9aq" kind="show" identifier="PushAccountViewController" action="showDetailViewController:sender:" id="NZE-IG-zop"/>
+                        <segue destination="dAn-da-9aq" kind="show" identifier="PushAccountViewController" id="NZE-IG-zop"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bef-e1-9GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="8"/>
+            <point key="canvasLocation" x="1925.0000000000002" y="7.9999999999999991"/>
         </scene>
         <!--AccountViewController-->
         <scene sceneID="5pw-Fs-Vny">
             <objects>
                 <viewController title="AccountViewController" id="dAn-da-9aq" customClass="AccountViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rQR-B5-w4X"/>
-                        <viewControllerLayoutGuide type="bottom" id="GPY-we-WJ5"/>
+                        <viewControllerLayoutGuide type="top" id="V40-X7-JcW"/>
+                        <viewControllerLayoutGuide type="bottom" id="3QL-ar-RhL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EJm-pk-Fzi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-Oq-maD">
-                                <rect key="frame" x="0.0" y="64" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="WaQ-tN-yvX"/>
-                                    <tabBarItem systemItem="more" id="RpV-U8-puv"/>
-                                </items>
-                            </tabBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JF2-hc-Mvw">
-                                <rect key="frame" x="0.0" y="113" width="320" height="70"/>
-                                <color key="backgroundColor" red="0.58606382990000006" green="0.75743893110000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDD-nP-wUx" customClass="CheckButton" customModule="AccountBook" customModuleProvider="target">
-                                <rect key="frame" x="26" y="121" width="240" height="128"/>
-                                <color key="backgroundColor" red="1" green="0.94174692209999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="CheckButton"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="bbb"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hah-oC-gfl"/>
@@ -363,6 +341,6 @@
         <image name="favorite_unchecked.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NZE-IG-zop"/>
+        <segue reference="XZW-RQ-cOf"/>
     </inferredMetricsTieBreakers>
 </document>
