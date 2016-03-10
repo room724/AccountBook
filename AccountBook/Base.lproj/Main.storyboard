@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -30,7 +31,6 @@
             <objects>
                 <navigationController title="FavoriteAccountNavigationController" id="qsX-kF-VkB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorite Account" id="FS0-V6-bCq"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGe-MW-qc9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,14 +41,50 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAe-Ap-Jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="-654.99999999999989"/>
+            <point key="canvasLocation" x="1100" y="-737"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g10-Id-Pgg">
+            <objects>
+                <viewController id="nAN-yu-vQ8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mPV-ec-FaH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yp2-ce-vdL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNg-Ul-D7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cAN-C6-p2k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OD2-ur-CeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="848"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IP6-oF-CMG">
+            <objects>
+                <viewController id="yod-S1-AaJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9W8-Zo-eaD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y8f-o7-em8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O35-iR-8r3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bh-Ta-t15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2332" y="848"/>
         </scene>
         <!--AccountGroupListNavigationController-->
         <scene sceneID="t8w-CK-RFa">
             <objects>
                 <navigationController title="AccountGroupListNavigationController" id="pNx-hn-jy2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="All Account" id="99R-lf-vZZ"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hxi-lK-2H5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -130,8 +166,13 @@
                             <outlet property="delegate" destination="pvD-0m-fIu" id="bKr-ZX-bHg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="AccountGroup" id="lfT-My-q8f"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" title="AccountGroup" id="lfT-My-q8f">
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="wRs-XT-mg6">
+                            <connections>
+                                <segue destination="nAN-yu-vQ8" kind="show" id="rqG-28-eKX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="fPX-VC-aFP" kind="show" identifier="PushAccountGroupViewController" id="cBF-Xk-nWp"/>
                     </connections>
@@ -148,30 +189,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="BIC-aE-ebx">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="BIC-aE-ebx" userLabel="summaryView">
                             <rect key="frame" x="0.0" y="64" width="320" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월수입" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OA-3S-Mf9">
-                                    <rect key="frame" x="10" y="21" width="40" height="21"/>
+                                    <rect key="frame" x="10" y="12" width="40" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="won-Zh-QUE" userLabel="incomeLabel">
-                                    <rect key="frame" x="50" y="21" width="85" height="21"/>
+                                    <rect key="frame" x="50" y="12" width="85" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월지출" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-rC-8a2">
-                                    <rect key="frame" x="10" y="38" width="40" height="21"/>
+                                    <rect key="frame" x="10" y="29" width="40" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkE-C5-qeP" userLabel="outcomeLabel">
-                                    <rect key="frame" x="50" y="38" width="85" height="21"/>
+                                    <rect key="frame" x="50" y="29" width="85" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -223,10 +264,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjK-0A-FE4" userLabel="favoriteButton">
-                                            <rect key="frame" x="10" y="11" width="24" height="24"/>
-                                            <state key="normal" image="favorite_unchecked.png"/>
-                                            <state key="selected" image="favorite_checked.png"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9u-Sp-2VF" userLabel="favoriteButton">
+                                            <rect key="frame" x="10" y="8" width="30" height="30"/>
+                                            <state key="normal" title="@"/>
+                                            <state key="selected">
+                                                <color key="titleColor" red="0.0" green="0.13331220739999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="청약저축" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orZ-3x-FMb" userLabel="nameLabel">
                                             <rect key="frame" x="40" y="12" width="130" height="21"/>
@@ -250,7 +293,20 @@
                             <outlet property="delegate" destination="fPX-VC-aFP" id="Xhy-39-oQP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SZS-wf-6uV"/>
+                    <navigationItem key="navigationItem" title="Account Group Name" id="SZS-wf-6uV">
+                        <rightBarButtonItems>
+                            <barButtonItem title="info" id="Fgq-A6-R0t">
+                                <connections>
+                                    <segue destination="nAN-yu-vQ8" kind="show" id="WmB-5P-Tdg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="graph" id="otD-Ih-dn7">
+                                <connections>
+                                    <segue destination="yod-S1-AaJ" kind="show" id="peq-1d-DXB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <segue destination="dAn-da-9aq" kind="show" identifier="PushAccountViewController" id="NZE-IG-zop"/>
                     </connections>
@@ -270,20 +326,110 @@
                     <view key="view" contentMode="scaleToFill" id="EJm-pk-Fzi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZ0-JH-5Kb" userLabel="summaryView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월수입" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPU-b9-2UZ">
+                                        <rect key="frame" x="11" y="12" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdb-TK-8oc" userLabel="incomeLabel">
+                                        <rect key="frame" x="51" y="12" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="월지출" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-dn-YxK">
+                                        <rect key="frame" x="11" y="29" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbn-OY-6Zh" userLabel="outcomeLabel">
+                                        <rect key="frame" x="51" y="29" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZj-U3-6yF" userLabel="modeCalendarButton">
+                                        <rect key="frame" x="206" y="16" width="60" height="30"/>
+                                        <state key="normal" title="calendar"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-4N-CbQ" userLabel="modeListButton">
+                                        <rect key="frame" x="274" y="16" width="30" height="30"/>
+                                        <state key="normal" title="list"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.58606382990000006" green="0.75743893110000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hah-oC-gfl"/>
+                    <navigationItem key="navigationItem" title="(@) Account Name" id="Hah-oC-gfl">
+                        <rightBarButtonItems>
+                            <barButtonItem title="info" id="20z-Gg-0Ce">
+                                <connections>
+                                    <segue destination="nAN-yu-vQ8" kind="show" id="B7n-ZA-WMl"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="graph" id="0oV-8x-Hu1">
+                                <connections>
+                                    <segue destination="yod-S1-AaJ" kind="show" id="9cq-qV-8yU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzp-hj-WGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2382" y="-624"/>
+            <point key="canvasLocation" x="2332" y="8"/>
+        </scene>
+        <!--AccountCalendarModeViewController-->
+        <scene sceneID="X9w-yb-l5f">
+            <objects>
+                <viewController title="AccountCalendarModeViewController" id="dgM-3Z-lGL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nXo-XH-5SH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uk8-PX-iTX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wah-W9-UDc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjL-Fu-ULa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="8"/>
+        </scene>
+        <!--AccountListModeViewController-->
+        <scene sceneID="uW1-Mz-fus">
+            <objects>
+                <viewController title="AccountListModeViewController" id="4QQ-fE-MVJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JZh-AO-FAL"/>
+                        <viewControllerLayoutGuide type="bottom" id="IY9-78-YXd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="How-Sm-k9o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfi-uz-YDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="8"/>
         </scene>
         <!--SettingNavigationController-->
         <scene sceneID="zwa-f5-WQk">
             <objects>
                 <navigationController title="SettingNavigationController" id="C9w-bo-nSp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" id="tFv-QQ-0aa"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wp8-Xk-Tkf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -294,7 +440,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scw-tg-Zp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="673"/>
+            <point key="canvasLocation" x="1100" y="737"/>
         </scene>
         <!--SettingViewController-->
         <scene sceneID="8wh-QZ-LUk">
@@ -329,18 +475,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Setting" id="aP7-GJ-agN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAn-FN-4FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="673"/>
+            <point key="canvasLocation" x="1513" y="737"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="favorite_checked.png" width="24" height="24"/>
-        <image name="favorite_unchecked.png" width="24" height="24"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XZW-RQ-cOf"/>
+        <segue reference="9cq-qV-8yU"/>
+        <segue reference="NZE-IG-zop"/>
+        <segue reference="B7n-ZA-WMl"/>
     </inferredMetricsTieBreakers>
 </document>

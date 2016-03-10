@@ -29,6 +29,8 @@ import UIKit
         translatesAutoresizingMaskIntoConstraints = false
         
         updateNib()
+        
+        self.performSelector("invalidateIntrinsicContentSize", withObject: nil, afterDelay: 3)
     }
     
     /*
