@@ -1,20 +1,16 @@
 //
-//  AccountGroupViewController.swift
+//  AccountModeCalendarViewController.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 3..
+//  Created by inock on 2016. 3. 12..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 
 import UIKit
 
-class AccountGroupViewController: UIViewController {
-    
-    @IBOutlet weak var incomeLabel: UILabel!
-    @IBOutlet weak var outcomeLabel: UILabel!
-    @IBOutlet weak var equityLabel: UILabel!
-    @IBOutlet weak var debtLabel: UILabel!
-    @IBOutlet weak var assetLabel: UILabel!
+class AccountModeCalendarViewController : UIViewController
+{
+    @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -30,7 +26,7 @@ class AccountGroupViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountGroupViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("AccountModeCalendarViewCell", forIndexPath: indexPath)
         
         
         
@@ -43,5 +39,4 @@ class AccountGroupViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
 }

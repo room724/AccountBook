@@ -1,5 +1,5 @@
 //
-//  AccountListModeViewCell.swift
+//  AccountModeCalendarViewCell.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 12..
@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AccountListModeViewCell: UITableViewCell {
+class AccountModeCalendarViewCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

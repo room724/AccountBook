@@ -10,12 +10,13 @@ import UIKit
 
 class AccountGroupViewHeaderView: UITableViewHeaderFooterView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var assetLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        //
     }
-    */
 
 }

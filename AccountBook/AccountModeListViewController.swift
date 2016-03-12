@@ -1,15 +1,15 @@
 //
-//  SettingViewController.swift
+//  AccountModeListViewController.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 3..
+//  Created by inock on 2016. 3. 12..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 
 import UIKit
 
-class SettingViewController: UITableViewController {
-
+class AccountModeListViewController : UITableViewController
+{
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +23,7 @@ class SettingViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SettingViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("AccountModeListViewCell", forIndexPath: indexPath)
         
         
         
@@ -36,5 +36,4 @@ class SettingViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
 }

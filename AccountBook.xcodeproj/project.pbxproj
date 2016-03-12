@@ -11,11 +11,12 @@
 		301A19E11C8B2144002353A0 /* CheckButton_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 301A19DE1C8B2144002353A0 /* CheckButton_disabled@2x.png */; };
 		301A19E21C8B2144002353A0 /* CheckButton_unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 301A19DF1C8B2144002353A0 /* CheckButton_unchecked@2x.png */; };
 		301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19E31C8B2D86002353A0 /* UIView+Layout.swift */; };
-		301A19F01C940DCA002353A0 /* AccountListModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19EF1C940DCA002353A0 /* AccountListModeViewController.swift */; };
-		301A19F21C940DD9002353A0 /* AccountCalendarModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19F11C940DD9002353A0 /* AccountCalendarModeViewController.swift */; };
-		301A19F41C940E26002353A0 /* AccountListModeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19F31C940E26002353A0 /* AccountListModeViewCell.swift */; };
-		301A19F61C940E30002353A0 /* AccountCalendarModeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19F51C940E30002353A0 /* AccountCalendarModeViewCell.swift */; };
+		301A19F01C940DCA002353A0 /* AccountModeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19EF1C940DCA002353A0 /* AccountModeListViewController.swift */; };
+		301A19F21C940DD9002353A0 /* AccountModeCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19F11C940DD9002353A0 /* AccountModeCalendarViewController.swift */; };
+		301A19F41C940E26002353A0 /* AccountModeListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19F31C940E26002353A0 /* AccountModeListViewCell.swift */; };
+		301A19F61C940E30002353A0 /* AccountModeCalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19F51C940E30002353A0 /* AccountModeCalendarViewCell.swift */; };
 		301A19F91C943422002353A0 /* AccountGroupViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301A19F81C943422002353A0 /* AccountGroupViewHeaderView.xib */; };
+		301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19FB1C944B5B002353A0 /* AppDefines.swift */; };
 		309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DCDC71C8721D00035B6BE /* AppDelegate.swift */; };
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
@@ -38,11 +39,12 @@
 		301A19DE1C8B2144002353A0 /* CheckButton_disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckButton_disabled@2x.png"; sourceTree = "<group>"; };
 		301A19DF1C8B2144002353A0 /* CheckButton_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckButton_unchecked@2x.png"; sourceTree = "<group>"; };
 		301A19E31C8B2D86002353A0 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
-		301A19EF1C940DCA002353A0 /* AccountListModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountListModeViewController.swift; sourceTree = "<group>"; };
-		301A19F11C940DD9002353A0 /* AccountCalendarModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCalendarModeViewController.swift; sourceTree = "<group>"; };
-		301A19F31C940E26002353A0 /* AccountListModeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountListModeViewCell.swift; sourceTree = "<group>"; };
-		301A19F51C940E30002353A0 /* AccountCalendarModeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCalendarModeViewCell.swift; sourceTree = "<group>"; };
+		301A19EF1C940DCA002353A0 /* AccountModeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModeListViewController.swift; sourceTree = "<group>"; };
+		301A19F11C940DD9002353A0 /* AccountModeCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModeCalendarViewController.swift; sourceTree = "<group>"; };
+		301A19F31C940E26002353A0 /* AccountModeListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModeListViewCell.swift; sourceTree = "<group>"; };
+		301A19F51C940E30002353A0 /* AccountModeCalendarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModeCalendarViewCell.swift; sourceTree = "<group>"; };
 		301A19F81C943422002353A0 /* AccountGroupViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountGroupViewHeaderView.xib; sourceTree = "<group>"; };
+		301A19FB1C944B5B002353A0 /* AppDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		309DCDC41C8721D00035B6BE /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309DCDC71C8721D00035B6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309DCDCC1C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 				301A19F81C943422002353A0 /* AccountGroupViewHeaderView.xib */,
 			);
 			name = NIB;
+			sourceTree = "<group>";
+		};
+		301A19FA1C944B2B002353A0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				301A19E31C8B2D86002353A0 /* UIView+Layout.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		309DCDBB1C8721D00035B6BE = {
@@ -182,6 +192,7 @@
 		30C9A4A71C87248D00596CCC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				301A19FB1C944B5B002353A0 /* AppDefines.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -189,7 +200,7 @@
 		30C9A4A81C87249200596CCC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				301A19E31C8B2D86002353A0 /* UIView+Layout.swift */,
+				301A19FA1C944B2B002353A0 /* Extension */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -251,8 +262,8 @@
 			children = (
 				30C9A4C51C8881AC00596CCC /* View */,
 				30C9A4C31C88818700596CCC /* AccountViewController.swift */,
-				301A19F11C940DD9002353A0 /* AccountCalendarModeViewController.swift */,
-				301A19EF1C940DCA002353A0 /* AccountListModeViewController.swift */,
+				301A19F11C940DD9002353A0 /* AccountModeCalendarViewController.swift */,
+				301A19EF1C940DCA002353A0 /* AccountModeListViewController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -260,8 +271,8 @@
 		30C9A4C51C8881AC00596CCC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				301A19F51C940E30002353A0 /* AccountCalendarModeViewCell.swift */,
-				301A19F31C940E26002353A0 /* AccountListModeViewCell.swift */,
+				301A19F51C940E30002353A0 /* AccountModeCalendarViewCell.swift */,
+				301A19F31C940E26002353A0 /* AccountModeListViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -346,15 +357,16 @@
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
 				30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */,
 				30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */,
-				301A19F41C940E26002353A0 /* AccountListModeViewCell.swift in Sources */,
+				301A19F41C940E26002353A0 /* AccountModeListViewCell.swift in Sources */,
 				30C9A4A31C87241D00596CCC /* AccountBook_01.xcdatamodel in Sources */,
 				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
 				30C9A4B71C88804800596CCC /* SettingViewCell.swift in Sources */,
-				301A19F21C940DD9002353A0 /* AccountCalendarModeViewController.swift in Sources */,
-				301A19F61C940E30002353A0 /* AccountCalendarModeViewCell.swift in Sources */,
+				301A19F21C940DD9002353A0 /* AccountModeCalendarViewController.swift in Sources */,
+				301A19F61C940E30002353A0 /* AccountModeCalendarViewCell.swift in Sources */,
 				30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */,
-				301A19F01C940DCA002353A0 /* AccountListModeViewController.swift in Sources */,
+				301A19F01C940DCA002353A0 /* AccountModeListViewController.swift in Sources */,
 				301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */,
+				301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
 				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
 				30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */,
