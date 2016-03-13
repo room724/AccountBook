@@ -11,7 +11,7 @@ import UIKit
 class AccountViewController: UIViewController {
     
     @IBOutlet weak var incomeLabel: UILabel!
-    @IBOutlet weak var outcomeLabel: UILabel!
+    @IBOutlet weak var expenseLabel: UILabel!
     @IBOutlet weak var modeCalendarButton: UIButton!
     @IBOutlet weak var modeListButton: UIButton!
     @IBOutlet weak var containerView: UIView!

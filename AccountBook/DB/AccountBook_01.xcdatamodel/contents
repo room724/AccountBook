@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
-    <entity name="Account" syncable="YES">
-        <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="attribute1" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="attribute2" optional="YES" attributeType="Date" syncable="YES"/>
-    </entity>
+    <entity name="ACCOUNT" syncable="YES"/>
+    <entity name="ACCOUNT_CATEGORY" syncable="YES"/>
+    <entity name="ACCOUNT_GROUP" syncable="YES"/>
+    <entity name="CHECK_CARD" syncable="YES"/>
+    <entity name="CREDIT_CARD" syncable="YES"/>
+    <entity name="EXPENSE_CATEGORY" syncable="YES"/>
+    <entity name="INCOME_CATEGORY" syncable="YES"/>
+    <entity name="INSTALLMENT_TRANSACTION" syncable="YES"/>
+    <entity name="REPEAT_TRANSACTION" syncable="YES"/>
+    <entity name="TRANSACTION" syncable="YES"/>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="ACCOUNT_GROUP" positionX="-63" positionY="9" width="128" height="45"/>
+        <element name="ACCOUNT" positionX="-54" positionY="18" width="128" height="45"/>
+        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="45"/>
+        <element name="EXPENSE_CATEGORY" positionX="-18" positionY="54" width="128" height="45"/>
+        <element name="ACCOUNT_CATEGORY" positionX="0" positionY="72" width="128" height="45"/>
+        <element name="INCOME_CATEGORY" positionX="18" positionY="90" width="128" height="45"/>
+        <element name="CREDIT_CARD" positionX="36" positionY="108" width="128" height="45"/>
+        <element name="CHECK_CARD" positionX="-9" positionY="63" width="128" height="45"/>
+        <element name="REPEAT_TRANSACTION" positionX="0" positionY="72" width="128" height="45"/>
+        <element name="INSTALLMENT_TRANSACTION" positionX="9" positionY="81" width="128" height="45"/>
     </elements>
 </model>

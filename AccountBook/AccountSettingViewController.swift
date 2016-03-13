@@ -1,15 +1,15 @@
 //
-//  SettingViewController.swift
+//  AccountSettingViewController.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 3..
+//  Created by inock on 2016. 3. 13..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 
 import UIKit
 
-class SettingViewController: UITableViewController {
-
+class AccountSettingViewController : UITableViewController
+{
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,5 +22,5 @@ class SettingViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    
 }

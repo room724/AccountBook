@@ -11,7 +11,7 @@ import UIKit
 class AccountGroupViewController: UIViewController {
     
     @IBOutlet weak var incomeLabel: UILabel!
-    @IBOutlet weak var outcomeLabel: UILabel!
+    @IBOutlet weak var expenseLabel: UILabel!
     @IBOutlet weak var equityLabel: UILabel!
     @IBOutlet weak var debtLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
