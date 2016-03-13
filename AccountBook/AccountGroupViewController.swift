@@ -23,6 +23,10 @@ class AccountGroupViewController: UIViewController {
         //
     }
     
+    @IBAction func addButtonTapped(sender: UIButton) {
+        
+    }
+    
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

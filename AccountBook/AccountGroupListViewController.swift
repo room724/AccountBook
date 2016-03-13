@@ -15,7 +15,11 @@ class AccountGroupListViewController: UITableViewController {
 
         //
     }
-
+    
+    @IBAction func addButtonTapped(sender: UIButton) {
+        
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
