@@ -8,4 +8,16 @@
 
 import Foundation
 
+enum TransactionType : Int32 {
+    
+    case Income
+    case Expense
+    case Transfer
+}
 
+enum PaymentType : Int32 {
+    
+    case Cash
+    case CardCheck
+    case CardCredit
+}

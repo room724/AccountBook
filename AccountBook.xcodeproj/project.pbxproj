@@ -18,11 +18,12 @@
 		301A19F91C943422002353A0 /* AccountGroupViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301A19F81C943422002353A0 /* AccountGroupViewHeaderView.xib */; };
 		301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19FB1C944B5B002353A0 /* AppDefines.swift */; };
 		301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19FE1C9595CA002353A0 /* AccountSettingViewController.swift */; };
+		306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306004761C99B41700E15DCF /* CoreDataManager.swift */; };
+		306004791C99B95C00E15DCF /* AccountBook.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 306004781C99B95C00E15DCF /* AccountBook.xcdatamodel */; };
 		309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DCDC71C8721D00035B6BE /* AppDelegate.swift */; };
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
 		309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */; };
-		30C9A4A31C87241D00596CCC /* AccountBook_01.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4A21C87241D00596CCC /* AccountBook_01.xcdatamodel */; };
 		30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */; };
 		30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B01C8737DF00596CCC /* SettingViewController.swift */; };
 		30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */; };
@@ -46,13 +47,14 @@
 		301A19F81C943422002353A0 /* AccountGroupViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountGroupViewHeaderView.xib; sourceTree = "<group>"; };
 		301A19FB1C944B5B002353A0 /* AppDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		301A19FE1C9595CA002353A0 /* AccountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
+		306004761C99B41700E15DCF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		306004781C99B95C00E15DCF /* AccountBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountBook.xcdatamodel; sourceTree = "<group>"; };
 		309DCDC41C8721D00035B6BE /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309DCDC71C8721D00035B6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309DCDCC1C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		309DCDD11C8721D00035B6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309DCDD41C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309DCDD61C8721D00035B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30C9A4A21C87241D00596CCC /* AccountBook_01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountBook_01.xcdatamodel; sourceTree = "<group>"; };
 		30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupListViewController.swift; sourceTree = "<group>"; };
 		30C9A4B01C8737DF00596CCC /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupListViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			name = AccountSetting;
 			sourceTree = "<group>";
 		};
+		306004751C99B3F500E15DCF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				306004761C99B41700E15DCF /* CoreDataManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		309DCDBB1C8721D00035B6BE = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +145,9 @@
 				301A19F71C943401002353A0 /* NIB */,
 				309DCDCB1C8721D00035B6BE /* Main.storyboard */,
 				309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */,
+				306004781C99B95C00E15DCF /* AccountBook.xcdatamodel */,
 				309DCDD11C8721D00035B6BE /* Assets.xcassets */,
 				309DCDD61C8721D00035B6BE /* Info.plist */,
-				30C9A49F1C8722EC00596CCC /* DB */,
 				30C9A49D1C87229000596CCC /* Resources */,
 			);
 			path = AccountBook;
@@ -159,14 +169,6 @@
 				301A19DF1C8B2144002353A0 /* CheckButton_unchecked@2x.png */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		30C9A49F1C8722EC00596CCC /* DB */ = {
-			isa = PBXGroup;
-			children = (
-				30C9A4A21C87241D00596CCC /* AccountBook_01.xcdatamodel */,
-			);
-			path = DB;
 			sourceTree = "<group>";
 		};
 		30C9A4A41C87246D00596CCC /* Application */ = {
@@ -201,6 +203,7 @@
 		30C9A4A71C87248D00596CCC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				306004751C99B3F500E15DCF /* Manager */,
 				301A19FB1C944B5B002353A0 /* AppDefines.swift */,
 			);
 			name = Custom;
@@ -356,9 +359,10 @@
 				30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
 				30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */,
+				306004791C99B95C00E15DCF /* AccountBook.xcdatamodel in Sources */,
 				30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */,
 				301A19F41C940E26002353A0 /* AccountModeListViewCell.swift in Sources */,
-				30C9A4A31C87241D00596CCC /* AccountBook_01.xcdatamodel in Sources */,
+				306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */,
 				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
 				301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */,
 				301A19F21C940DD9002353A0 /* AccountModeCalendarViewController.swift in Sources */,
