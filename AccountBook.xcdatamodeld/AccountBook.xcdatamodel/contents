@@ -4,13 +4,14 @@
         <attribute name="carryover" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_category_account" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_group" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="month_start_date" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="week_start_day" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="category_account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY_ACCOUNT" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GROUP" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CARD_CHECK" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -41,31 +42,32 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="ACCOUNT" syncable="YES"/>
     </entity>
     <entity name="TRANSACTION" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_account_from" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_account_to" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_card_check" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_card_credit" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_category_account" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_category_expense" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_category_income" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_group" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="payment_type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ACCOUNT" syncable="YES"/>
+        <relationship name="account_from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ACCOUNT" syncable="YES"/>
+        <relationship name="card_check" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CARD_CHECK" syncable="YES"/>
+        <relationship name="card_credit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CARD_CREDIT" syncable="YES"/>
+        <relationship name="category_account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY_ACCOUNT" syncable="YES"/>
+        <relationship name="category_expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY_EXPENSE" syncable="YES"/>
+        <relationship name="category_income" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY_INCOME" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ACCOUNT" positionX="-54" positionY="18" width="128" height="195"/>
+        <element name="ACCOUNT" positionX="-180" positionY="12" width="128" height="208"/>
         <element name="CARD_CHECK" positionX="36" positionY="108" width="128" height="90"/>
         <element name="CARD_CREDIT" positionX="-9" positionY="63" width="128" height="90"/>
         <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="90"/>
         <element name="CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="90"/>
         <element name="CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="90"/>
-        <element name="GROUP" positionX="-63" positionY="9" width="128" height="90"/>
-        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="255"/>
+        <element name="GROUP" positionX="-378" positionY="-9" width="128" height="103"/>
+        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="253"/>
     </elements>
 </model>
