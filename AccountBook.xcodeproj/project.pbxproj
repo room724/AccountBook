@@ -19,7 +19,7 @@
 		301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19FB1C944B5B002353A0 /* AppDefines.swift */; };
 		301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19FE1C9595CA002353A0 /* AccountSettingViewController.swift */; };
 		306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306004761C99B41700E15DCF /* CoreDataManager.swift */; };
-		306004791C99B95C00E15DCF /* AccountBook.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 306004781C99B95C00E15DCF /* AccountBook.xcdatamodel */; };
+		3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3060047A1C99BD5500E15DCF /* AccountBook.xcdatamodeld */; };
 		309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DCDC71C8721D00035B6BE /* AppDelegate.swift */; };
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
@@ -48,7 +48,7 @@
 		301A19FB1C944B5B002353A0 /* AppDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		301A19FE1C9595CA002353A0 /* AccountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
 		306004761C99B41700E15DCF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		306004781C99B95C00E15DCF /* AccountBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountBook.xcdatamodel; sourceTree = "<group>"; };
+		3060047C1C99BD5500E15DCF /* AccountBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountBook.xcdatamodel; sourceTree = "<group>"; };
 		309DCDC41C8721D00035B6BE /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309DCDC71C8721D00035B6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309DCDCC1C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 		309DCDBB1C8721D00035B6BE = {
 			isa = PBXGroup;
 			children = (
+				3060047A1C99BD5500E15DCF /* AccountBook.xcdatamodeld */,
 				309DCDC61C8721D00035B6BE /* AccountBook */,
 				30C9A49C1C87229000596CCC /* Frameworks */,
 				309DCDC51C8721D00035B6BE /* Products */,
@@ -145,7 +146,6 @@
 				301A19F71C943401002353A0 /* NIB */,
 				309DCDCB1C8721D00035B6BE /* Main.storyboard */,
 				309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */,
-				306004781C99B95C00E15DCF /* AccountBook.xcdatamodel */,
 				309DCDD11C8721D00035B6BE /* Assets.xcassets */,
 				309DCDD61C8721D00035B6BE /* Info.plist */,
 				30C9A49D1C87229000596CCC /* Resources */,
@@ -359,8 +359,8 @@
 				30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
 				30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */,
-				306004791C99B95C00E15DCF /* AccountBook.xcdatamodel in Sources */,
 				30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */,
+				3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */,
 				301A19F41C940E26002353A0 /* AccountModeListViewCell.swift in Sources */,
 				306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */,
 				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
@@ -526,6 +526,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3060047A1C99BD5500E15DCF /* AccountBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3060047C1C99BD5500E15DCF /* AccountBook.xcdatamodel */,
+			);
+			currentVersion = 3060047C1C99BD5500E15DCF /* AccountBook.xcdatamodel */;
+			path = AccountBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 309DCDBC1C8721D00035B6BE /* Project object */;
 }
