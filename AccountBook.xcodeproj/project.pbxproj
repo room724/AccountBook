@@ -33,6 +33,22 @@
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
 		30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4EB1C8B08E400596CCC /* CheckButton.xib */; };
 		30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4ED1C8B090C00596CCC /* CheckButton.swift */; };
+		30CA61B91C99CA35005879F0 /* CARD_CREDIT+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61A91C99CA35005879F0 /* CARD_CREDIT+CoreDataProperties.swift */; };
+		30CA61BA1C99CA35005879F0 /* CARD_CREDIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61AA1C99CA35005879F0 /* CARD_CREDIT.swift */; };
+		30CA61BB1C99CA35005879F0 /* CATEGORY_INCOME+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61AB1C99CA35005879F0 /* CATEGORY_INCOME+CoreDataProperties.swift */; };
+		30CA61BC1C99CA35005879F0 /* CATEGORY_INCOME.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61AC1C99CA35005879F0 /* CATEGORY_INCOME.swift */; };
+		30CA61BD1C99CA35005879F0 /* TRANSACTION+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61AD1C99CA35005879F0 /* TRANSACTION+CoreDataProperties.swift */; };
+		30CA61BE1C99CA35005879F0 /* TRANSACTION.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61AE1C99CA35005879F0 /* TRANSACTION.swift */; };
+		30CA61BF1C99CA35005879F0 /* CATEGORY_EXPENSE+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61AF1C99CA35005879F0 /* CATEGORY_EXPENSE+CoreDataProperties.swift */; };
+		30CA61C01C99CA35005879F0 /* CATEGORY_EXPENSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B01C99CA35005879F0 /* CATEGORY_EXPENSE.swift */; };
+		30CA61C11C99CA35005879F0 /* GROUP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B11C99CA35005879F0 /* GROUP+CoreDataProperties.swift */; };
+		30CA61C21C99CA35005879F0 /* GROUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B21C99CA35005879F0 /* GROUP.swift */; };
+		30CA61C31C99CA35005879F0 /* ACCOUNT+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B31C99CA35005879F0 /* ACCOUNT+CoreDataProperties.swift */; };
+		30CA61C41C99CA35005879F0 /* ACCOUNT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B41C99CA35005879F0 /* ACCOUNT.swift */; };
+		30CA61C51C99CA35005879F0 /* CATEGORY_ACCOUNT+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B51C99CA35005879F0 /* CATEGORY_ACCOUNT+CoreDataProperties.swift */; };
+		30CA61C61C99CA35005879F0 /* CATEGORY_ACCOUNT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B61C99CA35005879F0 /* CATEGORY_ACCOUNT.swift */; };
+		30CA61C71C99CA35005879F0 /* CARD_CHECK+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B71C99CA35005879F0 /* CARD_CHECK+CoreDataProperties.swift */; };
+		30CA61C81C99CA35005879F0 /* CARD_CHECK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CA61B81C99CA35005879F0 /* CARD_CHECK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +80,22 @@
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		30C9A4EB1C8B08E400596CCC /* CheckButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckButton.xib; sourceTree = "<group>"; };
 		30C9A4ED1C8B090C00596CCC /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		30CA61A91C99CA35005879F0 /* CARD_CREDIT+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CREDIT+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61AA1C99CA35005879F0 /* CARD_CREDIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CARD_CREDIT.swift; sourceTree = "<group>"; };
+		30CA61AB1C99CA35005879F0 /* CATEGORY_INCOME+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_INCOME+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61AC1C99CA35005879F0 /* CATEGORY_INCOME.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATEGORY_INCOME.swift; sourceTree = "<group>"; };
+		30CA61AD1C99CA35005879F0 /* TRANSACTION+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TRANSACTION+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61AE1C99CA35005879F0 /* TRANSACTION.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRANSACTION.swift; sourceTree = "<group>"; };
+		30CA61AF1C99CA35005879F0 /* CATEGORY_EXPENSE+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_EXPENSE+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61B01C99CA35005879F0 /* CATEGORY_EXPENSE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATEGORY_EXPENSE.swift; sourceTree = "<group>"; };
+		30CA61B11C99CA35005879F0 /* GROUP+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GROUP+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61B21C99CA35005879F0 /* GROUP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GROUP.swift; sourceTree = "<group>"; };
+		30CA61B31C99CA35005879F0 /* ACCOUNT+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ACCOUNT+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61B41C99CA35005879F0 /* ACCOUNT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACCOUNT.swift; sourceTree = "<group>"; };
+		30CA61B51C99CA35005879F0 /* CATEGORY_ACCOUNT+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_ACCOUNT+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61B61C99CA35005879F0 /* CATEGORY_ACCOUNT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATEGORY_ACCOUNT.swift; sourceTree = "<group>"; };
+		30CA61B71C99CA35005879F0 /* CARD_CHECK+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CHECK+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30CA61B81C99CA35005879F0 /* CARD_CHECK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CARD_CHECK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +118,12 @@
 			name = "## test ##";
 			sourceTree = "<group>";
 		};
-		301A19F71C943401002353A0 /* NIB */ = {
+		301A19F71C943401002353A0 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
 				301A19F81C943422002353A0 /* AccountGroupViewHeaderView.xib */,
 			);
-			name = NIB;
+			name = XIB;
 			sourceTree = "<group>";
 		};
 		301A19FA1C944B2B002353A0 /* Extension */ = {
@@ -121,7 +153,6 @@
 		309DCDBB1C8721D00035B6BE = {
 			isa = PBXGroup;
 			children = (
-				3060047A1C99BD5500E15DCF /* AccountBook.xcdatamodeld */,
 				309DCDC61C8721D00035B6BE /* AccountBook */,
 				30C9A49C1C87229000596CCC /* Frameworks */,
 				309DCDC51C8721D00035B6BE /* Products */,
@@ -143,7 +174,8 @@
 				30C9A4A41C87246D00596CCC /* Application */,
 				30C9A4A51C87247500596CCC /* Library */,
 				30C9A4A61C87247B00596CCC /* UI */,
-				301A19F71C943401002353A0 /* NIB */,
+				301A19F71C943401002353A0 /* XIB */,
+				30CA61771C99C85E005879F0 /* DB */,
 				309DCDCB1C8721D00035B6BE /* Main.storyboard */,
 				309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */,
 				309DCDD11C8721D00035B6BE /* Assets.xcassets */,
@@ -203,6 +235,7 @@
 		30C9A4A71C87248D00596CCC /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				30CA61781C99C88F005879F0 /* ManagedObject */,
 				306004751C99B3F500E15DCF /* Manager */,
 				301A19FB1C944B5B002353A0 /* AppDefines.swift */,
 			);
@@ -278,6 +311,37 @@
 				301A19F31C940E26002353A0 /* AccountModeListViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		30CA61771C99C85E005879F0 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				3060047A1C99BD5500E15DCF /* AccountBook.xcdatamodeld */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		30CA61781C99C88F005879F0 /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				30CA61B31C99CA35005879F0 /* ACCOUNT+CoreDataProperties.swift */,
+				30CA61B41C99CA35005879F0 /* ACCOUNT.swift */,
+				30CA61B71C99CA35005879F0 /* CARD_CHECK+CoreDataProperties.swift */,
+				30CA61B81C99CA35005879F0 /* CARD_CHECK.swift */,
+				30CA61A91C99CA35005879F0 /* CARD_CREDIT+CoreDataProperties.swift */,
+				30CA61AA1C99CA35005879F0 /* CARD_CREDIT.swift */,
+				30CA61B51C99CA35005879F0 /* CATEGORY_ACCOUNT+CoreDataProperties.swift */,
+				30CA61B61C99CA35005879F0 /* CATEGORY_ACCOUNT.swift */,
+				30CA61AF1C99CA35005879F0 /* CATEGORY_EXPENSE+CoreDataProperties.swift */,
+				30CA61B01C99CA35005879F0 /* CATEGORY_EXPENSE.swift */,
+				30CA61AB1C99CA35005879F0 /* CATEGORY_INCOME+CoreDataProperties.swift */,
+				30CA61AC1C99CA35005879F0 /* CATEGORY_INCOME.swift */,
+				30CA61B11C99CA35005879F0 /* GROUP+CoreDataProperties.swift */,
+				30CA61B21C99CA35005879F0 /* GROUP.swift */,
+				30CA61AD1C99CA35005879F0 /* TRANSACTION+CoreDataProperties.swift */,
+				30CA61AE1C99CA35005879F0 /* TRANSACTION.swift */,
+			);
+			name = ManagedObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,20 +420,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30CA61BA1C99CA35005879F0 /* CARD_CREDIT.swift in Sources */,
+				30CA61C31C99CA35005879F0 /* ACCOUNT+CoreDataProperties.swift in Sources */,
+				30CA61BD1C99CA35005879F0 /* TRANSACTION+CoreDataProperties.swift in Sources */,
+				30CA61BE1C99CA35005879F0 /* TRANSACTION.swift in Sources */,
+				30CA61C21C99CA35005879F0 /* GROUP.swift in Sources */,
 				30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
+				30CA61C41C99CA35005879F0 /* ACCOUNT.swift in Sources */,
+				30CA61C81C99CA35005879F0 /* CARD_CHECK.swift in Sources */,
 				30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */,
 				30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */,
 				3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */,
+				30CA61C11C99CA35005879F0 /* GROUP+CoreDataProperties.swift in Sources */,
 				301A19F41C940E26002353A0 /* AccountModeListViewCell.swift in Sources */,
 				306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */,
 				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
+				30CA61BF1C99CA35005879F0 /* CATEGORY_EXPENSE+CoreDataProperties.swift in Sources */,
+				30CA61C01C99CA35005879F0 /* CATEGORY_EXPENSE.swift in Sources */,
+				30CA61B91C99CA35005879F0 /* CARD_CREDIT+CoreDataProperties.swift in Sources */,
 				301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */,
 				301A19F21C940DD9002353A0 /* AccountModeCalendarViewController.swift in Sources */,
 				301A19F61C940E30002353A0 /* AccountModeCalendarViewCell.swift in Sources */,
 				30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */,
+				30CA61C51C99CA35005879F0 /* CATEGORY_ACCOUNT+CoreDataProperties.swift in Sources */,
+				30CA61BC1C99CA35005879F0 /* CATEGORY_INCOME.swift in Sources */,
+				30CA61BB1C99CA35005879F0 /* CATEGORY_INCOME+CoreDataProperties.swift in Sources */,
 				301A19F01C940DCA002353A0 /* AccountModeListViewController.swift in Sources */,
+				30CA61C71C99CA35005879F0 /* CARD_CHECK+CoreDataProperties.swift in Sources */,
 				301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */,
+				30CA61C61C99CA35005879F0 /* CATEGORY_ACCOUNT.swift in Sources */,
 				301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
 				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
@@ -484,11 +564,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AccountBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.room724.AccountBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -496,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AccountBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,7 +618,7 @@
 			);
 			currentVersion = 3060047C1C99BD5500E15DCF /* AccountBook.xcdatamodel */;
 			path = AccountBook.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
