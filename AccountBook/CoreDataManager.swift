@@ -13,6 +13,26 @@ class CoreDataManager {
     
     static let sharedManager = CoreDataManager()
     
+    func fetchGroup() -> [GROUP]? {
+        
+        let fetchReq = NSFetchRequest()
+        fetchReq.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext)
+        fetchReq.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
+        
+        var result: [GROUP]?
+        
+        do {
+            
+            try result = managedObjectContext.executeFetchRequest(fetchReq) as? [GROUP]
+            
+        } catch {
+            
+            print("===> fetch error")
+        }
+        
+        return result
+    }
+    
     // MARK: - Core Data stack
     
     lazy var applicationDocumentsDirectory: NSURL = {

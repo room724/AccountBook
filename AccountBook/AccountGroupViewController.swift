@@ -17,10 +17,18 @@ class AccountGroupViewController: UIViewController {
     @IBOutlet weak var assetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var list: [GROUP]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //
+        
+        list = CoreDataManager.sharedManager.fetchGroup()
+        
+        if list != nil {
+            tableView.reloadData()
+        }
     }
     
     @IBAction func addButtonTapped(sender: UIButton) {
@@ -30,11 +38,21 @@ class AccountGroupViewController: UIViewController {
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return list!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountGroupViewCell", forIndexPath: indexPath)
+        let cell  = tableView.dequeueReusableCellWithIdentifier("AccountGroupViewCell", forIndexPath: indexPath) as! AccountGroupViewCell
+        let group = list![indexPath.row] as GROUP
+        
+        cell.nameLabel.text = group.name
+        cell.assetLabel.text = "000"
+        
+        
+        
+        
+        
+        
         
         
         
