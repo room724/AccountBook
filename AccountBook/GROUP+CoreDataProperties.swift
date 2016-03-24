@@ -16,6 +16,6 @@ extension GROUP {
 
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
-    @NSManaged var accounts: NSSet?
+    @NSManaged var accounts: NSArray? // todo : NSSet <- NSArray
 
 }

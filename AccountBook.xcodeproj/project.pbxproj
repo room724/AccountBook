@@ -24,12 +24,12 @@
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
 		309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */; };
-		30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */; };
+		30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */; };
 		30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B01C8737DF00596CCC /* SettingViewController.swift */; };
-		30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */; };
-		30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B91C8880D500596CCC /* AccountGroupViewController.swift */; };
-		30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */; };
-		30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */; };
+		30C9A4B41C88801B00596CCC /* GroupListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B31C88801B00596CCC /* GroupListViewCell.swift */; };
+		30C9A4BA1C8880D500596CCC /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B91C8880D500596CCC /* GroupViewController.swift */; };
+		30C9A4BF1C88810100596CCC /* GroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4BE1C88810100596CCC /* GroupViewCell.swift */; };
+		30C9A4C11C88811E00596CCC /* GroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */; };
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
 		30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4EB1C8B08E400596CCC /* CheckButton.xib */; };
 		30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4ED1C8B090C00596CCC /* CheckButton.swift */; };
@@ -71,12 +71,12 @@
 		309DCDD11C8721D00035B6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309DCDD41C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309DCDD61C8721D00035B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupListViewController.swift; sourceTree = "<group>"; };
+		30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewController.swift; sourceTree = "<group>"; };
 		30C9A4B01C8737DF00596CCC /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupListViewCell.swift; sourceTree = "<group>"; };
-		30C9A4B91C8880D500596CCC /* AccountGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewController.swift; sourceTree = "<group>"; };
-		30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewCell.swift; sourceTree = "<group>"; };
-		30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupViewHeaderView.swift; sourceTree = "<group>"; };
+		30C9A4B31C88801B00596CCC /* GroupListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewCell.swift; sourceTree = "<group>"; };
+		30C9A4B91C8880D500596CCC /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		30C9A4BE1C88810100596CCC /* GroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewCell.swift; sourceTree = "<group>"; };
+		30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewHeaderView.swift; sourceTree = "<group>"; };
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		30C9A4EB1C8B08E400596CCC /* CheckButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckButton.xib; sourceTree = "<group>"; };
 		30C9A4ED1C8B090C00596CCC /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		30C9A4A61C87247B00596CCC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				30C9A4AA1C87379E00596CCC /* AccountGroupList */,
-				30C9A4B81C88808700596CCC /* AccountGroup */,
+				30C9A4AA1C87379E00596CCC /* GroupList */,
+				30C9A4B81C88808700596CCC /* Group */,
 				30C9A4C21C88813600596CCC /* Account */,
 				301A19FD1C9595A7002353A0 /* AccountSetting */,
 				30C9A4AB1C8737A600596CCC /* Setting */,
@@ -250,13 +250,13 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
-		30C9A4AA1C87379E00596CCC /* AccountGroupList */ = {
+		30C9A4AA1C87379E00596CCC /* GroupList */ = {
 			isa = PBXGroup;
 			children = (
 				30C9A4B21C88800100596CCC /* View */,
-				30C9A4AE1C8737D500596CCC /* AccountGroupListViewController.swift */,
+				30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */,
 			);
-			name = AccountGroupList;
+			name = GroupList;
 			sourceTree = "<group>";
 		};
 		30C9A4AB1C8737A600596CCC /* Setting */ = {
@@ -270,25 +270,25 @@
 		30C9A4B21C88800100596CCC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				30C9A4B31C88801B00596CCC /* AccountGroupListViewCell.swift */,
+				30C9A4B31C88801B00596CCC /* GroupListViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		30C9A4B81C88808700596CCC /* AccountGroup */ = {
+		30C9A4B81C88808700596CCC /* Group */ = {
 			isa = PBXGroup;
 			children = (
 				30C9A4BB1C8880DB00596CCC /* View */,
-				30C9A4B91C8880D500596CCC /* AccountGroupViewController.swift */,
+				30C9A4B91C8880D500596CCC /* GroupViewController.swift */,
 			);
-			name = AccountGroup;
+			name = Group;
 			sourceTree = "<group>";
 		};
 		30C9A4BB1C8880DB00596CCC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				30C9A4C01C88811E00596CCC /* AccountGroupViewHeaderView.swift */,
-				30C9A4BE1C88810100596CCC /* AccountGroupViewCell.swift */,
+				30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */,
+				30C9A4BE1C88810100596CCC /* GroupViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -425,24 +425,24 @@
 				30CA61BD1C99CA35005879F0 /* TRANSACTION+CoreDataProperties.swift in Sources */,
 				30CA61BE1C99CA35005879F0 /* TRANSACTION.swift in Sources */,
 				30CA61C21C99CA35005879F0 /* GROUP.swift in Sources */,
-				30C9A4BA1C8880D500596CCC /* AccountGroupViewController.swift in Sources */,
+				30C9A4BA1C8880D500596CCC /* GroupViewController.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
 				30CA61C41C99CA35005879F0 /* ACCOUNT.swift in Sources */,
 				30CA61C81C99CA35005879F0 /* CARD_CHECK.swift in Sources */,
-				30C9A4C11C88811E00596CCC /* AccountGroupViewHeaderView.swift in Sources */,
-				30C9A4BF1C88810100596CCC /* AccountGroupViewCell.swift in Sources */,
+				30C9A4C11C88811E00596CCC /* GroupViewHeaderView.swift in Sources */,
+				30C9A4BF1C88810100596CCC /* GroupViewCell.swift in Sources */,
 				3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */,
 				30CA61C11C99CA35005879F0 /* GROUP+CoreDataProperties.swift in Sources */,
 				301A19F41C940E26002353A0 /* AccountModeListViewCell.swift in Sources */,
 				306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */,
-				30C9A4B41C88801B00596CCC /* AccountGroupListViewCell.swift in Sources */,
+				30C9A4B41C88801B00596CCC /* GroupListViewCell.swift in Sources */,
 				30CA61BF1C99CA35005879F0 /* CATEGORY_EXPENSE+CoreDataProperties.swift in Sources */,
 				30CA61C01C99CA35005879F0 /* CATEGORY_EXPENSE.swift in Sources */,
 				30CA61B91C99CA35005879F0 /* CARD_CREDIT+CoreDataProperties.swift in Sources */,
 				301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */,
 				301A19F21C940DD9002353A0 /* AccountModeCalendarViewController.swift in Sources */,
 				301A19F61C940E30002353A0 /* AccountModeCalendarViewCell.swift in Sources */,
-				30C9A4AF1C8737D500596CCC /* AccountGroupListViewController.swift in Sources */,
+				30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */,
 				30CA61C51C99CA35005879F0 /* CATEGORY_ACCOUNT+CoreDataProperties.swift in Sources */,
 				30CA61BC1C99CA35005879F0 /* CATEGORY_INCOME.swift in Sources */,
 				30CA61BB1C99CA35005879F0 /* CATEGORY_INCOME+CoreDataProperties.swift in Sources */,

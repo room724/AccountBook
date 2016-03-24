@@ -1,15 +1,14 @@
 //
-//  AccountGroupViewController.swift
+//  GroupViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 3..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 
-import CoreData
 import UIKit
 
-class AccountGroupViewController: UIViewController {
+class GroupViewController: UIViewController {
     
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var expenseLabel: UILabel!
@@ -18,7 +17,7 @@ class AccountGroupViewController: UIViewController {
     @IBOutlet weak var assetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var groupObjectID: NSManagedObjectID?
+    var group: GROUP?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +32,14 @@ class AccountGroupViewController: UIViewController {
     // MARK: - UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return group?.accounts?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountGroupViewCell", forIndexPath: indexPath) as! AccountGroupViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("GroupViewCell", forIndexPath: indexPath) as! GroupViewCell
+        let account = group!.accounts![indexPath.row] as! ACCOUNT
         
-        //
+        cell.nameLabel.text = account.name
         
         return cell
     }

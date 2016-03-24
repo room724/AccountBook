@@ -1,5 +1,5 @@
 //
-//  AccountGroupListViewCell.swift
+//  GroupViewCell.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 3..
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class AccountGroupListViewCell: UITableViewCell {
-    
-    
+class GroupViewCell: UITableViewCell {
+
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var equityLabel: UILabel!
-    @IBOutlet weak var debtLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
     override func awakeFromNib() {
@@ -24,7 +22,7 @@ class AccountGroupListViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         //
     }
 

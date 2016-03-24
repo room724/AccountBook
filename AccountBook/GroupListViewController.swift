@@ -1,5 +1,5 @@
 //
-//  AccountGroupListViewController.swift
+//  GroupListViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 3..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountGroupListViewController: UITableViewController {
+class GroupListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class AccountGroupListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountGroupListViewCell", forIndexPath: indexPath) as! AccountGroupListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("GroupListViewCell", forIndexPath: indexPath) as! GroupListViewCell
         let group = CoreDataManager.sharedManager.groups![indexPath.row] as GROUP
         
         cell.nameLabel.text = group.name
@@ -61,10 +61,10 @@ class AccountGroupListViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "AccountGroupViewController") {
+        if (segue.identifier == "GroupViewController") {
             let indexPath = tableView.indexPathForSelectedRow!
-            let viewController = segue.destinationViewController as! AccountGroupViewController
-            viewController.groupObjectID = CoreDataManager.sharedManager.groups![indexPath.row].objectID
+            let viewController = segue.destinationViewController as! GroupViewController
+            viewController.group = CoreDataManager.sharedManager.groups![indexPath.row]
         }
     }
     

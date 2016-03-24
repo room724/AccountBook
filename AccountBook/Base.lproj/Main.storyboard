@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1100" y="7.9999999999999991"/>
         </scene>
-        <!--Account Group List View Controller-->
+        <!--Group List View Controller-->
         <scene sceneID="DYN-z5-2oF">
             <objects>
-                <tableViewController id="pvD-0m-fIu" customClass="AccountGroupListViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="pvD-0m-fIu" customClass="GroupListViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="JwO-GJ-HmQ" userLabel="tableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountGroupListViewCell" id="PDg-m9-D7D" customClass="AccountGroupListViewCell" customModule="AccountBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupListViewCell" id="PDg-m9-D7D" customClass="GroupListViewCell" customModule="AccountBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PDg-m9-D7D" id="eo4-T0-bHi">
@@ -128,13 +128,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.69756071990000001" green="0.48708370179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="AccountGroupListViewCell"/>
+                                <accessibility key="accessibilityConfiguration" identifier="GroupListViewCell"/>
                                 <connections>
                                     <outlet property="assetLabel" destination="ciw-MA-FPO" id="SEh-sT-raH"/>
                                     <outlet property="debtLabel" destination="TDF-74-olM" id="R2N-Ez-LXD"/>
                                     <outlet property="equityLabel" destination="a4i-2z-hoR" id="1QZ-db-aHF"/>
                                     <outlet property="nameLabel" destination="OxS-Sv-MKg" id="mi9-Cg-F2T"/>
-                                    <segue destination="big-fP-V5t" kind="show" identifier="AccountGroupViewController" id="4iM-60-j2L"/>
+                                    <segue destination="big-fP-V5t" kind="show" identifier="GroupViewController" id="4iM-60-j2L"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -149,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="1513" y="8"/>
         </scene>
-        <!--Account Group View Controller-->
+        <!--Group View Controller-->
         <scene sceneID="bSL-iH-oa5">
             <objects>
-                <viewController id="big-fP-V5t" customClass="AccountGroupViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="big-fP-V5t" customClass="GroupViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qe6-S8-5ag"/>
                         <viewControllerLayoutGuide type="bottom" id="Jfn-D5-foe"/>
@@ -239,7 +239,7 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountGroupViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountGroupViewCell" id="P0m-hf-Hwa" customClass="AccountGroupViewCell" customModule="AccountBook" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GroupViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupViewCell" id="P0m-hf-Hwa" customClass="GroupViewCell" customModule="AccountBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P0m-hf-Hwa" id="6h3-nC-q1P">

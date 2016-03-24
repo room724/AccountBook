@@ -1,5 +1,5 @@
 //
-//  AccountGroupViewHeaderView.swift
+//  GroupViewHeaderView.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 3..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountGroupViewHeaderView: UITableViewHeaderFooterView {
+class GroupViewHeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
