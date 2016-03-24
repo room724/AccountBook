@@ -13,11 +13,36 @@ class CoreDataManager {
     
     static let sharedManager = CoreDataManager()
     
+    var managedObjectContext: NSManagedObjectContext?
+    
     var groups: [GROUP]?
+    
+    func setup () -> NSError? {
+        let modelURL = NSBundle.mainBundle().URLForResource("AccountBook", withExtension: "momd")!
+        let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        let persistentStoreDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).last
+        let persistentStoreUrl = persistentStoreDirectory?.URLByAppendingPathComponent("AccountBook.sqlite")
+        let persistentStoreOptions = [ NSMigratePersistentStoresAutomaticallyOption : true, NSInferMappingModelAutomaticallyOption : true ]
+        
+        print("\(__FUNCTION__) url : \(persistentStoreUrl)")
+        
+        do {
+            try persistentStoreCoordinator.addPersistentStoreWithType(
+                NSSQLiteStoreType, configuration: nil, URL: persistentStoreUrl, options: persistentStoreOptions)
+        } catch {
+            return error as NSError
+        }
+        
+        managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        managedObjectContext!.persistentStoreCoordinator = persistentStoreCoordinator
+        return nil
+    }
     
     func fetchGroups (completion: (NSError? -> Void)?) {
         let fetchRequest = NSFetchRequest()
-        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext)
+        
+        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext!)
         fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
         
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
@@ -28,68 +53,35 @@ class CoreDataManager {
         }
         
         do {
-            try managedObjectContext.executeRequest(asynchronousFetchRequest)
+            try managedObjectContext!.executeRequest(asynchronousFetchRequest)
         } catch {
             completion?(error as NSError)
         }
     }
     
-    // MARK: - Core Data stack
-    
-    lazy var applicationDocumentsDirectory: NSURL = {
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1]
-    }()
-    
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        let modelURL = NSBundle.mainBundle().URLForResource("AccountBook", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
-    }()
-    
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("AccountBook.sqlite")
+    func addGroup (name: String, order: NSInteger) -> NSError? {
+        let group = NSEntityDescription.insertNewObjectForEntityForName("GROUP", inManagedObjectContext: managedObjectContext!) as! GROUP
         
-        print("url : \(url)")
+        group.id = 3 // todo
+        group.name = name
+        group.order = order
         
-        do {
-            let options = [ NSMigratePersistentStoresAutomaticallyOption : true, NSInferMappingModelAutomaticallyOption : true ]
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options)
-        } catch {
-            var dict = [String: AnyObject]()
-            
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = "There was an error creating or loading the application's saved data."
-            dict[NSUnderlyingErrorKey] = error as NSError
-            
-            let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            
-            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
+        if let error = save() {
+            return error
         }
         
-        return coordinator
-    }()
+        self.groups!.append(group)
+        return nil
+    }
     
-    lazy var managedObjectContext: NSManagedObjectContext = {
-        let coordinator = self.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
-        return managedObjectContext
-    }()
-    
-    // MARK: - Core Data Saving support
-    
-    func saveContext () {
-        if managedObjectContext.hasChanges {
+    func save () -> NSError? {
+        if managedObjectContext!.hasChanges {
             do {
-                try managedObjectContext.save()
+                try managedObjectContext!.save()
             } catch {
-                let nserror = error as NSError
-                
-                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
+                return error as NSError
             }
         }
+        return nil
     }
 }

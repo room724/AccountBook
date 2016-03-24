@@ -7,7 +7,7 @@
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="month_start_date" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="week_start_day" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="category_account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY_ACCOUNT" inverseName="accounts" inverseEntity="CATEGORY_ACCOUNT" syncable="YES"/>
         <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GROUP" inverseName="accounts" inverseEntity="GROUP" syncable="YES"/>
@@ -16,37 +16,37 @@
     <entity name="CARD_CHECK" representedClassName="CARD_CHECK" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="card_check" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CARD_CREDIT" representedClassName="CARD_CREDIT" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="card_credit" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CATEGORY_ACCOUNT" representedClassName="CATEGORY_ACCOUNT" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="ACCOUNT" inverseName="category_account" inverseEntity="ACCOUNT" syncable="YES"/>
     </entity>
     <entity name="CATEGORY_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="category_expense" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CATEGORY_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="category_income" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="GROUP" representedClassName="GROUP" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="ACCOUNT" inverseName="group" inverseEntity="ACCOUNT" syncable="YES"/>
     </entity>
     <entity name="TRANSACTION" representedClassName="TRANSACTION" syncable="YES">

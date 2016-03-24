@@ -15,12 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        print(CoreDataManager.sharedManager.managedObjectContext)
+        if let error = CoreDataManager.sharedManager.setup() {
+            print("CoreDataManager setup error : \(error)")
+        }
         
         return true
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        CoreDataManager.sharedManager.saveContext()
+        CoreDataManager.sharedManager.save()
     }
 }

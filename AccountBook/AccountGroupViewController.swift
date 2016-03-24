@@ -22,7 +22,7 @@ class AccountGroupViewController: UIViewController {
         
         CoreDataManager.sharedManager.fetchGroups { error in
             if error != nil {
-                print("error : \(error)")
+                print("\(__FUNCTION__) error : \(error)")
                 return;
             }
             
@@ -31,7 +31,14 @@ class AccountGroupViewController: UIViewController {
     }
     
     @IBAction func addButtonTapped(sender: UIButton) {
+        let order = CoreDataManager.sharedManager.groups!.count
         
+        if let error = CoreDataManager.sharedManager.addGroup("ABC", order: order) {
+            print("\(__FUNCTION__) error : \(error)")
+            return;
+        }
+        
+        self.tableView.insertRowsAtIndexPaths([ NSIndexPath(forRow: order, inSection: 0) ], withRowAnimation: .None)
     }
     
     // MARK: - UITableViewDelegate
