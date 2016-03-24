@@ -14,7 +14,6 @@ import CoreData
 
 extension CATEGORY_ACCOUNT {
 
-    @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
 

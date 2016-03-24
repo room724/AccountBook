@@ -15,7 +15,6 @@ import CoreData
 extension TRANSACTION {
 
     @NSManaged var date: NSDate?
-    @NSManaged var id: NSNumber?
     @NSManaged var memo: String?
     @NSManaged var money: NSNumber?
     @NSManaged var name: String?

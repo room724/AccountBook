@@ -14,7 +14,6 @@ import CoreData
 
 extension CATEGORY_EXPENSE {
 
-    @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
 

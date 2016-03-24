@@ -36,6 +36,7 @@ class CoreDataManager {
         
         managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
         managedObjectContext!.persistentStoreCoordinator = persistentStoreCoordinator
+        
         return nil
     }
     
@@ -62,7 +63,6 @@ class CoreDataManager {
     func addGroup (name: String, order: NSInteger) -> NSError? {
         let group = NSEntityDescription.insertNewObjectForEntityForName("GROUP", inManagedObjectContext: managedObjectContext!) as! GROUP
         
-        group.id = 3 // todo
         group.name = name
         group.order = order
         
@@ -70,7 +70,22 @@ class CoreDataManager {
             return error
         }
         
-        self.groups!.append(group)
+        groups!.append(group)
+        
+        return nil
+    }
+    
+    func removeGroup (group: GROUP) -> NSError? {
+        managedObjectContext!.deleteObject(group)
+        
+        if let error = save() {
+            return error
+        }
+        
+        if let index = groups!.indexOf(group) {
+            groups!.removeAtIndex(index)
+        }
+        
         return nil
     }
     

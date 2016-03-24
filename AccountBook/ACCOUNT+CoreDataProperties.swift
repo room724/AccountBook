@@ -16,7 +16,6 @@ extension ACCOUNT {
 
     @NSManaged var carryover: NSNumber?
     @NSManaged var favorite: NSNumber?
-    @NSManaged var id: NSNumber?
     @NSManaged var memo: String?
     @NSManaged var month_start_date: NSNumber?
     @NSManaged var name: String?

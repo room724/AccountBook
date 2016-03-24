@@ -14,7 +14,6 @@ import CoreData
 
 extension GROUP {
 
-    @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
     @NSManaged var accounts: NSSet?

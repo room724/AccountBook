@@ -14,7 +14,6 @@ import CoreData
 
 extension CARD_CHECK {
 
-    @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
 

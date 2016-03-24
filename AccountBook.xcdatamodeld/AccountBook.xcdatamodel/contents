@@ -3,7 +3,6 @@
     <entity name="ACCOUNT" representedClassName="ACCOUNT" syncable="YES">
         <attribute name="carryover" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="month_start_date" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,44 +13,37 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="account" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CARD_CHECK" representedClassName="CARD_CHECK" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="card_check" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CARD_CREDIT" representedClassName="CARD_CREDIT" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="card_credit" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CATEGORY_ACCOUNT" representedClassName="CATEGORY_ACCOUNT" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="ACCOUNT" inverseName="category_account" inverseEntity="ACCOUNT" syncable="YES"/>
     </entity>
     <entity name="CATEGORY_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="category_expense" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="CATEGORY_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="TRANSACTION" inverseName="category_income" inverseEntity="TRANSACTION" syncable="YES"/>
     </entity>
     <entity name="GROUP" representedClassName="GROUP" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="ACCOUNT" inverseName="group" inverseEntity="ACCOUNT" syncable="YES"/>
     </entity>
     <entity name="TRANSACTION" representedClassName="TRANSACTION" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -64,13 +56,13 @@
         <relationship name="category_income" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CATEGORY_INCOME" inverseName="transactions" inverseEntity="CATEGORY_INCOME" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ACCOUNT" positionX="-180" positionY="12" width="128" height="210"/>
-        <element name="CARD_CHECK" positionX="36" positionY="108" width="128" height="105"/>
-        <element name="CARD_CREDIT" positionX="-9" positionY="63" width="128" height="105"/>
-        <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="105"/>
-        <element name="CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="105"/>
-        <element name="CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="105"/>
-        <element name="GROUP" positionX="-378" positionY="-9" width="128" height="105"/>
-        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="225"/>
+        <element name="ACCOUNT" positionX="-180" positionY="12" width="128" height="195"/>
+        <element name="CARD_CHECK" positionX="36" positionY="108" width="128" height="90"/>
+        <element name="CARD_CREDIT" positionX="-9" positionY="63" width="128" height="90"/>
+        <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="90"/>
+        <element name="CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="90"/>
+        <element name="CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="90"/>
+        <element name="GROUP" positionX="-378" positionY="-9" width="128" height="90"/>
+        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="210"/>
     </elements>
 </model>
