@@ -13,24 +13,25 @@ class CoreDataManager {
     
     static let sharedManager = CoreDataManager()
     
-    func fetchGroup() -> [GROUP]? {
+    var groups: [GROUP]?
+    
+    func fetchGroups (completion: (NSError? -> Void)?) {
+        let fetchRequest = NSFetchRequest()
+        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext)
+        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
         
-        let fetchReq = NSFetchRequest()
-        fetchReq.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext)
-        fetchReq.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
-        
-        var result: [GROUP]?
-        
-        do {
-            
-            try result = managedObjectContext.executeFetchRequest(fetchReq) as? [GROUP]
-            
-        } catch {
-            
-            print("===> fetch error")
+        let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.groups = asynchronousFetchResult.finalResult as? [GROUP]
+                completion?(nil)
+            })
         }
         
-        return result
+        do {
+            try managedObjectContext.executeRequest(asynchronousFetchRequest)
+        } catch {
+            completion?(error as NSError)
+        }
     }
     
     // MARK: - Core Data stack

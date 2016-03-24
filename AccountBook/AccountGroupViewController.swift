@@ -17,17 +17,16 @@ class AccountGroupViewController: UIViewController {
     @IBOutlet weak var assetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var list: [GROUP]?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //
-        
-        list = CoreDataManager.sharedManager.fetchGroup()
-        
-        if list != nil {
-            tableView.reloadData()
+        CoreDataManager.sharedManager.fetchGroups { error in
+            if error != nil {
+                print("error : \(error)")
+                return;
+            }
+            
+            self.tableView.reloadData()
         }
     }
     
@@ -38,23 +37,14 @@ class AccountGroupViewController: UIViewController {
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list!.count
+        return CoreDataManager.sharedManager.groups?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCellWithIdentifier("AccountGroupViewCell", forIndexPath: indexPath) as! AccountGroupViewCell
-        let group = list![indexPath.row] as GROUP
+        let cell = tableView.dequeueReusableCellWithIdentifier("AccountGroupViewCell", forIndexPath: indexPath) as! AccountGroupViewCell
+        let group = CoreDataManager.sharedManager.groups![indexPath.row] as GROUP
         
         cell.nameLabel.text = group.name
-        cell.assetLabel.text = "000"
-        
-        
-        
-        
-        
-        
-        
-        
         
         return cell
     }
