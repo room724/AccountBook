@@ -59,5 +59,5 @@ extension CoreDataManager {
         }
         
         return nil
-    }    
+    }
 }
