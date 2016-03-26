@@ -10,34 +10,52 @@ import UIKit
 
 class GroupListViewController: UITableViewController {
 
+    var groups: [GROUP]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        CoreDataManager.sharedManager.fetchGroups { error in
+        self.fetchGroups()
+    }
+    
+    func fetchGroups () {
+        CoreDataManager.sharedManager.fetchGroups { (groups, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
-                return;
+                return
             }
             
+            self.groups = groups
             self.tableView.reloadData()
         }
     }
     
     @IBAction func addButtonTapped(sender: UIButton) {
-        let order = CoreDataManager.sharedManager.groups!.count
-        CoreDataManager.sharedManager.addGroup("ABC", order: order)
+        let order = groups?.count ?? 0
+        let (group, error) = CoreDataManager.sharedManager.addGroup(name: "ABC", order: order)
+        
+        if (error != nil) {
+            print("\(__FUNCTION__) error : \(error)")
+            return
+        }
+        
+        if groups == nil {
+            groups = [ group! ]
+        } else {
+            groups!.append(group!)
+        }
+        
         tableView.insertRowsAtIndexPaths([ NSIndexPath(forRow: order, inSection: 0) ], withRowAnimation: .None)
     }
     
     // MARK: - UITableViewDataSource
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CoreDataManager.sharedManager.groups?.count ?? 0
+        return groups?.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GroupListViewCell", forIndexPath: indexPath) as! GroupListViewCell
-        let group = CoreDataManager.sharedManager.groups![indexPath.row] as GROUP
+        let group = groups![indexPath.row]
         
         cell.nameLabel.text = group.name
         
@@ -51,10 +69,13 @@ class GroupListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            let group = CoreDataManager.sharedManager.groups![indexPath.row]
+        if (editingStyle == .Delete) {
+            let group = groups![indexPath.row]
             CoreDataManager.sharedManager.removeGroup(group)
             tableView.deleteRowsAtIndexPaths([ NSIndexPath(forRow: indexPath.row, inSection: 0) ], withRowAnimation: .None)
+        }
+        else if (editingStyle == .Insert) {
+            //
         }
     }
     
@@ -62,9 +83,9 @@ class GroupListViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "GroupViewController") {
-            let indexPath = tableView.indexPathForSelectedRow!
-            let viewController = segue.destinationViewController as! GroupViewController
-            viewController.group = CoreDataManager.sharedManager.groups![indexPath.row]
+            let groupViewController = segue.destinationViewController as! GroupViewController
+            let group = groups![tableView.indexPathForSelectedRow!.row]
+            groupViewController.groupId = group.id
         }
     }
     

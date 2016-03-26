@@ -2,7 +2,7 @@
 //  ACCOUNT+CoreDataProperties.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 17..
+//  Created by inock on 2016. 3. 26..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -21,8 +21,8 @@ extension ACCOUNT {
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
     @NSManaged var week_start_day: NSNumber?
-    @NSManaged var category_account: CATEGORY_ACCOUNT?
-    @NSManaged var group: GROUP?
-    @NSManaged var transactions: NSSet?
+    @NSManaged var category_id: NSNumber?
+    @NSManaged var id: NSNumber?
+    @NSManaged var group_id: NSNumber?
 
 }

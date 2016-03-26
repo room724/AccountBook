@@ -15,8 +15,6 @@ class CoreDataManager {
     
     var managedObjectContext: NSManagedObjectContext?
     
-    var groups: [GROUP]?
-    
     func setup () -> NSError? {
         let modelURL = NSBundle.mainBundle().URLForResource("AccountBook", withExtension: "momd")!
         let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
@@ -40,53 +38,24 @@ class CoreDataManager {
         return nil
     }
     
-    func fetchGroups (completion: (NSError? -> Void)?) {
+    func nextIdOfEntity (entityName: String) -> (id: NSNumber?, error: NSError?) {
         let fetchRequest = NSFetchRequest()
         
-        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
-        
-        let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.groups = asynchronousFetchResult.finalResult as? [GROUP]
-                completion?(nil)
-            })
-        }
+        fetchRequest.entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedObjectContext!)
+        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "id", ascending: false) ]
+        fetchRequest.fetchLimit = 1
         
         do {
-            try managedObjectContext!.executeRequest(asynchronousFetchRequest)
+            let result = try managedObjectContext!.executeFetchRequest(fetchRequest)
+            if result.count == 0 {
+                return (id: 0, error: nil)
+            }
+            
+            let id = result.first!.valueForKey("id") as! NSNumber
+            return (id: NSNumber(integer: id.integerValue + 1), error: nil)
         } catch {
-            completion?(error as NSError)
+            return (id: nil, error: error as NSError)
         }
-    }
-    
-    func addGroup (name: String, order: NSInteger) -> NSError? {
-        let group = NSEntityDescription.insertNewObjectForEntityForName("GROUP", inManagedObjectContext: managedObjectContext!) as! GROUP
-        
-        group.name = name
-        group.order = order
-        
-        if let error = save() {
-            return error
-        }
-        
-        groups!.append(group)
-        
-        return nil
-    }
-    
-    func removeGroup (group: GROUP) -> NSError? {
-        managedObjectContext!.deleteObject(group)
-        
-        if let error = save() {
-            return error
-        }
-        
-        if let index = groups!.indexOf(group) {
-            groups!.removeAtIndex(index)
-        }
-        
-        return nil
     }
     
     func save () -> NSError? {
@@ -97,6 +66,7 @@ class CoreDataManager {
                 return error as NSError
             }
         }
+        
         return nil
     }
 }

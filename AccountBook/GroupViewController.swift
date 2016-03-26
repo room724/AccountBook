@@ -17,7 +17,7 @@ class GroupViewController: UIViewController {
     @IBOutlet weak var assetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var group: GROUP?
+    var groupId: NSNumber?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +32,13 @@ class GroupViewController: UIViewController {
     // MARK: - UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return group?.accounts?.count ?? 0
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GroupViewCell", forIndexPath: indexPath) as! GroupViewCell
-        let account = group!.accounts![indexPath.row] as! ACCOUNT
         
-        cell.nameLabel.text = account.name
+        //
         
         return cell
     }
@@ -51,7 +50,10 @@ class GroupViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+        if (editingStyle == .Delete) {
+            //
+        }
+        else if (editingStyle == .Insert) {
             //
         }
     }

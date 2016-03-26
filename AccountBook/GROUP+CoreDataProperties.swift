@@ -2,7 +2,7 @@
 //  GROUP+CoreDataProperties.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 17..
+//  Created by inock on 2016. 3. 26..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -16,6 +16,6 @@ extension GROUP {
 
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
-    @NSManaged var accounts: NSArray? // todo : NSSet <- NSArray
+    @NSManaged var id: NSNumber?
 
 }
