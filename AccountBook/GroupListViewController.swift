@@ -71,7 +71,13 @@ class GroupListViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == .Delete) {
             let group = groups![indexPath.row]
-            CoreDataManager.sharedManager.removeGroup(group)
+            
+            if let error = CoreDataManager.sharedManager.removeGroup(group) {
+                print("\(__FUNCTION__) error : \(error)")
+                return
+            }
+            
+            groups!.removeAtIndex(groups!.indexOf(group)!)
             tableView.deleteRowsAtIndexPaths([ NSIndexPath(forRow: indexPath.row, inSection: 0) ], withRowAnimation: .None)
         }
         else if (editingStyle == .Insert) {
