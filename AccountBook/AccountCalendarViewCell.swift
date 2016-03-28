@@ -1,5 +1,5 @@
 //
-//  AccountModeListViewCell.swift
+//  AccountCalendarViewCell.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 12..
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class AccountModeListViewCell: UITableViewCell {
+class AccountCalendarViewCell: UITableViewCell {
     
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
     

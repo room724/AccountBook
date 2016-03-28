@@ -1,5 +1,5 @@
 //
-//  AccountModeListViewController.swift
+//  AccountCalendarViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 12..
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class AccountModeListViewController : UITableViewController
+class AccountCalendarViewController : UIViewController
 {
+    @IBOutlet weak var calendarView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,12 +21,12 @@ class AccountModeListViewController : UITableViewController
     
     // MARK: - UITableViewDelegate
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountModeListViewCell", forIndexPath: indexPath)
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("AccountCalendarViewCell", forIndexPath: indexPath) as! AccountCalendarViewCell
         
         
         

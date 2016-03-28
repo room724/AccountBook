@@ -1,18 +1,16 @@
 //
-//  GroupListViewCell.swift
+//  FavoriteAccountListViewCell.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 3..
+//  Created by inock on 2016. 3. 28..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 
 import UIKit
 
-class GroupListViewCell: UITableViewCell {
-    
+class FavoriteAccountListViewCell: UITableViewCell {
+
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var equityLabel: UILabel!
-    @IBOutlet weak var debtLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,7 +21,7 @@ class GroupListViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         //
     }
 

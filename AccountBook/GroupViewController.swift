@@ -25,7 +25,7 @@ class GroupViewController: UIViewController {
         self.fetchAccounts()
     }
     
-    func fetchAccounts () {
+    func fetchAccounts() {
         CoreDataManager.sharedManager.fetchAccountsWithGroupId(groupId!) { (accounts, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")

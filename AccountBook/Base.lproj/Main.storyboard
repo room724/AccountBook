@@ -25,28 +25,77 @@
             </objects>
             <point key="canvasLocation" x="589" y="325"/>
         </scene>
-        <!--Favorite Account-->
+        <!--Favorite-->
         <scene sceneID="5So-WC-Lyc">
             <objects>
                 <navigationController id="qsX-kF-VkB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite Account" id="FS0-V6-bCq"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" id="FS0-V6-bCq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGe-MW-qc9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dAn-da-9aq" kind="relationship" relationship="rootViewController" id="XZW-RQ-cOf"/>
+                        <segue destination="jdc-6e-wub" kind="relationship" relationship="rootViewController" id="iWC-Q6-p1c"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAe-Ap-Jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="-737"/>
         </scene>
-        <!--All Account-->
+        <!--Favorite Account List View Controller-->
+        <scene sceneID="nhf-ku-vN6">
+            <objects>
+                <tableViewController id="jdc-6e-wub" customClass="FavoriteAccountListViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vof-hq-EoA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FavoriteAccountListViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteAccountListViewCell" id="aaq-wO-Odo" customClass="FavoriteAccountListViewCell" customModule="AccountBook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aaq-wO-Odo" id="YF2-M2-fMt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ets-NE-xE9" userLabel="assetLabel">
+                                            <rect key="frame" x="212" y="11" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxg-6i-B4u" userLabel="nameLabel">
+                                            <rect key="frame" x="8" y="11" width="196" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.58606382990000006" green="0.75743893110000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="assetLabel" destination="Ets-NE-xE9" id="0gb-xC-LpA"/>
+                                    <outlet property="nameLabel" destination="Dxg-6i-B4u" id="dvL-9G-2jd"/>
+                                    <segue destination="dAn-da-9aq" kind="show" id="DEb-t2-g9R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jdc-6e-wub" id="bdb-cC-qPJ"/>
+                            <outlet property="delegate" destination="jdc-6e-wub" id="DEb-Md-QvP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3eD-fE-vIw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWM-KC-rMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="-737"/>
+        </scene>
+        <!--Group-->
         <scene sceneID="t8w-CK-RFa">
             <objects>
                 <navigationController id="pNx-hn-jy2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Account" id="99R-lf-vZZ"/>
+                    <tabBarItem key="tabBarItem" title="Group" id="99R-lf-vZZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hxi-lK-2H5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -340,10 +389,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-4N-CbQ" userLabel="modeListButton">
                                         <rect key="frame" x="274" y="16" width="30" height="30"/>
                                         <state key="normal" title="목록"/>
+                                        <connections>
+                                            <action selector="modeListButtonTapped:" destination="dAn-da-9aq" eventType="touchUpInside" id="0r1-Mn-mme"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZj-U3-6yF" userLabel="modeCalendarButton">
                                         <rect key="frame" x="236" y="16" width="30" height="30"/>
                                         <state key="normal" title="달력"/>
+                                        <connections>
+                                            <action selector="modeCalendarButtonTapped:" destination="dAn-da-9aq" eventType="touchUpInside" id="lyK-Rx-TES"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58606382990000006" green="0.75743893110000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -366,18 +421,18 @@
                         <outlet property="containerView" destination="ssf-y0-XXw" id="dmV-tD-JVo"/>
                         <outlet property="expenseLabel" destination="lbn-OY-6Zh" id="M23-Kw-ey3"/>
                         <outlet property="incomeLabel" destination="Wdb-TK-8oc" id="PXL-bM-KIQ"/>
-                        <outlet property="modeCalendarButton" destination="pZj-U3-6yF" id="LXL-mM-FiR"/>
-                        <outlet property="modeListButton" destination="qqw-4N-CbQ" id="1xl-tl-6zo"/>
+                        <outlet property="modeCalendarButton" destination="pZj-U3-6yF" id="Fs8-NH-qz2"/>
+                        <outlet property="modeListButton" destination="qqw-4N-CbQ" id="gBD-Vx-zKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzp-hj-WGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2332" y="8"/>
         </scene>
-        <!--Account Mode Calendar View Controller-->
+        <!--Account Calendar View Controller-->
         <scene sceneID="X9w-yb-l5f">
             <objects>
-                <viewController storyboardIdentifier="AccountModeCalendarViewController" id="dgM-3Z-lGL" customClass="AccountModeCalendarViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountCalendarViewController" id="dgM-3Z-lGL" customClass="AccountCalendarViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nXo-XH-5SH"/>
                         <viewControllerLayoutGuide type="bottom" id="Uk8-PX-iTX"/>
@@ -394,7 +449,7 @@
                                 <rect key="frame" x="0.0" y="260" width="320" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountModeCalendarViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountModeCalendarViewCell" id="wdq-p2-Lfz" customClass="AccountModeCalendarViewCell" customModule="AccountBook" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountCalendarViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCalendarViewCell" id="wdq-p2-Lfz" customClass="AccountCalendarViewCell" customModule="AccountBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wdq-p2-Lfz" id="kt3-55-hgX">
@@ -440,16 +495,16 @@
             </objects>
             <point key="canvasLocation" x="2332" y="737"/>
         </scene>
-        <!--Account Mode List View Controller-->
+        <!--Account List View Controller-->
         <scene sceneID="KJn-7c-eI8">
             <objects>
-                <tableViewController storyboardIdentifier="AccountModeListViewController" id="9VB-D1-raG" customClass="AccountModeListViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AccountListViewController" id="9VB-D1-raG" customClass="AccountListViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UBm-7l-BUQ" userLabel="tableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountModeListlViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountModeListlViewCell" id="dxQ-pI-qX5" customClass="AccountModeListViewCell" customModule="AccountBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountListlViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountListViewCell" id="dxQ-pI-qX5" customClass="AccountListViewCell" customModule="AccountBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dxQ-pI-qX5" id="xWB-KL-PpE">
@@ -1339,6 +1394,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XZW-RQ-cOf"/>
+        <segue reference="DEb-t2-g9R"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,7 +17,7 @@ class GroupListViewController: UITableViewController {
         self.fetchGroups()
     }
     
-    func fetchGroups () {
+    func fetchGroups() {
         CoreDataManager.sharedManager.fetchGroups { (groups, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
@@ -94,5 +94,4 @@ class GroupListViewController: UITableViewController {
             groupViewController.groupId = group.id
         }
     }
-    
 }
