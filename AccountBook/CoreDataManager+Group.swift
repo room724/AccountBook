@@ -11,7 +11,7 @@ import Foundation
 
 extension CoreDataManager {
     
-    func fetchGroups (completion: ((groups: [GROUP]?, error: NSError?) -> Void)?) {
+    func fetchGroups(completion: ((groups: [GROUP]?, error: NSError?) -> Void)?) {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext!)
@@ -31,7 +31,7 @@ extension CoreDataManager {
         }
     }
     
-    func addGroup (name name: String, order: NSInteger) -> (group: GROUP?, error: NSError?) {
+    func addGroup(name name: String, order: NSInteger) -> (group: GROUP?, error: NSError?) {
         let (id, error) = nextIdOfEntity("GROUP")
         
         if error != nil {
@@ -51,7 +51,7 @@ extension CoreDataManager {
         return (group: group, error: nil)
     }
     
-    func removeGroup (group: GROUP) -> NSError? {
+    func removeGroup(group: GROUP) -> NSError? {
         managedObjectContext!.deleteObject(group)
         
         if let error = save() {

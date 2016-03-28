@@ -11,7 +11,7 @@ import Foundation
 
 extension CoreDataManager {
 
-    func fetchAccountsWithGroupId (groupId: NSNumber, completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
+    func fetchAccountsWithGroupId(groupId: NSNumber, completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
@@ -32,7 +32,28 @@ extension CoreDataManager {
         }
     }
     
-    func addAccountWithGroupId (groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
+    func fetchFavoriteAccounts(completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
+        let fetchRequest = NSFetchRequest()
+        
+        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
+        fetchRequest.predicate = NSPredicate(format: "favorite = true", argumentArray: nil)
+        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "name", ascending: true) ]
+        
+        let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let accounts = asynchronousFetchResult.finalResult as? [ACCOUNT]
+                completion?(accounts: accounts, error: nil)
+            })
+        }
+        
+        do {
+            try managedObjectContext!.executeRequest(asynchronousFetchRequest)
+        } catch {
+            completion?(accounts: nil, error: error as NSError)
+        }
+    }
+    
+    func addAccountWithGroupId(groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
         let (id, error) = nextIdOfEntity("ACCOUNT")
         
         if error != nil {
@@ -48,6 +69,9 @@ extension CoreDataManager {
         account.category_id = 1 // todo
         account.week_start_day = 1 // todo
         account.month_start_date = 25 // todo
+        account.carryover = false
+        account.favorite = false
+        account.memo = String()
         
         if let error = save() {
             return (account: nil, error: error)
@@ -56,7 +80,7 @@ extension CoreDataManager {
         return (account: account, error: nil)
     }
     
-    func removeAccount (account: ACCOUNT) -> NSError? {
+    func removeAccount(account: ACCOUNT) -> NSError? {
         managedObjectContext!.deleteObject(account)
         
         if let error = save() {

@@ -8,22 +8,34 @@
 
 import UIKit
 
+protocol GroupViewCellDelegate {
+    
+    func favoriteButtonTappedInGroupViewCell(groupViewCell: GroupViewCell)
+}
+
 class GroupViewCell: UITableViewCell {
 
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
+    var delegate: GroupViewCellDelegate?
+
+    var account: ACCOUNT? {
+        didSet {
+            favoriteButton.selected = account!.favorite?.boolValue ?? false
+            nameLabel.text = account!.name
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //
+        favoriteButton.setTitle("-", forState: .Normal)
+        favoriteButton.setTitle("@", forState: .Selected)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        //
+    @IBAction func favoriteButtonTapped(sender: AnyObject) {
+        delegate?.favoriteButtonTappedInGroupViewCell(self)
     }
-
 }

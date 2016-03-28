@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupViewController: UIViewController {
+class GroupViewController: UIViewController, GroupViewCellDelegate {
     
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var expenseLabel: UILabel!
@@ -65,7 +65,8 @@ class GroupViewController: UIViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("GroupViewCell", forIndexPath: indexPath) as! GroupViewCell
         let account = accounts![indexPath.row]
         
-        cell.nameLabel.text = account.name
+        cell.account  = account
+        cell.delegate = self
         
         return cell
     }
@@ -91,5 +92,21 @@ class GroupViewController: UIViewController {
         else if (editingStyle == .Insert) {
             //
         }
+    }
+    
+    // MARK : - GroupViewCellDelegate
+    
+    func favoriteButtonTappedInGroupViewCell(groupViewCell: GroupViewCell) {
+        let account = groupViewCell.account!
+        let favorite = account.favorite?.boolValue ?? false
+        
+        account.favorite = NSNumber(bool: !favorite)
+        
+        if let error = CoreDataManager.sharedManager.save() {
+            print("\(__FUNCTION__) error : \(error)")
+            return
+        }
+        
+        groupViewCell.account = account
     }
 }

@@ -15,7 +15,7 @@ class CoreDataManager {
     
     var managedObjectContext: NSManagedObjectContext?
     
-    func setup () -> NSError? {
+    func setup() -> NSError? {
         let modelURL = NSBundle.mainBundle().URLForResource("AccountBook", withExtension: "momd")!
         let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
@@ -38,7 +38,7 @@ class CoreDataManager {
         return nil
     }
     
-    func nextIdOfEntity (entityName: String) -> (id: NSNumber?, error: NSError?) {
+    func nextIdOfEntity(entityName: String) -> (id: NSNumber?, error: NSError?) {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedObjectContext!)
@@ -58,7 +58,7 @@ class CoreDataManager {
         }
     }
     
-    func save () -> NSError? {
+    func save() -> NSError? {
         if managedObjectContext!.hasChanges {
             do {
                 try managedObjectContext!.save()

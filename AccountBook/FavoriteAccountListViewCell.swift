@@ -13,16 +13,15 @@ class FavoriteAccountListViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
+    var account: ACCOUNT? {
+        didSet {
+            nameLabel.text = account!.name
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         //
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        //
-    }
-
 }

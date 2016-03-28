@@ -301,6 +301,9 @@
                                                     <state key="selected">
                                                         <color key="titleColor" red="0.0" green="0.13331220739999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="P0m-hf-Hwa" eventType="touchUpInside" id="cXw-4b-f35"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bri-Uc-vIA" userLabel="nameLabel">
                                                     <rect key="frame" x="50" y="12" width="155" height="21"/>
@@ -1394,6 +1397,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DEb-t2-g9R"/>
+        <segue reference="MeI-oj-YWx"/>
     </inferredMetricsTieBreakers>
 </document>
