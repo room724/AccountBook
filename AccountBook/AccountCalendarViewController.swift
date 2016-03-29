@@ -19,6 +19,12 @@ class AccountCalendarViewController : UIViewController
         //
     }
     
+    // MARK: - HomeViewController
+    
+    override func didSelectInHomeViewController() {
+        tableView.setContentOffsetAsContentInset(animated: false)
+    }
+    
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,15 +34,8 @@ class AccountCalendarViewController : UIViewController
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AccountCalendarViewCell", forIndexPath: indexPath) as! AccountCalendarViewCell
         
-        
+        //
         
         return cell
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
 }

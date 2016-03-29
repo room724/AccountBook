@@ -2,7 +2,7 @@
 //  TRANSACTION+CoreDataProperties.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 26..
+//  Created by inock on 2016. 3. 30..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,14 +14,13 @@ import CoreData
 
 extension TRANSACTION {
 
+    @NSManaged var account_id: NSNumber?
+    @NSManaged var card_id: NSNumber?
+    @NSManaged var category_id: NSNumber?
     @NSManaged var date: NSDate?
+    @NSManaged var id: NSNumber?
     @NSManaged var memo: String?
     @NSManaged var money: NSNumber?
     @NSManaged var name: String?
-    @NSManaged var account_id: NSNumber?
-    @NSManaged var card_id: NSNumber?
-    @NSManaged var id: NSNumber?
-    @NSManaged var category_id: NSNumber?
-    @NSManaged var account_from_id: NSNumber?
 
 }

@@ -64,7 +64,7 @@ class GroupViewController: UIViewController, GroupViewCellDelegate {
     // MARK: - HomeViewController
     
     override func didSelectInHomeViewController() {
-        tableView.setContentOffset(CGPointZero, animated: false)
+        tableView.setContentOffsetAsContentInset(animated: false)
     }
     
     // MARK: - UITableViewDataSource

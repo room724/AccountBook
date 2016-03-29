@@ -13,6 +13,7 @@ enum AccountViewMode : NSString {
     case Undefinded
     case Calendar
     case List
+    case Budget
 }
 
 class AccountViewController: UIViewController {
@@ -21,6 +22,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var expenseLabel: UILabel!
     @IBOutlet weak var modeCalendarButton: UIButton!
     @IBOutlet weak var modeListButton: UIButton!
+    @IBOutlet weak var modeBudgetButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     
     var mode: AccountViewMode = .Undefinded
@@ -46,6 +48,7 @@ class AccountViewController: UIViewController {
         
         modeCalendarButton.selected = (mode == .Calendar)
         modeListButton.selected = (mode == .List)
+        modeBudgetButton.selected = (mode == .Budget)
         
         if let viewController = childViewControllers.first {
             viewController.removeFromParentViewController()
@@ -71,5 +74,9 @@ class AccountViewController: UIViewController {
     
     @IBAction func modeListButtonTapped(sender: AnyObject) {
         changeViewMode(.List)
+    }
+    
+    @IBAction func modeBudgetButtonTapped(sender: AnyObject) {
+        changeViewMode(.Budget)
     }
 }

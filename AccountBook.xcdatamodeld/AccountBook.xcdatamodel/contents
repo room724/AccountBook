@@ -12,17 +12,32 @@
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="week_start_day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="ACCOUNT_CATEGORY" representedClassName="CATEGORY_ACCOUNT" syncable="YES">
+    <entity name="CARD_CHECK" representedClassName=".CARD_CHECK" syncable="YES">
+        <attribute name="group_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CARD_CHECK" representedClassName="CARD_CHECK" syncable="YES">
+    <entity name="CARD_CREDIT" representedClassName="CARD_CHECK" syncable="YES">
+        <attribute name="group_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CARD_CREDIT" representedClassName="CARD_CREDIT" syncable="YES">
+    <entity name="CATEGORY_ACCOUNT" representedClassName="CATEGORY_ACCOUNT" syncable="YES">
+        <attribute name="group_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="CATEGORY_TRANSACTION_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
+        <attribute name="group_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="CATEGORY_TRANSACTION_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
+        <attribute name="group_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -33,7 +48,6 @@
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="TRANSACTION" representedClassName="TRANSACTION" syncable="YES">
-        <attribute name="account_from_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="account_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="card_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="category_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -43,24 +57,14 @@
         <attribute name="money" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="TRANSACTION_CATEGORY_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
-    <entity name="TRANSACTION_CATEGORY_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
     <elements>
         <element name="ACCOUNT" positionX="-180" positionY="12" width="128" height="195"/>
-        <element name="CARD_CHECK" positionX="36" positionY="108" width="128" height="90"/>
-        <element name="CARD_CREDIT" positionX="-9" positionY="63" width="128" height="90"/>
-        <element name="ACCOUNT_CATEGORY" positionX="0" positionY="72" width="128" height="90"/>
-        <element name="TRANSACTION_CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="90"/>
-        <element name="TRANSACTION_CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="90"/>
+        <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="105"/>
+        <element name="CARD_CREDIT" positionX="36" positionY="108" width="128" height="105"/>
         <element name="GROUP" positionX="-378" positionY="-9" width="128" height="90"/>
-        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="180"/>
+        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="165"/>
+        <element name="CATEGORY_TRANSACTION_EXPENSE" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="CATEGORY_TRANSACTION_INCOME" positionX="18" positionY="90" width="128" height="105"/>
+        <element name="CARD_CHECK" positionX="-153" positionY="99" width="128" height="105"/>
     </elements>
 </model>

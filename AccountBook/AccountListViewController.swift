@@ -15,11 +15,11 @@ class AccountListViewController : UITableViewController
         
         //
     }
-    
+        
     // MARK: - HomeViewController
     
     override func didSelectInHomeViewController() {
-        tableView.setContentOffset(CGPointZero, animated: false)
+        tableView.setContentOffsetAsContentInset(animated: false)
     }
     
     // MARK: - UITableViewDelegate
@@ -31,15 +31,8 @@ class AccountListViewController : UITableViewController
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AccountListViewCell", forIndexPath: indexPath) as! AccountListViewCell
         
-        
+        //
         
         return cell
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
 }

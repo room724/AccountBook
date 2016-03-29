@@ -1,8 +1,8 @@
 //
-//  CARD_CHECK+CoreDataProperties.swift
+//  GROUP+CoreDataProperties.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 26..
+//  Created by inock on 2016. 3. 30..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,10 +12,10 @@
 import Foundation
 import CoreData
 
-extension CARD_CHECK {
+extension GROUP {
 
+    @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
-    @NSManaged var id: NSNumber?
 
 }
