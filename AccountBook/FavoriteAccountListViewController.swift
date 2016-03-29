@@ -14,6 +14,12 @@ class FavoriteAccountListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.fetchAccounts()
     }
     
@@ -33,6 +39,12 @@ class FavoriteAccountListViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         
         //
+    }
+    
+    // MARK: - HomeViewController
+    
+    override func didSelectInHomeViewController() {
+        tableView.setContentOffset(CGPointZero, animated: false)
     }
     
     // MARK: - UITableViewDataSource

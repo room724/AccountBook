@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Q5b-sl-IMB">
             <objects>
-                <tabBarController id="huS-cM-4zw" sceneMemberID="viewController">
+                <tabBarController id="huS-cM-4zw" customClass="HomeViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="iuH-tg-94M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

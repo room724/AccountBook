@@ -16,6 +16,12 @@ class AccountListViewController : UITableViewController
         //
     }
     
+    // MARK: - HomeViewController
+    
+    override func didSelectInHomeViewController() {
+        tableView.setContentOffset(CGPointZero, animated: false)
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

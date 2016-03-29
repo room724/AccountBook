@@ -16,6 +16,12 @@ class SettingViewController: UITableViewController {
         //
     }
     
+    // MARK: - HomeViewController
+    
+    override func didSelectInHomeViewController() {
+        tableView.setContentOffset(CGPointZero, animated: false)
+    }
+    
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

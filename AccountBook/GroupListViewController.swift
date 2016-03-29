@@ -14,6 +14,12 @@ class GroupListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.fetchGroups()
     }
     
@@ -45,6 +51,12 @@ class GroupListViewController: UITableViewController {
         }
         
         tableView.insertRowsAtIndexPaths([ NSIndexPath(forRow: order, inSection: 0) ], withRowAnimation: .None)
+    }
+    
+    // MARK: - HomeViewController
+    
+    override func didSelectInHomeViewController() {
+        tableView.setContentOffset(CGPointZero, animated: false)
     }
     
     // MARK: - UITableViewDataSource

@@ -30,6 +30,10 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.changeViewMode(.Calendar)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.fetchTransactions()
     }
     

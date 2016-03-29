@@ -45,6 +45,7 @@
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
 		309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */; };
+		30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A37C961CAACA04000EDB4E /* HomeViewController.swift */; };
 		30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */; };
 		30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B01C8737DF00596CCC /* SettingViewController.swift */; };
 		30C9A4B41C88801B00596CCC /* GroupListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4B31C88801B00596CCC /* GroupListViewCell.swift */; };
@@ -97,6 +98,7 @@
 		309DCDD11C8721D00035B6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309DCDD41C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309DCDD61C8721D00035B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30A37C961CAACA04000EDB4E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewController.swift; sourceTree = "<group>"; };
 		30C9A4B01C8737DF00596CCC /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		30C9A4B31C88801B00596CCC /* GroupListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 			path = AccountBook;
 			sourceTree = "<group>";
 		};
+		30A37C951CAAC9ED000EDB4E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30A37C961CAACA04000EDB4E /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		30C9A49C1C87229000596CCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +263,7 @@
 		30C9A4A61C87247B00596CCC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				30A37C951CAAC9ED000EDB4E /* Home */,
 				309872AB1CA9556C004B649F /* FavoriteAccountList */,
 				30C9A4AA1C87379E00596CCC /* GroupList */,
 				30C9A4B81C88808700596CCC /* Group */,
@@ -486,6 +497,7 @@
 				309872A21CA633E5004B649F /* GROUP.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
 				3098729C1CA633E5004B649F /* TRANSACTION.swift in Sources */,
+				30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */,
 				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
 				309872A11CA633E5004B649F /* GROUP+CoreDataProperties.swift in Sources */,
 				3098729F1CA633E5004B649F /* CARD_CREDIT+CoreDataProperties.swift in Sources */,
