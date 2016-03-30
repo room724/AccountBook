@@ -1,8 +1,8 @@
 //
-//  CATEGORY_ACCOUNT+CoreDataProperties.swift
+//  BUDGET+CoreDataProperties.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 30..
+//  Created by inock on 2016. 3. 31..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,11 +12,12 @@
 import Foundation
 import CoreData
 
-extension CATEGORY_ACCOUNT {
+extension BUDGET {
 
+    @NSManaged var account_id: NSNumber?
     @NSManaged var id: NSNumber?
-    @NSManaged var name: String?
-    @NSManaged var order: NSNumber?
-    @NSManaged var group_id: NSNumber?
+    @NSManaged var category_id: NSNumber?
+    @NSManaged var money: NSNumber?
+    @NSManaged var type: NSNumber?
 
 }

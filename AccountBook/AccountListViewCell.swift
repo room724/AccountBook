@@ -8,11 +8,19 @@
 
 import UIKit
 
-class AccountListViewCell: UITableViewCell {
+class AccountListViewCell : UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
+    
+    var transaction: TRANSACTION? {
+        didSet {
+            //dateLabel.text = transaction!.date!
+            titleLabel.text = transaction!.name
+            //moneyLabel.text = transaction!.money
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

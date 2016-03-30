@@ -1,5 +1,5 @@
 //
-//  FavoriteAccountListViewController.swift
+//  BookmarkViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 28..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteAccountListViewController: UITableViewController {
+class BookmarkViewController : UITableViewController {
 
     var accounts: [ACCOUNT]?
     
@@ -54,7 +54,7 @@ class FavoriteAccountListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteAccountListViewCell", forIndexPath: indexPath) as! FavoriteAccountListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("BookmarkViewCell", forIndexPath: indexPath) as! BookmarkViewCell
         let account = accounts![indexPath.row]
         
         cell.account = account

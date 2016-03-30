@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountCalendarViewController : UIViewController
+class AccountCalendarViewController : UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var tableView: UITableView!

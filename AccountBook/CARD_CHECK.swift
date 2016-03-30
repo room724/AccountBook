@@ -1,16 +1,16 @@
 //
-//  ACCOUNT.swift
+//  CARD_CHECK.swift
 //  AccountBook
 //
-//  Created by inock on 2016. 3. 30..
+//  Created by inock on 2016. 3. 31..
 //  Copyright © 2016년 room724. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-@objc(ACCOUNT)
-class ACCOUNT: NSManagedObject {
+
+class CARD_CHECK: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

@@ -38,12 +38,16 @@ class CoreDataManager {
         return nil
     }
     
-    func nextIdOfEntity(entityName: String) -> (id: NSNumber?, error: NSError?) {
+    func nextIdOfEntity(entityName: String, predicateFormat: String?) -> (id: NSNumber?, error: NSError?) {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedObjectContext!)
         fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "id", ascending: false) ]
         fetchRequest.fetchLimit = 1
+        
+        if predicateFormat != nil {
+            fetchRequest.predicate = NSPredicate(format: predicateFormat!, argumentArray: nil)
+        }
         
         do {
             let result = try managedObjectContext!.executeFetchRequest(fetchRequest)

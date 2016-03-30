@@ -69,7 +69,7 @@ class GroupListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("GroupListViewCell", forIndexPath: indexPath) as! GroupListViewCell
         let group = groups![indexPath.row]
         
-        cell.nameLabel.text = group.name
+        cell.group = group
         
         return cell
     }

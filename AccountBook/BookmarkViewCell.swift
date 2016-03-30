@@ -1,5 +1,5 @@
 //
-//  FavoriteAccountListViewCell.swift
+//  BookmarkViewCell.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 28..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteAccountListViewCell: UITableViewCell {
+class BookmarkViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!

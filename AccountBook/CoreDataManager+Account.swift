@@ -54,7 +54,7 @@ extension CoreDataManager {
     }
     
     func addAccountWithGroupId(groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
-        let (id, error) = nextIdOfEntity("ACCOUNT")
+        let (id, error) = nextIdOfEntity("ACCOUNT", predicateFormat: "group_id=\(groupId)")
         
         if error != nil {
             return (account: nil, error: error)

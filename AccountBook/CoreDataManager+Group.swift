@@ -32,7 +32,7 @@ extension CoreDataManager {
     }
     
     func addGroup(name name: String, order: NSInteger) -> (group: GROUP?, error: NSError?) {
-        let (id, error) = nextIdOfEntity("GROUP")
+        let (id, error) = nextIdOfEntity("GROUP", predicateFormat: nil)
         
         if error != nil {
             return (group: nil, error: error)

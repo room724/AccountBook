@@ -15,6 +15,12 @@ class GroupListViewCell: UITableViewCell {
     @IBOutlet weak var debtLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
+    var group: GROUP? {
+        didSet {
+            nameLabel.text = group!.name
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupViewController: UIViewController, GroupViewCellDelegate {
+class GroupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GroupViewCellDelegate {
     
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var expenseLabel: UILabel!
