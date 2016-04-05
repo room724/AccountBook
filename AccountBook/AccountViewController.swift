@@ -33,8 +33,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var modeControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
     
-    var accountId: NSNumber?
-    var transactions: [TRANSACTION]?
+    var account: ACCOUNT?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +43,7 @@ class AccountViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        fetchTransactions()
+        fetchAccountDetailInfos()
     }
     
     func updateModeView() {
@@ -62,7 +61,11 @@ class AccountViewController: UIViewController {
         addChildViewController(viewController)
     }
     
-    func fetchTransactions() {
+    func fetchAccountDetailInfos() {
+        
+        
+        
+        
         
     }
     

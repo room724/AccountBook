@@ -8,15 +8,8 @@
 
 import Foundation
 
-enum TransactionType : NSNumber {
+enum WeekStartDay : NSInteger {
     
-    case Income
-    case Expense
-    case Transfer
-}
-
-enum BudgetType : NSNumber {
-    
-    case Income
-    case Expense
+    case Sunday = 1
+    case Monday
 }

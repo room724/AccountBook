@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
     <entity name="ACCOUNT" representedClassName="ACCOUNT" syncable="YES">
+        <attribute name="bookmark" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="carryover" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>

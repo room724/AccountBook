@@ -39,6 +39,7 @@
 		308E6E7C1CAC98AE00F16585 /* BUDGET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E6C1CAC98AE00F16585 /* BUDGET.swift */; };
 		308E6E7D1CAC98AE00F16585 /* CARD_CHECK+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E6D1CAC98AE00F16585 /* CARD_CHECK+CoreDataProperties.swift */; };
 		308E6E7E1CAC98AE00F16585 /* CARD_CHECK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E6E1CAC98AE00F16585 /* CARD_CHECK.swift */; };
+		308E6E801CB3F8FB00F16585 /* AppDefines+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E7F1CB3F8FB00F16585 /* AppDefines+CoreData.swift */; };
 		309872861CA4AE49004B649F /* CoreDataManager+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872851CA4AE49004B649F /* CoreDataManager+Group.swift */; };
 		309872881CA4AF21004B649F /* CoreDataManager+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872871CA4AF21004B649F /* CoreDataManager+Account.swift */; };
 		3098728A1CA4AF30004B649F /* CoreDataManager+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872891CA4AF30004B649F /* CoreDataManager+Transition.swift */; };
@@ -94,6 +95,7 @@
 		308E6E6C1CAC98AE00F16585 /* BUDGET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUDGET.swift; sourceTree = "<group>"; };
 		308E6E6D1CAC98AE00F16585 /* CARD_CHECK+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CHECK+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		308E6E6E1CAC98AE00F16585 /* CARD_CHECK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CARD_CHECK.swift; sourceTree = "<group>"; };
+		308E6E7F1CB3F8FB00F16585 /* AppDefines+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDefines+CoreData.swift"; sourceTree = "<group>"; };
 		309872851CA4AE49004B649F /* CoreDataManager+Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Group.swift"; sourceTree = "<group>"; };
 		309872871CA4AF21004B649F /* CoreDataManager+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Account.swift"; sourceTree = "<group>"; };
 		309872891CA4AF30004B649F /* CoreDataManager+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Transition.swift"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				30CA61781C99C88F005879F0 /* ManagedObject */,
 				306004751C99B3F500E15DCF /* Manager */,
 				301A19FB1C944B5B002353A0 /* AppDefines.swift */,
+				308E6E7F1CB3F8FB00F16585 /* AppDefines+CoreData.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
 				30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */,
 				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
+				308E6E801CB3F8FB00F16585 /* AppDefines+CoreData.swift in Sources */,
 				30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,12 @@ import UIKit
 
 protocol GroupViewCellDelegate {
     
-    func favoriteButtonTappedInGroupViewCell(groupViewCell: GroupViewCell)
+    func bookmarkButtonTappedInGroupViewCell(groupViewCell: GroupViewCell)
 }
 
 class GroupViewCell: UITableViewCell {
 
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
@@ -23,7 +23,7 @@ class GroupViewCell: UITableViewCell {
 
     var account: ACCOUNT? {
         didSet {
-            favoriteButton.selected = account!.favorite?.boolValue ?? false
+            bookmarkButton.selected = account!.bookmark?.boolValue ?? false
             nameLabel.text = account!.name
         }
     }
@@ -31,11 +31,11 @@ class GroupViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        favoriteButton.setTitle("-", forState: .Normal)
-        favoriteButton.setTitle("@", forState: .Selected)
+        bookmarkButton.setTitle("-", forState: .Normal)
+        bookmarkButton.setTitle("@", forState: .Selected)
     }
 
-    @IBAction func favoriteButtonTapped(sender: AnyObject) {
-        delegate?.favoriteButtonTappedInGroupViewCell(self)
+    @IBAction func bookmarkButtonTapped(sender: AnyObject) {
+        delegate?.bookmarkButtonTappedInGroupViewCell(self)
     }
 }

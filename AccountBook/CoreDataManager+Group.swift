@@ -31,6 +31,18 @@ extension CoreDataManager {
         }
     }
     
+    func getGroupCount() -> (count: NSInteger, error: NSError?) {
+        let fetchRequest = NSFetchRequest()
+        
+        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext!)
+        fetchRequest.includesPropertyValues = false
+        
+        var error: NSError?
+        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
+        
+        return (count : count, error: error)
+    }
+    
     func addGroup(name name: String, order: NSInteger) -> (group: GROUP?, error: NSError?) {
         let (id, error) = nextIdOfEntity("GROUP", predicateFormat: nil)
         
@@ -44,6 +56,8 @@ extension CoreDataManager {
         group.name = name
         group.order = order
         
+        // todo : add entity with default values -> card_check, card_credit, category_account, category_transaction_expense, category_transaction_income
+                
         if let error = save() {
             return (group: nil, error: error)
         }
@@ -52,6 +66,12 @@ extension CoreDataManager {
     }
     
     func removeGroup(group: GROUP) -> NSError? {
+        if let error = removeAccounts(groupId: group.id!) {
+            return error
+        }
+        
+        // todo : delete entity -> card_check, card_credit, category_account, category_transaction_expense, category_transaction_income
+        
         managedObjectContext!.deleteObject(group)
         
         if let error = save() {

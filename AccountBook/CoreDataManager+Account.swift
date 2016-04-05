@@ -11,7 +11,7 @@ import Foundation
 
 extension CoreDataManager {
 
-    func fetchAccountsWithGroupId(groupId: NSNumber, completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
+    func fetchAccounts(groupId groupId: NSNumber, completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
@@ -32,11 +32,11 @@ extension CoreDataManager {
         }
     }
     
-    func fetchFavoriteAccounts(completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
+    func fetchBookmarkAccounts(completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "favorite = true", argumentArray: nil)
+        fetchRequest.predicate = NSPredicate(format: "bookmark = true", argumentArray: nil)
         fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "name", ascending: true) ]
         
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
@@ -53,7 +53,20 @@ extension CoreDataManager {
         }
     }
     
-    func addAccountWithGroupId(groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
+    func getAccountCount(groupId groupId: NSNumber) -> (count: NSInteger, error: NSError?) {
+        let fetchRequest = NSFetchRequest()
+        
+        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
+        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId)", argumentArray: nil)
+        fetchRequest.includesPropertyValues = false
+        
+        var error: NSError?
+        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
+        
+        return (count : count, error: error)
+    }
+    
+    func addAccount(groupId groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
         let (id, error) = nextIdOfEntity("ACCOUNT", predicateFormat: "group_id=\(groupId)")
         
         if error != nil {
@@ -66,11 +79,11 @@ extension CoreDataManager {
         account.id = id
         account.name = name
         account.order = order
-        account.category_id = 1 // todo
-        account.week_start_day = 1 // todo
-        account.month_start_date = 25 // todo
+        account.category_id = 0 // todo
+        account.week_start_day = NSNumber(integer: WeekStartDay.Sunday.rawValue)
+        account.month_start_date = 1
         account.carryover = false
-        account.favorite = false
+        account.bookmark = false
         account.memo = String()
         
         if let error = save() {
@@ -80,8 +93,17 @@ extension CoreDataManager {
         return (account: account, error: nil)
     }
     
+    func removeAccounts(groupId groupId: NSNumber) -> NSError? {
+        
+        // todo
+        
+        return nil
+    }
+    
     func removeAccount(account: ACCOUNT) -> NSError? {
         managedObjectContext!.deleteObject(account)
+        
+        // todo : delete entity -> budget, transaction
         
         if let error = save() {
             return error

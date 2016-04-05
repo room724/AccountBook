@@ -24,7 +24,7 @@ class BookmarkViewController : UITableViewController {
     }
     
     func fetchAccounts() {
-        CoreDataManager.sharedManager.fetchFavoriteAccounts { (accounts, error) in
+        CoreDataManager.sharedManager.fetchBookmarkAccounts { (accounts, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
                 return
@@ -54,5 +54,14 @@ class BookmarkViewController : UITableViewController {
         cell.account = account
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "AccountViewController") {
+            let accountViewController = segue.destinationViewController as! AccountViewController
+            accountViewController.account = accounts![tableView.indexPathForSelectedRow!.row]
+        }
     }
 }

@@ -17,7 +17,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var assetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var groupId: NSNumber?
+    var group: GROUP?
     var accounts: [ACCOUNT]?
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func fetchAccounts() {
-        CoreDataManager.sharedManager.fetchAccountsWithGroupId(groupId!) { (accounts, error) in
+        CoreDataManager.sharedManager.fetchAccounts(groupId: group!.id!) { (accounts, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
                 return
@@ -43,9 +43,9 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    @IBAction func addButtonTapped(sender: UIButton) {
+    func addAccount() {
         let order = accounts?.count ?? 0
-        let (account, error) = CoreDataManager.sharedManager.addAccountWithGroupId(groupId!, name: "ABC", order: order)
+        let (account, error) = CoreDataManager.sharedManager.addAccount(groupId: group!.id!, name: "ABC", order: order)
         
         if (error != nil) {
             print("\(__FUNCTION__) error : \(error)")
@@ -59,6 +59,21 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         
         tableView.insertRowsAtIndexPaths([ NSIndexPath(forRow: order, inSection: 0) ], withRowAnimation: .None)
+    }
+    
+    func removeAccount(account: ACCOUNT) {
+        if let error = CoreDataManager.sharedManager.removeAccount(account) {
+            print("\(__FUNCTION__) error : \(error)")
+            return
+        }
+        
+        let index = accounts!.indexOf(account)!
+        accounts!.removeAtIndex(index)
+        tableView.deleteRowsAtIndexPaths([ NSIndexPath(forRow: index, inSection: 0) ], withRowAnimation: .None)
+    }
+    
+    @IBAction func addButtonTapped(sender: UIButton) {
+        addAccount()
     }
     
     // MARK: - HomeViewController
@@ -91,28 +106,17 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == .Delete) {
-            let account = accounts![indexPath.row]
-            
-            if let error = CoreDataManager.sharedManager.removeAccount(account) {
-                print("\(__FUNCTION__) error : \(error)")
-                return
-            }
-            
-            accounts!.removeAtIndex(accounts!.indexOf(account)!)
-            tableView.deleteRowsAtIndexPaths([ NSIndexPath(forRow: indexPath.row, inSection: 0) ], withRowAnimation: .None)
-        }
-        else if (editingStyle == .Insert) {
-            //
+            removeAccount(accounts![indexPath.row])
         }
     }
     
     // MARK : - GroupViewCellDelegate
     
-    func favoriteButtonTappedInGroupViewCell(groupViewCell: GroupViewCell) {
+    func bookmarkButtonTappedInGroupViewCell(groupViewCell: GroupViewCell) {
         let account = groupViewCell.account!
-        let favorite = account.favorite?.boolValue ?? false
+        let bookmark = account.bookmark?.boolValue ?? false
         
-        account.favorite = NSNumber(bool: !favorite)
+        account.bookmark = NSNumber(bool: !bookmark)
         
         if let error = CoreDataManager.sharedManager.save() {
             print("\(__FUNCTION__) error : \(error)")
@@ -120,5 +124,14 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         
         groupViewCell.account = account
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "AccountViewController") {
+            let accountViewController = segue.destinationViewController as! AccountViewController
+            accountViewController.account = accounts![tableView.indexPathForSelectedRow!.row]
+        }
     }
 }
