@@ -24,7 +24,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CARD_CREDIT" representedClassName="CARD_CHECK" syncable="YES">
+    <entity name="CARD_CREDIT" representedClassName="CARD_CREDIT" syncable="YES">
         <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -36,13 +36,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CATEGORY_TRANSACTION_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
+    <entity name="CATEGORY_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
         <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CATEGORY_TRANSACTION_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
+    <entity name="CATEGORY_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
         <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -70,8 +70,8 @@
         <element name="CARD_CHECK" positionX="-153" positionY="99" width="128" height="105"/>
         <element name="CARD_CREDIT" positionX="36" positionY="108" width="128" height="105"/>
         <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="105"/>
-        <element name="CATEGORY_TRANSACTION_EXPENSE" positionX="-18" positionY="54" width="128" height="105"/>
-        <element name="CATEGORY_TRANSACTION_INCOME" positionX="18" positionY="90" width="128" height="105"/>
+        <element name="CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="105"/>
         <element name="GROUP" positionX="-378" positionY="-9" width="128" height="90"/>
         <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="180"/>
     </elements>

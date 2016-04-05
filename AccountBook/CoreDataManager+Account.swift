@@ -20,8 +20,7 @@ extension CoreDataManager {
         
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let accounts = asynchronousFetchResult.finalResult as? [ACCOUNT]
-                completion?(accounts: accounts, error: nil)
+                completion?(accounts: asynchronousFetchResult.finalResult as? [ACCOUNT], error: nil)
             })
         }
         
@@ -41,8 +40,7 @@ extension CoreDataManager {
         
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let accounts = asynchronousFetchResult.finalResult as? [ACCOUNT]
-                completion?(accounts: accounts, error: nil)
+                completion?(accounts: asynchronousFetchResult.finalResult as? [ACCOUNT], error: nil)
             })
         }
         
@@ -79,8 +77,8 @@ extension CoreDataManager {
         account.id = id
         account.name = name
         account.order = order
-        account.category_id = 0 // todo
-        account.week_start_day = NSNumber(integer: WeekStartDay.Sunday.rawValue)
+        account.category_id = 0
+        account.week_start_day = WeekStartDay.Sunday.rawValue
         account.month_start_date = 1
         account.carryover = false
         account.bookmark = false

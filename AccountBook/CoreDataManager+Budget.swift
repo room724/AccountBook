@@ -22,7 +22,7 @@ extension CoreDataManager {
         budget.account_id = accountId
         budget.type = type.rawValue
         budget.category_id = categoryId
-        budget.money = NSNumber(integer: money)
+        budget.money = money
         
         if let error = save() {
             return (budget: nil, error: error)

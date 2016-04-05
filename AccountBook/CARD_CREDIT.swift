@@ -1,5 +1,5 @@
 //
-//  ACCOUNT.swift
+//  CARD_CREDIT.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 6..
@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-@objc(ACCOUNT)
-class ACCOUNT: NSManagedObject {
+@objc(CARD_CREDIT)
+class CARD_CREDIT: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

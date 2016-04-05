@@ -19,8 +19,7 @@ extension CoreDataManager {
         
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let groups = asynchronousFetchResult.finalResult as? [GROUP]
-                completion?(groups: groups, error: nil)
+                completion?(groups: asynchronousFetchResult.finalResult as? [GROUP], error: nil)
             })
         }
         

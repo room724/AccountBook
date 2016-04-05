@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-enum WeekStartDay : NSInteger {
-    
-    case Sunday = 1
-    case Monday
-}

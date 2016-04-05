@@ -1,5 +1,5 @@
 //
-//  GROUP+CoreDataProperties.swift
+//  CARD_CREDIT+CoreDataProperties.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 6..
@@ -12,8 +12,9 @@
 import Foundation
 import CoreData
 
-extension GROUP {
+extension CARD_CREDIT {
 
+    @NSManaged var group_id: NSNumber?
     @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
