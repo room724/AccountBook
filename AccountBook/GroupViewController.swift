@@ -28,7 +28,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.fetchAccounts()
+        fetchAccounts()
     }
     
     func fetchAccounts() {

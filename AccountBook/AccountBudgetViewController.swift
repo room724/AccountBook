@@ -10,26 +10,39 @@ import UIKit
 
 class AccountBudgetViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    enum TypeControlIndex : NSInteger {
+        
+        case Income = 0
+        case Expense
+    }
+    
+    @IBOutlet weak var typeControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //
+        typeControl.selectedSegmentIndex = TypeControlIndex.Expense.rawValue
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        fetchList()
+    }
+    
+    func fetchList() {
+        var type: BudgetType?
+        
+        if typeControl.selectedSegmentIndex == TypeControlIndex.Income.rawValue {
+            type = .Income
+        } else if typeControl.selectedSegmentIndex == TypeControlIndex.Expense.rawValue {
+            type = .Expense
+        }
         
         //
     }
     
-    // MARK: - HomeViewController
-    
-    override func didSelectInHomeViewController() {
-        segmentedControl.selectedSegmentIndex = 0
-        tableView.setContentOffsetAsContentInset(animated: false)
+    @IBAction func typeControlValueChanged(sender: AnyObject) {
+        fetchList()
     }
     
     // MARK: - UITableViewDelegate

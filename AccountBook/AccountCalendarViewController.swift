@@ -19,12 +19,6 @@ class AccountCalendarViewController : UIViewController, UITableViewDataSource, U
         //
     }
     
-    // MARK: - HomeViewController
-    
-    override func didSelectInHomeViewController() {
-        tableView.setContentOffsetAsContentInset(animated: false)
-    }
-    
     // MARK: - UITableViewDelegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

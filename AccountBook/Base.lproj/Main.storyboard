@@ -369,58 +369,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZ0-JH-5Kb" userLabel="summaryView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="62"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="수입" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPU-b9-2UZ">
                                         <rect key="frame" x="11" y="12" width="30" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지출" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-dn-YxK">
-                                        <rect key="frame" x="11" y="29" width="30" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="183" y="12" width="30" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdb-TK-8oc" userLabel="incomeLabel">
-                                        <rect key="frame" x="41" y="12" width="85" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="60" y="12" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbn-OY-6Zh" userLabel="expenseLabel">
-                                        <rect key="frame" x="41" y="29" width="85" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="212" y="12" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqw-4N-CbQ" userLabel="modeListButton">
-                                        <rect key="frame" x="244" y="16" width="30" height="30"/>
-                                        <state key="normal" title="목록"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qb-cH-TB5">
+                                        <rect key="frame" x="193" y="34" width="30" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QST-GO-83Y" userLabel="expenseCashLabel">
+                                        <rect key="frame" x="232" y="34" width="80" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-jT-XXu">
+                                        <rect key="frame" x="193" y="46" width="30" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8Z-gw-CQh" userLabel="expenseCardLabel">
+                                        <rect key="frame" x="232" y="46" width="80" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현금잔액" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-CJ-HDu">
+                                        <rect key="frame" x="11" y="37" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999,999,999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nh0-Tm-IGn" userLabel="balanceLabel">
+                                        <rect key="frame" x="60" y="37" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZlK-rz-dji" userLabel="modeControl">
+                                        <rect key="frame" x="0.0" y="68" width="320" height="29"/>
+                                        <color key="backgroundColor" red="0.69756071990000001" green="0.48708370179999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <segments>
+                                            <segment title="달력"/>
+                                            <segment title="목록"/>
+                                            <segment title="예산"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="modeListButtonTapped:" destination="dAn-da-9aq" eventType="touchUpInside" id="0r1-Mn-mme"/>
+                                            <action selector="modeControlValueChanged:" destination="dAn-da-9aq" eventType="valueChanged" id="9Kq-6x-kuN"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxy-gS-Ku2" userLabel="modeBudgetButton">
-                                        <rect key="frame" x="282" y="16" width="30" height="30"/>
-                                        <state key="normal" title="예산"/>
-                                        <connections>
-                                            <action selector="modeBudgetButtonTapped:" destination="dAn-da-9aq" eventType="touchUpInside" id="0u3-8V-ow7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZj-U3-6yF" userLabel="modeCalendarButton">
-                                        <rect key="frame" x="206" y="16" width="30" height="30"/>
-                                        <state key="normal" title="달력"/>
-                                        <connections>
-                                            <action selector="modeCalendarButtonTapped:" destination="dAn-da-9aq" eventType="touchUpInside" id="lyK-Rx-TES"/>
-                                        </connections>
-                                    </button>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58606382990000006" green="0.75743893110000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ssf-y0-XXw" userLabel="containerView">
-                                <rect key="frame" x="0.0" y="125" width="320" height="394"/>
+                                <rect key="frame" x="0.0" y="160" width="320" height="359"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -434,12 +462,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="balanceLabel" destination="nh0-Tm-IGn" id="CQb-Ma-8XX"/>
                         <outlet property="containerView" destination="ssf-y0-XXw" id="dmV-tD-JVo"/>
-                        <outlet property="expenseLabel" destination="lbn-OY-6Zh" id="M23-Kw-ey3"/>
-                        <outlet property="incomeLabel" destination="Wdb-TK-8oc" id="PXL-bM-KIQ"/>
-                        <outlet property="modeBudgetButton" destination="Qxy-gS-Ku2" id="mqe-Y6-ZHZ"/>
-                        <outlet property="modeCalendarButton" destination="pZj-U3-6yF" id="Fs8-NH-qz2"/>
-                        <outlet property="modeListButton" destination="qqw-4N-CbQ" id="gBD-Vx-zKs"/>
+                        <outlet property="expenseCardLabel" destination="R8Z-gw-CQh" id="Re0-8q-fzX"/>
+                        <outlet property="expenseCashLabel" destination="QST-GO-83Y" id="SQE-gk-gbl"/>
+                        <outlet property="expenseLabel" destination="lbn-OY-6Zh" id="iNU-jF-VJ4"/>
+                        <outlet property="incomeLabel" destination="Wdb-TK-8oc" id="bZu-hZ-cpc"/>
+                        <outlet property="modeControl" destination="ZlK-rz-dji" id="RAh-Nz-XIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzp-hj-WGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,18 +487,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y4P-6k-4sC" userLabel="segmentedControl">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Y4P-6k-4sC" userLabel="typeControl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
                                 <segments>
                                     <segment title="수입"/>
                                     <segment title="지출"/>
                                 </segments>
+                                <connections>
+                                    <action selector="typeControlValueChanged:" destination="2IL-hx-oiL" eventType="valueChanged" id="I9F-c8-MTT"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yJy-oF-kq5" userLabel="tableView">
                                 <rect key="frame" x="0.0" y="28" width="320" height="540"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountBudgetViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountBudgetViewCell" id="r1g-1C-Jp3" customClass="AccountBudgetViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountBudgetViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountBudgetViewCell" id="r1g-1C-Jp3" customClass="AccountBudgetViewCell" customModule="AccountBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r1g-1C-Jp3" id="NXL-LH-OEb">
@@ -497,8 +529,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="segmentedControl" destination="Y4P-6k-4sC" id="I4i-YC-jwv"/>
                         <outlet property="tableView" destination="yJy-oF-kq5" id="SBV-2y-Act"/>
+                        <outlet property="typeControl" destination="Y4P-6k-4sC" id="k1p-d5-jPD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zij-h4-mdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,7 +704,7 @@
                                 <rect key="frame" x="0.0" y="260" width="320" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountCalendarViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCalendarViewCell" id="wdq-p2-Lfz" customClass="AccountCalendarViewCell" customModule="AccountBook" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountCalendarViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountCalendarViewCell" id="wdq-p2-Lfz" customClass="AccountCalendarViewCell" customModule="AccountBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wdq-p2-Lfz" id="kt3-55-hgX">
@@ -727,7 +759,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountListlViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountListViewCell" id="dxQ-pI-qX5" customClass="AccountListViewCell" customModule="AccountBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AccountListlViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountListViewCell" id="dxQ-pI-qX5" customClass="AccountListViewCell" customModule="AccountBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dxQ-pI-qX5" id="xWB-KL-PpE">
@@ -1344,35 +1376,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="데이터" id="ckm-at-198">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="v6z-fZ-9Te">
-                                        <rect key="frame" x="0.0" y="297" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v6z-fZ-9Te" id="Kxb-xe-Kj0">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예산" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4z-3w-kl0">
-                                                    <rect key="frame" x="8" y="12" width="28" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKa-6I-PnB">
-                                                    <rect key="frame" x="129" y="11" width="150" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="YvF-E0-5DF" kind="show" id="hbj-tU-9G8"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="2ff-Ev-GLD" id="jmC-bq-b4v"/>
@@ -1404,35 +1407,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4N-fF-ZYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4526" y="1656"/>
-        </scene>
-        <!--예산-->
-        <scene sceneID="gi2-ez-vhp">
-            <objects>
-                <tableViewController id="YvF-E0-5DF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UcY-t2-A9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LE7-Ss-szV">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LE7-Ss-szV" id="h8p-zV-mKq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="YvF-E0-5DF" id="duV-a1-O2c"/>
-                            <outlet property="delegate" destination="YvF-E0-5DF" id="q4l-Hj-Wau"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="예산" id="xIA-cm-Gwu"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6lW-Hr-TnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4932" y="1656"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

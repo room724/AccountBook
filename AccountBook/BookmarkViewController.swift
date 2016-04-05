@@ -20,7 +20,7 @@ class BookmarkViewController : UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.fetchAccounts()
+        fetchAccounts()
     }
     
     func fetchAccounts() {
@@ -33,12 +33,6 @@ class BookmarkViewController : UITableViewController {
             self.accounts = accounts
             self.tableView.reloadData()
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        //
     }
     
     // MARK: - HomeViewController

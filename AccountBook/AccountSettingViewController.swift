@@ -15,10 +15,4 @@ class AccountSettingViewController : UITableViewController
         
         //
     }
-    
-    // MARK: - HomeViewController
-    
-    override func didSelectInHomeViewController() {
-        tableView.setContentOffsetAsContentInset(animated: false)
-    }
 }

@@ -8,55 +8,53 @@
 
 import UIKit
 
-enum AccountViewMode : NSString {
-    
-    case Undefinded
-    case Calendar
-    case List
-    case Budget
-}
-
 class AccountViewController: UIViewController {
     
+    enum ModeControlIndex : NSInteger {
+        
+        case Calendar = 0
+        case List
+        case Budget
+        
+        var description: String {
+            switch self {
+                case .Calendar : return "Calendar"
+                case .List     : return "List"
+                case .Budget   : return "Budget"
+            }
+        }
+    }
+    
     @IBOutlet weak var incomeLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var expenseLabel: UILabel!
-    @IBOutlet weak var modeCalendarButton: UIButton!
-    @IBOutlet weak var modeListButton: UIButton!
-    @IBOutlet weak var modeBudgetButton: UIButton!
+    @IBOutlet weak var expenseCashLabel: UILabel!
+    @IBOutlet weak var expenseCardLabel: UILabel!
+    @IBOutlet weak var modeControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
     
-    var mode: AccountViewMode = .Undefinded
     var accountId: NSNumber?
     var transactions: [TRANSACTION]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.changeViewMode(.Calendar)
+        modeControl.selectedSegmentIndex = ModeControlIndex.Calendar.rawValue
+        updateModeView()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.fetchTransactions()
+        fetchTransactions()
     }
     
-    func changeViewMode(mode: AccountViewMode) {
-        if self.mode == mode {
-            return
-        }
-        
-        self.mode = mode
-        
-        modeCalendarButton.selected = (mode == .Calendar)
-        modeListButton.selected = (mode == .List)
-        modeBudgetButton.selected = (mode == .Budget)
-        
+    func updateModeView() {
         if let viewController = childViewControllers.first {
             viewController.removeFromParentViewController()
             viewController.view.removeFromSuperview()
         }
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewControllerId: String = "Account\(mode.rawValue)ViewController"
+        let viewControllerId: String = "Account\(ModeControlIndex(rawValue: modeControl.selectedSegmentIndex)!.description)ViewController"
         let viewController = storyBoard.instantiateViewControllerWithIdentifier(viewControllerId)
         
         viewController.view.frame = containerView.bounds
@@ -68,15 +66,7 @@ class AccountViewController: UIViewController {
         
     }
     
-    @IBAction func modeCalendarButtonTapped(sender: AnyObject) {
-        changeViewMode(.Calendar)
-    }
-    
-    @IBAction func modeListButtonTapped(sender: AnyObject) {
-        changeViewMode(.List)
-    }
-    
-    @IBAction func modeBudgetButtonTapped(sender: AnyObject) {
-        changeViewMode(.Budget)
+    @IBAction func modeControlValueChanged(sender: AnyObject) {
+        updateModeView()
     }
 }

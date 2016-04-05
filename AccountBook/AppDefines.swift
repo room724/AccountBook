@@ -8,15 +8,15 @@
 
 import Foundation
 
-enum BudgetType : NSNumber {
-    
-    case Income
-    case Expense
-}
-
 enum TransactionType : NSNumber {
     
     case Income
     case Expense
     case Transfer
+}
+
+enum BudgetType : NSNumber {
+    
+    case Income
+    case Expense
 }
