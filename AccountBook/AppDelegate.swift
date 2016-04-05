@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        if let error = CoreDataManager.sharedManager.setup() {
+        if let error = CORE_DATA_MANAGER.setup() {
             print("CoreDataManager setup error : \(error)")
         }
         
@@ -23,6 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        CoreDataManager.sharedManager.save()
+        CORE_DATA_MANAGER.save()
     }
 }

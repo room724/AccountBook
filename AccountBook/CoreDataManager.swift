@@ -9,6 +9,8 @@
 import CoreData
 import Foundation
 
+let CORE_DATA_MANAGER = CoreDataManager.sharedManager
+
 class CoreDataManager {
     
     static let sharedManager = CoreDataManager()

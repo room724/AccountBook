@@ -15,7 +15,6 @@ import CoreData
 extension BUDGET {
 
     @NSManaged var account_id: NSNumber?
-    @NSManaged var id: NSNumber?
     @NSManaged var category_id: NSNumber?
     @NSManaged var money: NSNumber?
     @NSManaged var type: NSNumber?

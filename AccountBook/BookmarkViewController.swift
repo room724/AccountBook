@@ -24,7 +24,7 @@ class BookmarkViewController : UITableViewController {
     }
     
     func fetchAccounts() {
-        CoreDataManager.sharedManager.fetchBookmarkAccounts { (accounts, error) in
+        CORE_DATA_MANAGER.fetchBookmarkAccounts { (accounts, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
                 return

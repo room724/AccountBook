@@ -60,6 +60,9 @@
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
 		30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4EB1C8B08E400596CCC /* CheckButton.xib */; };
 		30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4ED1C8B090C00596CCC /* CheckButton.swift */; };
+		30D65E671CB41B3F000AA606 /* CoreDataManager+Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */; };
+		30D65E691CB41B55000AA606 /* CoreDataManager+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E681CB41B55000AA606 /* CoreDataManager+Card.swift */; };
+		30D65E6B1CB41B60000AA606 /* CoreDataManager+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E6A1CB41B60000AA606 /* CoreDataManager+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +121,9 @@
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		30C9A4EB1C8B08E400596CCC /* CheckButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckButton.xib; sourceTree = "<group>"; };
 		30C9A4ED1C8B090C00596CCC /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Budget.swift"; sourceTree = "<group>"; };
+		30D65E681CB41B55000AA606 /* CoreDataManager+Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Card.swift"; sourceTree = "<group>"; };
+		30D65E6A1CB41B60000AA606 /* CoreDataManager+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				306004761C99B41700E15DCF /* CoreDataManager.swift */,
-				309872851CA4AE49004B649F /* CoreDataManager+Group.swift */,
 				309872871CA4AF21004B649F /* CoreDataManager+Account.swift */,
+				30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */,
+				30D65E681CB41B55000AA606 /* CoreDataManager+Card.swift */,
+				30D65E6A1CB41B60000AA606 /* CoreDataManager+Category.swift */,
+				309872851CA4AE49004B649F /* CoreDataManager+Group.swift */,
 				309872891CA4AF30004B649F /* CoreDataManager+Transition.swift */,
 			);
 			name = Manager;
@@ -501,7 +510,9 @@
 				308E6E701CAC98AE00F16585 /* CATEGORY_ACCOUNT.swift in Sources */,
 				308E6E7E1CAC98AE00F16585 /* CARD_CHECK.swift in Sources */,
 				308E6E5C1CAC8BCF00F16585 /* GroupSettingViewController.swift in Sources */,
+				30D65E6B1CB41B60000AA606 /* CoreDataManager+Category.swift in Sources */,
 				3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */,
+				30D65E671CB41B3F000AA606 /* CoreDataManager+Budget.swift in Sources */,
 				308E6E7C1CAC98AE00F16585 /* BUDGET.swift in Sources */,
 				301A19F41C940E26002353A0 /* AccountListViewCell.swift in Sources */,
 				308E6E6F1CAC98AE00F16585 /* CATEGORY_ACCOUNT+CoreDataProperties.swift in Sources */,
@@ -526,6 +537,7 @@
 				301A19E41C8B2D86002353A0 /* UIView+ock+Layout.swift in Sources */,
 				301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
+				30D65E691CB41B55000AA606 /* CoreDataManager+Card.swift in Sources */,
 				30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */,
 				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
 				308E6E801CB3F8FB00F16585 /* AppDefines+CoreData.swift in Sources */,

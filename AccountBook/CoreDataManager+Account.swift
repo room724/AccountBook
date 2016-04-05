@@ -36,7 +36,7 @@ extension CoreDataManager {
         let fetchRequest = NSFetchRequest()
         
         fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "bookmark = true", argumentArray: nil)
+        fetchRequest.predicate = NSPredicate(format: "bookmark = \(true)", argumentArray: nil)
         fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "name", ascending: true) ]
         
         let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
@@ -67,7 +67,7 @@ extension CoreDataManager {
     }
     
     func addAccount(groupId groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
-        let (id, error) = nextIdOfEntity("ACCOUNT", predicateFormat: "group_id=\(groupId)")
+        let (id, error) = nextIdOfEntity("ACCOUNT", predicateFormat: "group_id = \(groupId)")
         
         if error != nil {
             return (account: nil, error: error)
@@ -94,21 +94,36 @@ extension CoreDataManager {
     }
     
     func removeAccounts(groupId groupId: NSNumber) -> NSError? {
+        let fetchRequest = NSFetchRequest()
         
-        // todo
+        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
+        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId)", argumentArray: nil)
+        
+        var accounts: [ACCOUNT]
+        
+        do {
+            accounts = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [ACCOUNT]
+        } catch {
+            return error as NSError
+        }
+        
+        for account in accounts {
+            if let error = removeAccount(account) {
+                return error
+            }
+        }
         
         return nil
     }
     
     func removeAccount(account: ACCOUNT) -> NSError? {
-        managedObjectContext!.deleteObject(account)
-        
-        // todo : delete entity -> budget, transaction
-        
-        if let error = save() {
+        if let error = removeBudgets(accountId: account.id!) {
             return error
         }
         
-        return nil
+        // todo : delete entity -> transaction
+        
+        managedObjectContext!.deleteObject(account)
+        return save()
     }
 }

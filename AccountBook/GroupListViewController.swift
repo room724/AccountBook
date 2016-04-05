@@ -24,7 +24,7 @@ class GroupListViewController: UITableViewController {
     }
     
     func fetchGroups() {
-        CoreDataManager.sharedManager.fetchGroups { (groups, error) in
+        CORE_DATA_MANAGER.fetchGroups { (groups, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
                 return
@@ -36,19 +36,19 @@ class GroupListViewController: UITableViewController {
     }
     
     func showActionSheetForRemoveGroup(group: GROUP) {
-        let accountCount = CoreDataManager.sharedManager.getAccountCount(groupId: group.id!).count
+        let accountCount = CORE_DATA_MANAGER.getAccountCount(groupId: group.id!).count
         let message = "\(accountCount)개의 계좌가 존재합니다. 함께 삭제하시겠습니까?"
         let actionSheet = UIAlertController(title: nil, message: message, preferredStyle: .ActionSheet)
         
-        let removeAction = UIAlertAction(title: "전체 삭제", style: .Default) { UIAlertAction in
+        let removeAction = UIAlertAction(title: "전체 삭제", style: .Default) { action in
             self.removeGroup(group)
         }
         
-        let moveAction = UIAlertAction(title: "다른 그룹으로 계좌 이동", style: .Default) { UIAlertAction in
+        let moveAction = UIAlertAction(title: "다른 그룹으로 계좌 이동", style: .Default) { action in
             self.showActionSheetForMoveGroup(group)
         }
         
-        let cancelAction = UIAlertAction(title: "취소", style: .Cancel) { UIAlertAction in
+        let cancelAction = UIAlertAction(title: "취소", style: .Cancel) { action in
             self.tableView.setEditing(false, animated: true)
         }
         
@@ -65,7 +65,7 @@ class GroupListViewController: UITableViewController {
     
     func addGroup() {
         let order = groups?.count ?? 0
-        let (group, error) = CoreDataManager.sharedManager.addGroup(name: "ABC", order: order)
+        let (group, error) = CORE_DATA_MANAGER.addGroup(name: "ABC", order: order)
         
         if (error != nil) {
             print("\(__FUNCTION__) error : \(error)")
@@ -82,7 +82,7 @@ class GroupListViewController: UITableViewController {
     }
     
     func removeGroup(group: GROUP) {
-        if let error = CoreDataManager.sharedManager.removeGroup(group) {
+        if let error = CORE_DATA_MANAGER.removeGroup(group) {
             print("\(__FUNCTION__) error : \(error)")
             return
         }
@@ -131,7 +131,7 @@ class GroupListViewController: UITableViewController {
         if (editingStyle == .Delete) {
             let group = groups![indexPath.row]
             
-            if groups!.count > 1 && CoreDataManager.sharedManager.getAccountCount(groupId: group.id!).count > 0 {
+            if groups!.count > 1 && CORE_DATA_MANAGER.getAccountCount(groupId: group.id!).count > 0 {
                 showActionSheetForRemoveGroup(group)
             }
             else {

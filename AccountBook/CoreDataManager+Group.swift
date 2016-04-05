@@ -73,11 +73,6 @@ extension CoreDataManager {
         // todo : delete entity -> card_check, card_credit, category_account, category_transaction_expense, category_transaction_income
         
         managedObjectContext!.deleteObject(group)
-        
-        if let error = save() {
-            return error
-        }
-        
-        return nil
+        return save()
     }
 }

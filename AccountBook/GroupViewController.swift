@@ -32,7 +32,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func fetchAccounts() {
-        CoreDataManager.sharedManager.fetchAccounts(groupId: group!.id!) { (accounts, error) in
+        CORE_DATA_MANAGER.fetchAccounts(groupId: group!.id!) { (accounts, error) in
             if error != nil {
                 print("\(__FUNCTION__) error : \(error)")
                 return
@@ -45,7 +45,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func addAccount() {
         let order = accounts?.count ?? 0
-        let (account, error) = CoreDataManager.sharedManager.addAccount(groupId: group!.id!, name: "ABC", order: order)
+        let (account, error) = CORE_DATA_MANAGER.addAccount(groupId: group!.id!, name: "ABC", order: order)
         
         if (error != nil) {
             print("\(__FUNCTION__) error : \(error)")
@@ -62,7 +62,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func removeAccount(account: ACCOUNT) {
-        if let error = CoreDataManager.sharedManager.removeAccount(account) {
+        if let error = CORE_DATA_MANAGER.removeAccount(account) {
             print("\(__FUNCTION__) error : \(error)")
             return
         }
@@ -118,7 +118,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         account.bookmark = NSNumber(bool: !bookmark)
         
-        if let error = CoreDataManager.sharedManager.save() {
+        if let error = CORE_DATA_MANAGER.save() {
             print("\(__FUNCTION__) error : \(error)")
             return
         }
