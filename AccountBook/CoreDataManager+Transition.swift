@@ -11,4 +11,18 @@ import Foundation
 
 extension CoreDataManager {
     
+    //
+    
+    func getTransactionCount(accountId accountId: NSNumber, type: TransactionType, categoryId: NSNumber) -> (count: NSInteger, error: NSError?) {
+        let fetchRequest = NSFetchRequest()
+        
+        fetchRequest.entity = NSEntityDescription.entityForName("TRANSACTION", inManagedObjectContext: managedObjectContext!)
+        fetchRequest.predicate = NSPredicate(format: "account_id = \(accountId) AND type = \(type) AND category_id = \(categoryId)", argumentArray: nil)
+        fetchRequest.includesPropertyValues = false
+        
+        var error: NSError?
+        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
+        
+        return (count : count, error: error)
+    }
 }

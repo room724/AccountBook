@@ -64,6 +64,19 @@ extension CoreDataManager {
         return (count : count, error: error)
     }
     
+    func getAccountCount(groupId groupId: NSNumber, categoryId: NSNumber) -> (count: NSInteger, error: NSError?) {
+        let fetchRequest = NSFetchRequest()
+        
+        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
+        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId) AND category_id = \(categoryId)", argumentArray: nil)
+        fetchRequest.includesPropertyValues = false
+        
+        var error: NSError?
+        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
+        
+        return (count : count, error: error)
+    }
+    
     func addAccount(groupId groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
         let (id, error) = nextIdOfEntity("ACCOUNT", predicateFormat: "group_id = \(groupId)")
         

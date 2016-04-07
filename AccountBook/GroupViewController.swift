@@ -110,7 +110,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    // MARK : - GroupViewCellDelegate
+    // MARK: - GroupViewCellDelegate
     
     func bookmarkButtonTappedInGroupViewCell(groupViewCell: GroupViewCell) {
         let account = groupViewCell.account!

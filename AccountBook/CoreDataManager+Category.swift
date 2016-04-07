@@ -11,10 +11,21 @@ import Foundation
 
 extension CoreDataManager {
     
-    func fetchCategories<T: NSManagedObject>(groupId groupId: NSNumber, completion: ((categories: [T]?, error: NSError?) -> Void)?) {
+    //
+    
+    // MARK: - Private
+    
+    private func fetchCategories<T: NSManagedObject>(groupId groupId: NSNumber, completion: ((categories: [T]?, error: NSError?) -> Void)?) {
+        let entityName = String(T.self)
+        
+        if !entityName.hasPrefix("CATEGORY_") {
+            completion?(categories: nil, error: nil)
+            return
+        }
+        
         let fetchRequest = NSFetchRequest()
         
-        fetchRequest.entity = NSEntityDescription.entityForName(String(T.self), inManagedObjectContext: managedObjectContext!)
+        fetchRequest.entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedObjectContext!)
         fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId)", argumentArray: nil)
         fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
         
@@ -31,26 +42,44 @@ extension CoreDataManager {
         }
     }
     
-    func addCategory<T: NSManagedObject>(groupId groupId: NSNumber, name: String, order: NSInteger) -> (category: T?, error: NSError?) {
-        let (id, error) = nextIdOfEntity(String(T.self), predicateFormat: "group_id = \(groupId)")
+    private func addCategory<T: NSManagedObject>(groupId groupId: NSNumber, name: String, order: NSInteger) -> (category: T?, error: NSError?) {
+        let entityName = String(T.self)
+        
+        if !entityName.hasPrefix("CATEGORY_") {
+            return (category: nil, error: nil)
+        }
+        
+        let (id, error) = nextIdOfEntity(entityName, predicateFormat: "group_id = \(groupId)")
         
         if error != nil {
             return (category: nil, error: error)
         }
         
-        let category = NSEntityDescription.insertNewObjectForEntityForName(String(T.self), inManagedObjectContext: managedObjectContext!) as! T
+        let category = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedObjectContext!) as! T
         
-        /*
-        category.group_id = groupId
-        category.id = id
-        category.name = name
-        category.order = order
-        */
+        if let category: NSManagedObject = category {
+            
+            category.setValue(groupId, forKey: "group_id")
+            category.setValue(id, forKey: "id")
+            category.setValue(name, forKey: "name")
+            category.setValue(order, forKey: "order")
+        }
         
         if let error = save() {
             return (category: nil, error: error)
         }
         
         return (category: category, error: nil)
+    }
+    
+    private func removeCategory<T: NSManagedObject>(category: T) -> NSError? {
+        let entityName = String(T.self)
+        
+        if !entityName.hasPrefix("CATEGORY_") {
+            return nil
+        }
+        
+        managedObjectContext!.deleteObject(category)
+        return save()
     }
 }
