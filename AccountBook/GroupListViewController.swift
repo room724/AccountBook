@@ -10,7 +10,7 @@ import UIKit
 
 class GroupListViewController: UITableViewController {
 
-    var groups: [GROUP]?
+    var groups: [Group]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class GroupListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func showActionSheetForRemoveGroup(group: GROUP) {
+    func showActionSheetForRemoveGroup(group: Group) {
         let accountCount = CORE_DATA_MANAGER.fetchAccountCount(groupId: group.id!).count
         let message = "\(accountCount)개의 계좌가 존재합니다. 함께 삭제하시겠습니까?"
         let actionSheet = UIAlertController(title: nil, message: message, preferredStyle: .ActionSheet)
@@ -60,7 +60,7 @@ class GroupListViewController: UITableViewController {
         presentViewController(actionSheet, animated: true, completion: nil)
     }
     
-    func showActionSheetForMoveGroup(group: GROUP) {
+    func showActionSheetForMoveGroup(group: Group) {
         
     }
     
@@ -82,7 +82,7 @@ class GroupListViewController: UITableViewController {
         tableView.insertRowsAtIndexPaths([ NSIndexPath(forRow: order, inSection: 0) ], withRowAnimation: .None)
     }
     
-    func removeGroup(group: GROUP) {
+    func removeGroup(group: Group) {
         if let error = CORE_DATA_MANAGER.removeGroup(group) {
             print("\(__FUNCTION__) error : \(error)")
             return
@@ -93,7 +93,7 @@ class GroupListViewController: UITableViewController {
         tableView.deleteRowsAtIndexPaths([ NSIndexPath(forRow: index, inSection: 0) ], withRowAnimation: .None)
     }
     
-    func moveGroup(group: GROUP, toGroup: GROUP) {
+    func moveGroup(group: Group, toGroup: Group) {
         
     }
     

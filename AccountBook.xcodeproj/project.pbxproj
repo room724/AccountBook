@@ -23,15 +23,33 @@
 		308E6E571CAC224000F16585 /* AccountBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E561CAC224000F16585 /* AccountBudgetViewController.swift */; };
 		308E6E5C1CAC8BCF00F16585 /* GroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E5B1CAC8BCF00F16585 /* GroupSettingViewController.swift */; };
 		308E6E5E1CAC957E00F16585 /* AccountBudgetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E5D1CAC957E00F16585 /* AccountBudgetViewCell.swift */; };
-		309872861CA4AE49004B649F /* CoreDataManager+GROUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872851CA4AE49004B649F /* CoreDataManager+GROUP.swift */; };
-		309872881CA4AF21004B649F /* CoreDataManager+ACCOUNT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872871CA4AF21004B649F /* CoreDataManager+ACCOUNT.swift */; };
-		3098728A1CA4AF30004B649F /* CoreDataManager+TRANSACTION.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872891CA4AF30004B649F /* CoreDataManager+TRANSACTION.swift */; };
+		309872861CA4AE49004B649F /* CoreDataManager+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872851CA4AE49004B649F /* CoreDataManager+Group.swift */; };
+		309872881CA4AF21004B649F /* CoreDataManager+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872871CA4AF21004B649F /* CoreDataManager+Account.swift */; };
+		3098728A1CA4AF30004B649F /* CoreDataManager+Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872891CA4AF30004B649F /* CoreDataManager+Transaction.swift */; };
 		309872AD1CA95595004B649F /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872AC1CA95595004B649F /* BookmarkViewController.swift */; };
 		309872B01CA955BA004B649F /* BookmarkViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309872AF1CA955BA004B649F /* BookmarkViewCell.swift */; };
 		309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309DCDC71C8721D00035B6BE /* AppDelegate.swift */; };
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
 		309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */; };
+		309F428F1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F427D1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift */; };
+		309F42901CB9512B00443016 /* IncomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F427E1CB9512B00443016 /* IncomeCategory.swift */; };
+		309F42911CB9512B00443016 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F427F1CB9512B00443016 /* Transaction+CoreDataProperties.swift */; };
+		309F42921CB9512B00443016 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42801CB9512B00443016 /* Transaction.swift */; };
+		309F42931CB9512B00443016 /* AccountCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42811CB9512B00443016 /* AccountCategory+CoreDataProperties.swift */; };
+		309F42941CB9512B00443016 /* AccountCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42821CB9512B00443016 /* AccountCategory.swift */; };
+		309F42951CB9512B00443016 /* CheckCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42831CB9512B00443016 /* CheckCard+CoreDataProperties.swift */; };
+		309F42961CB9512B00443016 /* CheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42841CB9512B00443016 /* CheckCard.swift */; };
+		309F42971CB9512B00443016 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42851CB9512B00443016 /* Budget+CoreDataProperties.swift */; };
+		309F42981CB9512B00443016 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42861CB9512B00443016 /* Budget.swift */; };
+		309F42991CB9512B00443016 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42871CB9512B00443016 /* Account+CoreDataProperties.swift */; };
+		309F429A1CB9512B00443016 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42881CB9512B00443016 /* Account.swift */; };
+		309F429B1CB9512B00443016 /* CreditCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42891CB9512B00443016 /* CreditCard+CoreDataProperties.swift */; };
+		309F429C1CB9512B00443016 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428A1CB9512B00443016 /* CreditCard.swift */; };
+		309F429D1CB9512B00443016 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428B1CB9512B00443016 /* Group+CoreDataProperties.swift */; };
+		309F429E1CB9512B00443016 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428C1CB9512B00443016 /* Group.swift */; };
+		309F429F1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428D1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift */; };
+		309F42A01CB9512B00443016 /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428E1CB9512B00443016 /* ExpenseCategory.swift */; };
 		30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A37C961CAACA04000EDB4E /* HomeViewController.swift */; };
 		30A37C991CAB3477000EDB4E /* UITableView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A37C981CAB3477000EDB4E /* UITableView+Common.swift */; };
 		30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */; };
@@ -41,48 +59,28 @@
 		30C9A4BF1C88810100596CCC /* GroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4BE1C88810100596CCC /* GroupViewCell.swift */; };
 		30C9A4C11C88811E00596CCC /* GroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */; };
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
-		30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C9A4EB1C8B08E400596CCC /* CheckButton.xib */; };
-		30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4ED1C8B090C00596CCC /* CheckButton.swift */; };
-		30D65E671CB41B3F000AA606 /* CoreDataManager+BUDGET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E661CB41B3F000AA606 /* CoreDataManager+BUDGET.swift */; };
-		30D65E691CB41B55000AA606 /* CoreDataManager+CARD_CHECK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E681CB41B55000AA606 /* CoreDataManager+CARD_CHECK.swift */; };
-		30D65E6B1CB41B60000AA606 /* CoreDataManager+CATEGORY_ACCOUNT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E6A1CB41B60000AA606 /* CoreDataManager+CATEGORY_ACCOUNT.swift */; };
+		30D65E671CB41B3F000AA606 /* CoreDataManager+Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */; };
+		30D65E691CB41B55000AA606 /* CoreDataManager+CheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E681CB41B55000AA606 /* CoreDataManager+CheckCard.swift */; };
+		30D65E6B1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E6A1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift */; };
 		30D65E911CB479B2000AA606 /* CoreDataDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E901CB479B2000AA606 /* CoreDataDefines.swift */; };
-		30D65EB71CB4813B000AA606 /* CARD_CHECK+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EA51CB4813B000AA606 /* CARD_CHECK+CoreDataProperties.swift */; };
-		30D65EB81CB4813B000AA606 /* CARD_CHECK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EA61CB4813B000AA606 /* CARD_CHECK.swift */; };
-		30D65EB91CB4813B000AA606 /* GROUP+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EA71CB4813B000AA606 /* GROUP+CoreDataProperties.swift */; };
-		30D65EBA1CB4813B000AA606 /* GROUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EA81CB4813B000AA606 /* GROUP.swift */; };
-		30D65EBB1CB4813B000AA606 /* ACCOUNT+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EA91CB4813B000AA606 /* ACCOUNT+CoreDataProperties.swift */; };
-		30D65EBC1CB4813B000AA606 /* ACCOUNT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EAA1CB4813B000AA606 /* ACCOUNT.swift */; };
-		30D65EBD1CB4813B000AA606 /* CATEGORY_EXPENSE+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EAB1CB4813B000AA606 /* CATEGORY_EXPENSE+CoreDataProperties.swift */; };
-		30D65EBE1CB4813B000AA606 /* CATEGORY_EXPENSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EAC1CB4813B000AA606 /* CATEGORY_EXPENSE.swift */; };
-		30D65EBF1CB4813B000AA606 /* TRANSACTION+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EAD1CB4813B000AA606 /* TRANSACTION+CoreDataProperties.swift */; };
-		30D65EC01CB4813B000AA606 /* TRANSACTION.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EAE1CB4813B000AA606 /* TRANSACTION.swift */; };
-		30D65EC11CB4813B000AA606 /* BUDGET+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EAF1CB4813B000AA606 /* BUDGET+CoreDataProperties.swift */; };
-		30D65EC21CB4813B000AA606 /* BUDGET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB01CB4813B000AA606 /* BUDGET.swift */; };
-		30D65EC31CB4813B000AA606 /* CATEGORY_ACCOUNT+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB11CB4813B000AA606 /* CATEGORY_ACCOUNT+CoreDataProperties.swift */; };
-		30D65EC41CB4813B000AA606 /* CATEGORY_ACCOUNT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB21CB4813B000AA606 /* CATEGORY_ACCOUNT.swift */; };
-		30D65EC51CB4813B000AA606 /* CATEGORY_INCOME+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB31CB4813B000AA606 /* CATEGORY_INCOME+CoreDataProperties.swift */; };
-		30D65EC61CB4813B000AA606 /* CATEGORY_INCOME.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB41CB4813B000AA606 /* CATEGORY_INCOME.swift */; };
-		30D65EC71CB4813B000AA606 /* CARD_CREDIT+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB51CB4813B000AA606 /* CARD_CREDIT+CoreDataProperties.swift */; };
-		30D65EC81CB4813B000AA606 /* CARD_CREDIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EB61CB4813B000AA606 /* CARD_CREDIT.swift */; };
-		30D65ED01CB89D38000AA606 /* ACCOUNT+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ECF1CB89D38000AA606 /* ACCOUNT+CoreDataPropertyNames.swift */; };
-		30D65ED21CB8A205000AA606 /* GROUP+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED11CB8A205000AA606 /* GROUP+CoreDataPropertyNames.swift */; };
-		30D65ED41CB8A221000AA606 /* CATEGORY_ACCOUNT+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED31CB8A221000AA606 /* CATEGORY_ACCOUNT+CoreDataPropertyNames.swift */; };
-		30D65ED61CB8A233000AA606 /* CARD_CHECK+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED51CB8A233000AA606 /* CARD_CHECK+CoreDataPropertyNames.swift */; };
-		30D65ED81CB8A23C000AA606 /* BUDGET+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED71CB8A23C000AA606 /* BUDGET+CoreDataPropertyNames.swift */; };
-		30D65EDA1CB8A247000AA606 /* TRANSACTION+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED91CB8A247000AA606 /* TRANSACTION+CoreDataPropertyNames.swift */; };
-		30D65EDC1CB8A320000AA606 /* CARD_CREDIT+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDB1CB8A320000AA606 /* CARD_CREDIT+CoreDataPropertyNames.swift */; };
-		30D65EDF1CB8A379000AA606 /* CATEGORY_EXPENSE+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDD1CB8A379000AA606 /* CATEGORY_EXPENSE+CoreDataPropertyNames.swift */; };
-		30D65EE01CB8A379000AA606 /* CATEGORY_INCOME+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDE1CB8A379000AA606 /* CATEGORY_INCOME+CoreDataPropertyNames.swift */; };
-		30D65EE71CB8C6D2000AA606 /* CoreDataManager+CARD_CREDIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EE61CB8C6D2000AA606 /* CoreDataManager+CARD_CREDIT.swift */; };
-		30D65EE91CB8C743000AA606 /* CoreDataManager+CATEGORY_INCOME.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EE81CB8C743000AA606 /* CoreDataManager+CATEGORY_INCOME.swift */; };
-		30D65EEB1CB8C750000AA606 /* CoreDataManager+CATEGORY_EXPENSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EEA1CB8C750000AA606 /* CoreDataManager+CATEGORY_EXPENSE.swift */; };
-		30D65EF61CB94A59000AA606 /* CategoryAccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF51CB94A59000AA606 /* CategoryAccountListViewController.swift */; };
-		30D65EF81CB94A68000AA606 /* CategoryIncomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF71CB94A68000AA606 /* CategoryIncomeListViewController.swift */; };
-		30D65EFA1CB94A8D000AA606 /* CategoryExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF91CB94A8D000AA606 /* CategoryExpenseListViewController.swift */; };
-		30D65EFC1CB94A9A000AA606 /* CardCheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EFB1CB94A9A000AA606 /* CardCheckListViewController.swift */; };
-		30D65EFE1CB94AA6000AA606 /* CardCreditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EFD1CB94AA6000AA606 /* CardCreditListViewController.swift */; };
-		30D65F011CB94D1B000AA606 /* CategoryAccountListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65F001CB94D1B000AA606 /* CategoryAccountListViewCell.swift */; };
+		30D65ED01CB89D38000AA606 /* Account+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ECF1CB89D38000AA606 /* Account+CoreDataPropertyNames.swift */; };
+		30D65ED21CB8A205000AA606 /* Group+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED11CB8A205000AA606 /* Group+CoreDataPropertyNames.swift */; };
+		30D65ED41CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED31CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift */; };
+		30D65ED61CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED51CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift */; };
+		30D65ED81CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED71CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift */; };
+		30D65EDA1CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED91CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift */; };
+		30D65EDC1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDB1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift */; };
+		30D65EDF1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDD1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift */; };
+		30D65EE01CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDE1CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift */; };
+		30D65EE71CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EE61CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift */; };
+		30D65EE91CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EE81CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift */; };
+		30D65EEB1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EEA1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift */; };
+		30D65EF61CB94A59000AA606 /* AccountCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF51CB94A59000AA606 /* AccountCategoryListViewController.swift */; };
+		30D65EF81CB94A68000AA606 /* IncomeCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF71CB94A68000AA606 /* IncomeCategoryListViewController.swift */; };
+		30D65EFA1CB94A8D000AA606 /* ExpenseCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF91CB94A8D000AA606 /* ExpenseCategoryListViewController.swift */; };
+		30D65EFC1CB94A9A000AA606 /* CheckCardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EFB1CB94A9A000AA606 /* CheckCardListViewController.swift */; };
+		30D65EFE1CB94AA6000AA606 /* CreditCardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EFD1CB94AA6000AA606 /* CreditCardListViewController.swift */; };
+		30D65F011CB94D1B000AA606 /* AccountCategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65F001CB94D1B000AA606 /* AccountCategoryListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,9 +100,9 @@
 		308E6E561CAC224000F16585 /* AccountBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBudgetViewController.swift; sourceTree = "<group>"; };
 		308E6E5B1CAC8BCF00F16585 /* GroupSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSettingViewController.swift; sourceTree = "<group>"; };
 		308E6E5D1CAC957E00F16585 /* AccountBudgetViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBudgetViewCell.swift; sourceTree = "<group>"; };
-		309872851CA4AE49004B649F /* CoreDataManager+GROUP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+GROUP.swift"; sourceTree = "<group>"; };
-		309872871CA4AF21004B649F /* CoreDataManager+ACCOUNT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+ACCOUNT.swift"; sourceTree = "<group>"; };
-		309872891CA4AF30004B649F /* CoreDataManager+TRANSACTION.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+TRANSACTION.swift"; sourceTree = "<group>"; };
+		309872851CA4AE49004B649F /* CoreDataManager+Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Group.swift"; sourceTree = "<group>"; };
+		309872871CA4AF21004B649F /* CoreDataManager+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Account.swift"; sourceTree = "<group>"; };
+		309872891CA4AF30004B649F /* CoreDataManager+Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Transaction.swift"; sourceTree = "<group>"; };
 		309872AC1CA95595004B649F /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		309872AF1CA955BA004B649F /* BookmarkViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewCell.swift; sourceTree = "<group>"; };
 		309DCDC41C8721D00035B6BE /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +111,24 @@
 		309DCDD11C8721D00035B6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309DCDD41C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309DCDD61C8721D00035B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309F427D1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IncomeCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F427E1CB9512B00443016 /* IncomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomeCategory.swift; sourceTree = "<group>"; };
+		309F427F1CB9512B00443016 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F42801CB9512B00443016 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		309F42811CB9512B00443016 /* AccountCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F42821CB9512B00443016 /* AccountCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCategory.swift; sourceTree = "<group>"; };
+		309F42831CB9512B00443016 /* CheckCard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F42841CB9512B00443016 /* CheckCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCard.swift; sourceTree = "<group>"; };
+		309F42851CB9512B00443016 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F42861CB9512B00443016 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		309F42871CB9512B00443016 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F42881CB9512B00443016 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		309F42891CB9512B00443016 /* CreditCard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreditCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F428A1CB9512B00443016 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		309F428B1CB9512B00443016 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F428C1CB9512B00443016 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		309F428D1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		309F428E1CB9512B00443016 /* ExpenseCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
 		30A37C961CAACA04000EDB4E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30A37C981CAB3477000EDB4E /* UITableView+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Common.swift"; sourceTree = "<group>"; };
 		30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewController.swift; sourceTree = "<group>"; };
@@ -122,49 +138,28 @@
 		30C9A4BE1C88810100596CCC /* GroupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewCell.swift; sourceTree = "<group>"; };
 		30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewHeaderView.swift; sourceTree = "<group>"; };
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		30C9A4EB1C8B08E400596CCC /* CheckButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckButton.xib; sourceTree = "<group>"; };
-		30C9A4ED1C8B090C00596CCC /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
-		30D65E661CB41B3F000AA606 /* CoreDataManager+BUDGET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+BUDGET.swift"; sourceTree = "<group>"; };
-		30D65E681CB41B55000AA606 /* CoreDataManager+CARD_CHECK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CARD_CHECK.swift"; sourceTree = "<group>"; };
-		30D65E6A1CB41B60000AA606 /* CoreDataManager+CATEGORY_ACCOUNT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CATEGORY_ACCOUNT.swift"; sourceTree = "<group>"; };
+		30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Budget.swift"; sourceTree = "<group>"; };
+		30D65E681CB41B55000AA606 /* CoreDataManager+CheckCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CheckCard.swift"; sourceTree = "<group>"; };
+		30D65E6A1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+AccountCategory.swift"; sourceTree = "<group>"; };
 		30D65E901CB479B2000AA606 /* CoreDataDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDefines.swift; sourceTree = "<group>"; };
-		30D65EA51CB4813B000AA606 /* CARD_CHECK+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CHECK+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EA61CB4813B000AA606 /* CARD_CHECK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CARD_CHECK.swift; sourceTree = "<group>"; };
-		30D65EA71CB4813B000AA606 /* GROUP+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GROUP+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EA81CB4813B000AA606 /* GROUP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GROUP.swift; sourceTree = "<group>"; };
-		30D65EA91CB4813B000AA606 /* ACCOUNT+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ACCOUNT+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EAA1CB4813B000AA606 /* ACCOUNT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACCOUNT.swift; sourceTree = "<group>"; };
-		30D65EAB1CB4813B000AA606 /* CATEGORY_EXPENSE+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_EXPENSE+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EAC1CB4813B000AA606 /* CATEGORY_EXPENSE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATEGORY_EXPENSE.swift; sourceTree = "<group>"; };
-		30D65EAD1CB4813B000AA606 /* TRANSACTION+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TRANSACTION+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EAE1CB4813B000AA606 /* TRANSACTION.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRANSACTION.swift; sourceTree = "<group>"; };
-		30D65EAF1CB4813B000AA606 /* BUDGET+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BUDGET+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EB01CB4813B000AA606 /* BUDGET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BUDGET.swift; sourceTree = "<group>"; };
-		30D65EB11CB4813B000AA606 /* CATEGORY_ACCOUNT+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_ACCOUNT+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EB21CB4813B000AA606 /* CATEGORY_ACCOUNT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATEGORY_ACCOUNT.swift; sourceTree = "<group>"; };
-		30D65EB31CB4813B000AA606 /* CATEGORY_INCOME+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_INCOME+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EB41CB4813B000AA606 /* CATEGORY_INCOME.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATEGORY_INCOME.swift; sourceTree = "<group>"; };
-		30D65EB51CB4813B000AA606 /* CARD_CREDIT+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CREDIT+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		30D65EB61CB4813B000AA606 /* CARD_CREDIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CARD_CREDIT.swift; sourceTree = "<group>"; };
-		30D65ECF1CB89D38000AA606 /* ACCOUNT+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ACCOUNT+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED11CB8A205000AA606 /* GROUP+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GROUP+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED31CB8A221000AA606 /* CATEGORY_ACCOUNT+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_ACCOUNT+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED51CB8A233000AA606 /* CARD_CHECK+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CHECK+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED71CB8A23C000AA606 /* BUDGET+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BUDGET+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED91CB8A247000AA606 /* TRANSACTION+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TRANSACTION+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EDB1CB8A320000AA606 /* CARD_CREDIT+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CARD_CREDIT+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EDD1CB8A379000AA606 /* CATEGORY_EXPENSE+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_EXPENSE+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EDE1CB8A379000AA606 /* CATEGORY_INCOME+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATEGORY_INCOME+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EE11CB8A60C000AA606 /* TEST.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TEST.playground; sourceTree = "<group>"; };
-		30D65EE61CB8C6D2000AA606 /* CoreDataManager+CARD_CREDIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CARD_CREDIT.swift"; sourceTree = "<group>"; };
-		30D65EE81CB8C743000AA606 /* CoreDataManager+CATEGORY_INCOME.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CATEGORY_INCOME.swift"; sourceTree = "<group>"; };
-		30D65EEA1CB8C750000AA606 /* CoreDataManager+CATEGORY_EXPENSE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CATEGORY_EXPENSE.swift"; sourceTree = "<group>"; };
-		30D65EF51CB94A59000AA606 /* CategoryAccountListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryAccountListViewController.swift; sourceTree = "<group>"; };
-		30D65EF71CB94A68000AA606 /* CategoryIncomeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryIncomeListViewController.swift; sourceTree = "<group>"; };
-		30D65EF91CB94A8D000AA606 /* CategoryExpenseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryExpenseListViewController.swift; sourceTree = "<group>"; };
-		30D65EFB1CB94A9A000AA606 /* CardCheckListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCheckListViewController.swift; sourceTree = "<group>"; };
-		30D65EFD1CB94AA6000AA606 /* CardCreditListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCreditListViewController.swift; sourceTree = "<group>"; };
-		30D65F001CB94D1B000AA606 /* CategoryAccountListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryAccountListViewCell.swift; sourceTree = "<group>"; };
+		30D65ECF1CB89D38000AA606 /* Account+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED11CB8A205000AA606 /* Group+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED31CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCategory+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED51CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckCard+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED71CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED91CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65EDB1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreditCard+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65EDD1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseCategory+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65EDE1CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IncomeCategory+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65EE61CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CreditCard.swift"; sourceTree = "<group>"; };
+		30D65EE81CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+IncomeCategory.swift"; sourceTree = "<group>"; };
+		30D65EEA1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+ExpenseCategory.swift"; sourceTree = "<group>"; };
+		30D65EF51CB94A59000AA606 /* AccountCategoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCategoryListViewController.swift; sourceTree = "<group>"; };
+		30D65EF71CB94A68000AA606 /* IncomeCategoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomeCategoryListViewController.swift; sourceTree = "<group>"; };
+		30D65EF91CB94A8D000AA606 /* ExpenseCategoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCategoryListViewController.swift; sourceTree = "<group>"; };
+		30D65EFB1CB94A9A000AA606 /* CheckCardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCardListViewController.swift; sourceTree = "<group>"; };
+		30D65EFD1CB94AA6000AA606 /* CreditCardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardListViewController.swift; sourceTree = "<group>"; };
+		30D65F001CB94D1B000AA606 /* AccountCategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCategoryListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,16 +173,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		301A19E51C8B3067002353A0 /* ### TEST ### */ = {
-			isa = PBXGroup;
-			children = (
-				30D65EE11CB8A60C000AA606 /* TEST.playground */,
-				30C9A4ED1C8B090C00596CCC /* CheckButton.swift */,
-				30C9A4EB1C8B08E400596CCC /* CheckButton.xib */,
-			);
-			name = "### TEST ###";
-			sourceTree = "<group>";
-		};
 		301A19F71C943401002353A0 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,15 +202,15 @@
 			isa = PBXGroup;
 			children = (
 				306004761C99B41700E15DCF /* CoreDataManager.swift */,
-				309872871CA4AF21004B649F /* CoreDataManager+ACCOUNT.swift */,
-				30D65E661CB41B3F000AA606 /* CoreDataManager+BUDGET.swift */,
-				30D65E681CB41B55000AA606 /* CoreDataManager+CARD_CHECK.swift */,
-				30D65EE61CB8C6D2000AA606 /* CoreDataManager+CARD_CREDIT.swift */,
-				30D65E6A1CB41B60000AA606 /* CoreDataManager+CATEGORY_ACCOUNT.swift */,
-				30D65EEA1CB8C750000AA606 /* CoreDataManager+CATEGORY_EXPENSE.swift */,
-				30D65EE81CB8C743000AA606 /* CoreDataManager+CATEGORY_INCOME.swift */,
-				309872851CA4AE49004B649F /* CoreDataManager+GROUP.swift */,
-				309872891CA4AF30004B649F /* CoreDataManager+TRANSACTION.swift */,
+				309872871CA4AF21004B649F /* CoreDataManager+Account.swift */,
+				30D65E6A1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift */,
+				30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */,
+				30D65E681CB41B55000AA606 /* CoreDataManager+CheckCard.swift */,
+				30D65EE61CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift */,
+				30D65EEA1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift */,
+				309872851CA4AE49004B649F /* CoreDataManager+Group.swift */,
+				30D65EE81CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift */,
+				309872891CA4AF30004B649F /* CoreDataManager+Transaction.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -235,11 +220,11 @@
 			children = (
 				30D65EFF1CB94C61000AA606 /* View */,
 				308E6E5B1CAC8BCF00F16585 /* GroupSettingViewController.swift */,
-				30D65EF51CB94A59000AA606 /* CategoryAccountListViewController.swift */,
-				30D65EF91CB94A8D000AA606 /* CategoryExpenseListViewController.swift */,
-				30D65EF71CB94A68000AA606 /* CategoryIncomeListViewController.swift */,
-				30D65EFB1CB94A9A000AA606 /* CardCheckListViewController.swift */,
-				30D65EFD1CB94AA6000AA606 /* CardCreditListViewController.swift */,
+				30D65EF51CB94A59000AA606 /* AccountCategoryListViewController.swift */,
+				30D65EF91CB94A8D000AA606 /* ExpenseCategoryListViewController.swift */,
+				30D65EF71CB94A68000AA606 /* IncomeCategoryListViewController.swift */,
+				30D65EFB1CB94A9A000AA606 /* CheckCardListViewController.swift */,
+				30D65EFD1CB94AA6000AA606 /* CreditCardListViewController.swift */,
 			);
 			name = GroupSetting;
 			sourceTree = "<group>";
@@ -281,7 +266,6 @@
 		309DCDC61C8721D00035B6BE /* AccountBook */ = {
 			isa = PBXGroup;
 			children = (
-				301A19E51C8B3067002353A0 /* ### TEST ### */,
 				30C9A4A41C87246D00596CCC /* Application */,
 				30C9A4A51C87247500596CCC /* Library */,
 				30C9A4A61C87247B00596CCC /* UI */,
@@ -447,24 +431,24 @@
 		30CA61781C99C88F005879F0 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
-				30D65EA51CB4813B000AA606 /* CARD_CHECK+CoreDataProperties.swift */,
-				30D65EA61CB4813B000AA606 /* CARD_CHECK.swift */,
-				30D65EA71CB4813B000AA606 /* GROUP+CoreDataProperties.swift */,
-				30D65EA81CB4813B000AA606 /* GROUP.swift */,
-				30D65EA91CB4813B000AA606 /* ACCOUNT+CoreDataProperties.swift */,
-				30D65EAA1CB4813B000AA606 /* ACCOUNT.swift */,
-				30D65EAB1CB4813B000AA606 /* CATEGORY_EXPENSE+CoreDataProperties.swift */,
-				30D65EAC1CB4813B000AA606 /* CATEGORY_EXPENSE.swift */,
-				30D65EAD1CB4813B000AA606 /* TRANSACTION+CoreDataProperties.swift */,
-				30D65EAE1CB4813B000AA606 /* TRANSACTION.swift */,
-				30D65EAF1CB4813B000AA606 /* BUDGET+CoreDataProperties.swift */,
-				30D65EB01CB4813B000AA606 /* BUDGET.swift */,
-				30D65EB11CB4813B000AA606 /* CATEGORY_ACCOUNT+CoreDataProperties.swift */,
-				30D65EB21CB4813B000AA606 /* CATEGORY_ACCOUNT.swift */,
-				30D65EB31CB4813B000AA606 /* CATEGORY_INCOME+CoreDataProperties.swift */,
-				30D65EB41CB4813B000AA606 /* CATEGORY_INCOME.swift */,
-				30D65EB51CB4813B000AA606 /* CARD_CREDIT+CoreDataProperties.swift */,
-				30D65EB61CB4813B000AA606 /* CARD_CREDIT.swift */,
+				309F427D1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift */,
+				309F427E1CB9512B00443016 /* IncomeCategory.swift */,
+				309F427F1CB9512B00443016 /* Transaction+CoreDataProperties.swift */,
+				309F42801CB9512B00443016 /* Transaction.swift */,
+				309F42811CB9512B00443016 /* AccountCategory+CoreDataProperties.swift */,
+				309F42821CB9512B00443016 /* AccountCategory.swift */,
+				309F42831CB9512B00443016 /* CheckCard+CoreDataProperties.swift */,
+				309F42841CB9512B00443016 /* CheckCard.swift */,
+				309F42851CB9512B00443016 /* Budget+CoreDataProperties.swift */,
+				309F42861CB9512B00443016 /* Budget.swift */,
+				309F42871CB9512B00443016 /* Account+CoreDataProperties.swift */,
+				309F42881CB9512B00443016 /* Account.swift */,
+				309F42891CB9512B00443016 /* CreditCard+CoreDataProperties.swift */,
+				309F428A1CB9512B00443016 /* CreditCard.swift */,
+				309F428B1CB9512B00443016 /* Group+CoreDataProperties.swift */,
+				309F428C1CB9512B00443016 /* Group.swift */,
+				309F428D1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift */,
+				309F428E1CB9512B00443016 /* ExpenseCategory.swift */,
 			);
 			name = ManagedObject;
 			sourceTree = "<group>";
@@ -483,15 +467,15 @@
 		30D65ECE1CB89CF7000AA606 /* ManagedObject+Extension */ = {
 			isa = PBXGroup;
 			children = (
-				30D65ECF1CB89D38000AA606 /* ACCOUNT+CoreDataPropertyNames.swift */,
-				30D65ED71CB8A23C000AA606 /* BUDGET+CoreDataPropertyNames.swift */,
-				30D65ED51CB8A233000AA606 /* CARD_CHECK+CoreDataPropertyNames.swift */,
-				30D65EDB1CB8A320000AA606 /* CARD_CREDIT+CoreDataPropertyNames.swift */,
-				30D65ED31CB8A221000AA606 /* CATEGORY_ACCOUNT+CoreDataPropertyNames.swift */,
-				30D65EDD1CB8A379000AA606 /* CATEGORY_EXPENSE+CoreDataPropertyNames.swift */,
-				30D65EDE1CB8A379000AA606 /* CATEGORY_INCOME+CoreDataPropertyNames.swift */,
-				30D65ED11CB8A205000AA606 /* GROUP+CoreDataPropertyNames.swift */,
-				30D65ED91CB8A247000AA606 /* TRANSACTION+CoreDataPropertyNames.swift */,
+				30D65ECF1CB89D38000AA606 /* Account+CoreDataPropertyNames.swift */,
+				30D65ED31CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift */,
+				30D65ED71CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift */,
+				30D65ED51CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift */,
+				30D65EDB1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift */,
+				30D65EDD1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift */,
+				30D65ED11CB8A205000AA606 /* Group+CoreDataPropertyNames.swift */,
+				30D65EDE1CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift */,
+				30D65ED91CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift */,
 			);
 			name = "ManagedObject+Extension";
 			sourceTree = "<group>";
@@ -499,7 +483,7 @@
 		30D65EFF1CB94C61000AA606 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				30D65F001CB94D1B000AA606 /* CategoryAccountListViewCell.swift */,
+				30D65F001CB94D1B000AA606 /* AccountCategoryListViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -563,7 +547,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				301A19F91C943422002353A0 /* AccountGroupViewHeaderView.xib in Resources */,
-				30C9A4EC1C8B08E400596CCC /* CheckButton.xib in Resources */,
 				309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */,
 				309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */,
 				301A19E21C8B2144002353A0 /* CheckButton_unchecked@2x.png in Resources */,
@@ -580,74 +563,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309F429C1CB9512B00443016 /* CreditCard.swift in Sources */,
 				309872B01CA955BA004B649F /* BookmarkViewCell.swift in Sources */,
-				30D65EDC1CB8A320000AA606 /* CARD_CREDIT+CoreDataPropertyNames.swift in Sources */,
-				3098728A1CA4AF30004B649F /* CoreDataManager+TRANSACTION.swift in Sources */,
-				30D65EBE1CB4813B000AA606 /* CATEGORY_EXPENSE.swift in Sources */,
-				309872861CA4AE49004B649F /* CoreDataManager+GROUP.swift in Sources */,
-				30D65EFA1CB94A8D000AA606 /* CategoryExpenseListViewController.swift in Sources */,
-				30D65EC71CB4813B000AA606 /* CARD_CREDIT+CoreDataProperties.swift in Sources */,
+				30D65EDC1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift in Sources */,
+				309F42981CB9512B00443016 /* Budget.swift in Sources */,
+				3098728A1CA4AF30004B649F /* CoreDataManager+Transaction.swift in Sources */,
+				309F42941CB9512B00443016 /* AccountCategory.swift in Sources */,
+				309872861CA4AE49004B649F /* CoreDataManager+Group.swift in Sources */,
+				309F42911CB9512B00443016 /* Transaction+CoreDataProperties.swift in Sources */,
+				309F428F1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift in Sources */,
+				30D65EFA1CB94A8D000AA606 /* ExpenseCategoryListViewController.swift in Sources */,
 				30C9A4BA1C8880D500596CCC /* GroupViewController.swift in Sources */,
-				30D65EDF1CB8A379000AA606 /* CATEGORY_EXPENSE+CoreDataPropertyNames.swift in Sources */,
-				30D65EFE1CB94AA6000AA606 /* CardCreditListViewController.swift in Sources */,
-				30D65ED81CB8A23C000AA606 /* BUDGET+CoreDataPropertyNames.swift in Sources */,
+				30D65EDF1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift in Sources */,
+				30D65EFE1CB94AA6000AA606 /* CreditCardListViewController.swift in Sources */,
+				30D65ED81CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift in Sources */,
 				308E6E571CAC224000F16585 /* AccountBudgetViewController.swift in Sources */,
-				30D65EB81CB4813B000AA606 /* CARD_CHECK.swift in Sources */,
 				309872AD1CA95595004B649F /* BookmarkViewController.swift in Sources */,
-				30D65ED01CB89D38000AA606 /* ACCOUNT+CoreDataPropertyNames.swift in Sources */,
-				30D65EB91CB4813B000AA606 /* GROUP+CoreDataProperties.swift in Sources */,
+				309F429B1CB9512B00443016 /* CreditCard+CoreDataProperties.swift in Sources */,
+				30D65ED01CB89D38000AA606 /* Account+CoreDataPropertyNames.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
 				30A37C991CAB3477000EDB4E /* UITableView+Common.swift in Sources */,
-				30D65F011CB94D1B000AA606 /* CategoryAccountListViewCell.swift in Sources */,
+				30D65F011CB94D1B000AA606 /* AccountCategoryListViewCell.swift in Sources */,
+				309F42951CB9512B00443016 /* CheckCard+CoreDataProperties.swift in Sources */,
+				309F42971CB9512B00443016 /* Budget+CoreDataProperties.swift in Sources */,
+				309F42931CB9512B00443016 /* AccountCategory+CoreDataProperties.swift in Sources */,
+				309F42901CB9512B00443016 /* IncomeCategory.swift in Sources */,
 				30C9A4C11C88811E00596CCC /* GroupViewHeaderView.swift in Sources */,
-				30D65EC21CB4813B000AA606 /* BUDGET.swift in Sources */,
-				30D65EFC1CB94A9A000AA606 /* CardCheckListViewController.swift in Sources */,
+				30D65EFC1CB94A9A000AA606 /* CheckCardListViewController.swift in Sources */,
+				309F429D1CB9512B00443016 /* Group+CoreDataProperties.swift in Sources */,
 				308E6E5E1CAC957E00F16585 /* AccountBudgetViewCell.swift in Sources */,
-				30D65EE71CB8C6D2000AA606 /* CoreDataManager+CARD_CREDIT.swift in Sources */,
-				30D65ED21CB8A205000AA606 /* GROUP+CoreDataPropertyNames.swift in Sources */,
+				309F42961CB9512B00443016 /* CheckCard.swift in Sources */,
+				30D65EE71CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift in Sources */,
+				30D65ED21CB8A205000AA606 /* Group+CoreDataPropertyNames.swift in Sources */,
+				309F429F1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift in Sources */,
 				30C9A4BF1C88810100596CCC /* GroupViewCell.swift in Sources */,
+				309F429E1CB9512B00443016 /* Group.swift in Sources */,
 				308E6E5C1CAC8BCF00F16585 /* GroupSettingViewController.swift in Sources */,
-				30D65E6B1CB41B60000AA606 /* CoreDataManager+CATEGORY_ACCOUNT.swift in Sources */,
-				30D65EC31CB4813B000AA606 /* CATEGORY_ACCOUNT+CoreDataProperties.swift in Sources */,
+				30D65E6B1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift in Sources */,
+				309F42991CB9512B00443016 /* Account+CoreDataProperties.swift in Sources */,
 				3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */,
 				30D65E911CB479B2000AA606 /* CoreDataDefines.swift in Sources */,
-				30D65EC61CB4813B000AA606 /* CATEGORY_INCOME.swift in Sources */,
-				30D65EBC1CB4813B000AA606 /* ACCOUNT.swift in Sources */,
-				30D65E671CB41B3F000AA606 /* CoreDataManager+BUDGET.swift in Sources */,
+				30D65E671CB41B3F000AA606 /* CoreDataManager+Budget.swift in Sources */,
 				301A19F41C940E26002353A0 /* AccountListViewCell.swift in Sources */,
 				306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */,
 				30C9A4B41C88801B00596CCC /* GroupListViewCell.swift in Sources */,
 				301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */,
 				301A19F21C940DD9002353A0 /* AccountCalendarViewController.swift in Sources */,
 				301A19F61C940E30002353A0 /* AccountCalendarViewCell.swift in Sources */,
-				30D65EE01CB8A379000AA606 /* CATEGORY_INCOME+CoreDataPropertyNames.swift in Sources */,
-				30D65EF81CB94A68000AA606 /* CategoryIncomeListViewController.swift in Sources */,
-				30D65EC81CB4813B000AA606 /* CARD_CREDIT.swift in Sources */,
-				30D65EBF1CB4813B000AA606 /* TRANSACTION+CoreDataProperties.swift in Sources */,
+				30D65EE01CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift in Sources */,
+				30D65EF81CB94A68000AA606 /* IncomeCategoryListViewController.swift in Sources */,
 				30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */,
-				309872881CA4AF21004B649F /* CoreDataManager+ACCOUNT.swift in Sources */,
-				30D65EC41CB4813B000AA606 /* CATEGORY_ACCOUNT.swift in Sources */,
+				309F42A01CB9512B00443016 /* ExpenseCategory.swift in Sources */,
+				309F429A1CB9512B00443016 /* Account.swift in Sources */,
+				309872881CA4AF21004B649F /* CoreDataManager+Account.swift in Sources */,
 				301A19F01C940DCA002353A0 /* AccountListViewController.swift in Sources */,
-				30D65EBD1CB4813B000AA606 /* CATEGORY_EXPENSE+CoreDataProperties.swift in Sources */,
 				301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */,
-				30D65ED61CB8A233000AA606 /* CARD_CHECK+CoreDataPropertyNames.swift in Sources */,
-				30D65EC01CB4813B000AA606 /* TRANSACTION.swift in Sources */,
-				30D65EE91CB8C743000AA606 /* CoreDataManager+CATEGORY_INCOME.swift in Sources */,
-				30D65EB71CB4813B000AA606 /* CARD_CHECK+CoreDataProperties.swift in Sources */,
+				30D65ED61CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift in Sources */,
+				30D65EE91CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift in Sources */,
 				301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */,
-				30D65EC51CB4813B000AA606 /* CATEGORY_INCOME+CoreDataProperties.swift in Sources */,
+				309F42921CB9512B00443016 /* Transaction.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
-				30D65EBA1CB4813B000AA606 /* GROUP.swift in Sources */,
-				30D65E691CB41B55000AA606 /* CoreDataManager+CARD_CHECK.swift in Sources */,
-				30D65EC11CB4813B000AA606 /* BUDGET+CoreDataProperties.swift in Sources */,
+				30D65E691CB41B55000AA606 /* CoreDataManager+CheckCard.swift in Sources */,
 				30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */,
-				30D65EF61CB94A59000AA606 /* CategoryAccountListViewController.swift in Sources */,
-				30C9A4EE1C8B090C00596CCC /* CheckButton.swift in Sources */,
-				30D65EEB1CB8C750000AA606 /* CoreDataManager+CATEGORY_EXPENSE.swift in Sources */,
-				30D65EBB1CB4813B000AA606 /* ACCOUNT+CoreDataProperties.swift in Sources */,
+				30D65EF61CB94A59000AA606 /* AccountCategoryListViewController.swift in Sources */,
+				30D65EEB1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift in Sources */,
 				30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */,
-				30D65ED41CB8A221000AA606 /* CATEGORY_ACCOUNT+CoreDataPropertyNames.swift in Sources */,
-				30D65EDA1CB8A247000AA606 /* TRANSACTION+CoreDataPropertyNames.swift in Sources */,
+				30D65ED41CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift in Sources */,
+				30D65EDA1CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

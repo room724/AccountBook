@@ -14,7 +14,7 @@ class AccountListViewCell : UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
     
-    var transaction: TRANSACTION? {
+    var transaction: Transaction? {
         didSet {
             //dateLabel.text = transaction!.date!
             titleLabel.text = transaction!.name

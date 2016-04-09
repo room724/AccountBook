@@ -13,7 +13,7 @@ class BookmarkViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
-    var account: ACCOUNT? {
+    var account: Account? {
         didSet {
             nameLabel.text = account!.name
         }

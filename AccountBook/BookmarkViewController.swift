@@ -10,7 +10,7 @@ import UIKit
 
 class BookmarkViewController : UITableViewController {
 
-    var accounts: [ACCOUNT]?
+    var accounts: [Account]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

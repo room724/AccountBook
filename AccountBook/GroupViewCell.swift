@@ -21,7 +21,7 @@ class GroupViewCell: UITableViewCell {
     
     var delegate: GroupViewCellDelegate?
 
-    var account: ACCOUNT? {
+    var account: Account? {
         didSet {
             bookmarkButton.selected = account!.bookmark?.boolValue ?? false
             nameLabel.text = account!.name

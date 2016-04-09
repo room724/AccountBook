@@ -17,8 +17,8 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var assetLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var group: GROUP?
-    var accounts: [ACCOUNT]?
+    var group: Group?
+    var accounts: [Account]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.insertRowsAtIndexPaths([ NSIndexPath(forRow: order, inSection: 0) ], withRowAnimation: .None)
     }
     
-    func removeAccount(account: ACCOUNT) {
+    func removeAccount(account: Account) {
         if let error = CORE_DATA_MANAGER.removeAccount(account) {
             print("\(__FUNCTION__) error : \(error)")
             return

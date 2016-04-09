@@ -13,7 +13,7 @@ class AccountCalendarViewController : UIViewController, UITableViewDataSource, U
     @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var transactions: [TRANSACTION]?
+    var transactions: [Transaction]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

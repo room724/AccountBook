@@ -10,7 +10,7 @@ import UIKit
 
 class AccountListViewController : UITableViewController
 {
-    var transactions: [TRANSACTION]?
+    var transactions: [Transaction]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

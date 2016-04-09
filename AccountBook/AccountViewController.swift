@@ -33,7 +33,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var modeControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
     
-    var account: ACCOUNT?
+    var account: Account?
     
     override func viewDidLoad() {
         super.viewDidLoad()

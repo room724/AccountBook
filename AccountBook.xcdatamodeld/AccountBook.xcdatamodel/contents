@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
-    <entity name="ACCOUNT" representedClassName="ACCOUNT" syncable="YES">
+    <entity name="Account" representedClassName="Account" syncable="YES">
         <attribute name="bookmark" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="carryover" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="month_start_date" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="monthStartDate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="week_start_day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="weekStartDay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="BUDGET" representedClassName=".BUDGET" syncable="YES">
-        <attribute name="account_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="AccountCategory" representedClassName="AccountCategory" syncable="YES">
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Budget" representedClassName=".Budget" syncable="YES">
+        <attribute name="accountId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CARD_CHECK" representedClassName=".CARD_CHECK" syncable="YES">
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="CheckCard" representedClassName=".CheckCard" syncable="YES">
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CARD_CREDIT" representedClassName="CARD_CREDIT" syncable="YES">
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="CreditCard" representedClassName="CreditCard" syncable="YES">
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CATEGORY_ACCOUNT" representedClassName="CATEGORY_ACCOUNT" syncable="YES">
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="ExpenseCategory" representedClassName="ExpenseCategory" syncable="YES">
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CATEGORY_EXPENSE" representedClassName="CATEGORY_EXPENSE" syncable="YES">
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="Group" representedClassName="Group" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="CATEGORY_INCOME" representedClassName="CATEGORY_INCOME" syncable="YES">
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="IncomeCategory" representedClassName="IncomeCategory" syncable="YES">
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="GROUP" representedClassName="GROUP" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
-    <entity name="TRANSACTION" representedClassName="TRANSACTION" syncable="YES">
-        <attribute name="account_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="card_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="accountId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="cardId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -67,14 +67,14 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ACCOUNT" positionX="-180" positionY="12" width="128" height="195"/>
-        <element name="BUDGET" positionX="-162" positionY="90" width="128" height="120"/>
-        <element name="CARD_CHECK" positionX="-153" positionY="99" width="128" height="105"/>
-        <element name="CARD_CREDIT" positionX="36" positionY="108" width="128" height="105"/>
-        <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="105"/>
-        <element name="CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="105"/>
-        <element name="CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="105"/>
-        <element name="GROUP" positionX="-378" positionY="-9" width="128" height="90"/>
-        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="195"/>
+        <element name="Account" positionX="-180" positionY="12" width="128" height="195"/>
+        <element name="Budget" positionX="-162" positionY="90" width="128" height="120"/>
+        <element name="CheckCard" positionX="-153" positionY="99" width="128" height="105"/>
+        <element name="CreditCard" positionX="36" positionY="108" width="128" height="105"/>
+        <element name="AccountCategory" positionX="0" positionY="72" width="128" height="105"/>
+        <element name="ExpenseCategory" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="IncomeCategory" positionX="18" positionY="90" width="128" height="105"/>
+        <element name="Group" positionX="-378" positionY="-9" width="128" height="90"/>
+        <element name="Transaction" positionX="-36" positionY="36" width="128" height="195"/>
     </elements>
 </model>

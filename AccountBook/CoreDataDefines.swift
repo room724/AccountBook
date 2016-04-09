@@ -8,21 +8,21 @@
 
 import Foundation
 
-enum BUDGET_TYPE : NSNumber {
+enum BudgetType : NSNumber {
     
-    case INCOME  = 0
-    case EXPENSE = 1
+    case Income  = 0
+    case Expense = 1
 }
 
-enum TRANSACTION_TYPE : NSNumber {
+enum TransactionType : NSNumber {
     
-    case INCOME   = 0
-    case EXPENSE  = 1
-    case TRANSFER = 2
+    case Income   = 0
+    case Expense  = 1
+    case Transfer = 2
 }
 
-enum WEEK_START_DAY : NSNumber {
+enum WeekStartDay : NSNumber {
     
-    case SUNDAY = 1
-    case MONDAY = 2
+    case Sunday = 1
+    case Monday = 2
 }

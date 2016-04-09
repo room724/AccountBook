@@ -15,7 +15,7 @@ class GroupListViewCell: UITableViewCell {
     @IBOutlet weak var debtLabel: UILabel!
     @IBOutlet weak var assetLabel: UILabel!
     
-    var group: GROUP? {
+    var group: Group? {
         didSet {
             nameLabel.text = group!.name
         }
