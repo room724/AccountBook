@@ -1,5 +1,5 @@
 //
-//  CoreDataManager+Transition.swift
+//  CoreDataManager+TRANSACTION.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 25..
@@ -15,7 +15,7 @@ extension CoreDataManager {
         groupId
         groupId: NSNumber,
         accountId: NSNumber,
-        type: TransactionType,
+        type: TRANSACTION_TYPE,
         categoryId: NSNumber) -> (count: NSInteger, error: NSError?) {
             
         let predicateFormats = [
@@ -52,7 +52,7 @@ extension CoreDataManager {
         groupId
         groupId: NSNumber,
         accountId: NSNumber,
-        type: TransactionType,
+        type: TRANSACTION_TYPE,
         categoryId: NSNumber,
         name: String,
         money: NSInteger,

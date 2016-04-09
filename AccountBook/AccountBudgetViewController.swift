@@ -30,12 +30,12 @@ class AccountBudgetViewController : UIViewController, UITableViewDataSource, UIT
     }
     
     func fetchList() {
-        var type: BudgetType?
+        var type: BUDGET_TYPE?
         
         if typeControl.selectedSegmentIndex == TypeControlIndex.Income.rawValue {
-            type = .Income
+            type = .INCOME
         } else if typeControl.selectedSegmentIndex == TypeControlIndex.Expense.rawValue {
-            type = .Expense
+            type = .EXPENSE
         }
         
         //

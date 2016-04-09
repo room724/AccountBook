@@ -1,5 +1,5 @@
 //
-//  CoreDataManager+Group.swift
+//  CoreDataManager+GROUP.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 25..

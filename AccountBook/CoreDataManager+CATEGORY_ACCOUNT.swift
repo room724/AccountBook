@@ -1,5 +1,5 @@
 //
-//  CoreDataManager+Card.swift
+//  CoreDataManager+CATEGORY_ACCOUNT.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 6..
@@ -10,5 +10,6 @@ import CoreData
 import Foundation
 
 extension CoreDataManager {
+    
     
 }

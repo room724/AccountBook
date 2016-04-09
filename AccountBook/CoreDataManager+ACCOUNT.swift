@@ -1,5 +1,5 @@
 //
-//  CoreDataManager+Account.swift
+//  CoreDataManager+ACCOUNT.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 25..
@@ -37,7 +37,7 @@ extension CoreDataManager {
             object.name = name
             object.order = order
             object.category_id = 0 // todo : default
-            object.week_start_day = WeekStartDay.Sunday.rawValue
+            object.week_start_day = WEEK_START_DAY.SUNDAY.rawValue
             object.month_start_date = 1
             object.carryover = false
             object.bookmark = false

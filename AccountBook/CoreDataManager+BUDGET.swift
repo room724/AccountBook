@@ -1,5 +1,5 @@
 //
-//  CoreDataManager+Budget.swift
+//  CoreDataManager+BUDGET.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 6..
@@ -15,7 +15,7 @@ extension CoreDataManager {
         groupId
         groupId: NSNumber,
         accountId: NSNumber,
-        type: BudgetType,
+        type: BUDGET_TYPE,
         categoryId: NSNumber) -> (budget: BUDGET?, error: NSError?) {
             
         let predicateFormats = [
@@ -34,7 +34,7 @@ extension CoreDataManager {
         groupId
         groupId: NSNumber,
         accountId: NSNumber,
-        type: BudgetType,
+        type: BUDGET_TYPE,
         categoryId: NSNumber,
         money: NSInteger) -> (budget: BUDGET?, error: NSError?) {
             
