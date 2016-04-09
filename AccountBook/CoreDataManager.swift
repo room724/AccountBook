@@ -12,14 +12,11 @@ import Foundation
 let CORE_DATA_MANAGER = CoreDataManager.sharedManager
 
 class CoreDataManager {
-    
     static let sharedManager = CoreDataManager()
     
     // MARK: -
     
     var managedObjectContext: NSManagedObjectContext?
-    
-    var skipSave = false
     
     // MARK: -
     
@@ -46,22 +43,23 @@ class CoreDataManager {
     }
     
     func save() -> NSError? {
-        if !skipSave && managedObjectContext!.hasChanges {
+        if managedObjectContext!.hasChanges {
             do {
                 try managedObjectContext!.save()
             } catch {
                 return error as NSError
             }
         }
-        
         return nil
     }
     
     // MARK: -
     
-    func fetchObjectNextId<T: NSManagedObject>(objectType objectType: T.Type, predicate: NSPredicate?) -> (id: NSNumber?, error: NSError?) {
+    func fetchObjectNextId<T: NSManagedObject>(
+        objectType objectType: T.Type,
+        predicate: NSPredicate?) -> (id: NSNumber?, error: NSError?)
+    {
         let fetchRequest = NSFetchRequest()
-        
         fetchRequest.entity = NSEntityDescription.entityForName(String(T.self), inManagedObjectContext: managedObjectContext!)
         fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "id", ascending: false) ]
         fetchRequest.predicate = predicate
@@ -80,9 +78,11 @@ class CoreDataManager {
         }
     }
     
-    func fetchObjectCount<T: NSManagedObject>(objectType objectType: T.Type, predicate: NSPredicate?) -> (count: NSInteger, error: NSError?) {
+    func fetchObjectCount<T: NSManagedObject>(
+        objectType objectType: T.Type,
+        predicate: NSPredicate?) -> (count: NSInteger, error: NSError?)
+    {
         let fetchRequest = NSFetchRequest()
-        
         fetchRequest.entity = NSEntityDescription.entityForName(String(T.self), inManagedObjectContext: managedObjectContext!)
         fetchRequest.predicate = predicate
         fetchRequest.includesSubentities = false
@@ -90,13 +90,15 @@ class CoreDataManager {
         
         var error: NSError?
         let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
-        
         return (count : count, error: error)
     }
     
-    func fetchObjects<T: NSManagedObject>(objectType objectType: T.Type, predicate: NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> ([T]?, NSError?) {
+    func fetchObjects<T: NSManagedObject>(
+        objectType objectType: T.Type,
+        predicate: NSPredicate?,
+        sortDescriptors: [NSSortDescriptor]?) -> ([T]?, NSError?)
+    {
         let fetchRequest = NSFetchRequest()
-        
         fetchRequest.entity = NSEntityDescription.entityForName(String(T.self), inManagedObjectContext: managedObjectContext!)
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sortDescriptors
@@ -112,8 +114,13 @@ class CoreDataManager {
         return (objects, nil)
     }
     
-    func addObject<T: NSManagedObject>(objectType objectType: T.Type, predicateForId: NSPredicate?, updateBlock: ((object: T, id: NSNumber) -> Void)?) -> (T?, NSError?) {
-        var nextId: NSNumber = -1
+    func addObjects<T: NSManagedObject>(
+        count count: NSInteger,
+        objectType: T.Type,
+        predicateForId: NSPredicate?,
+        updateBlock: ((index: NSInteger, object: T, id: NSNumber) -> Void)?) -> ([T]?, NSError?)
+    {
+        var nextId: NSNumber?
         
         if predicateForId != nil {
             let (id, error) = fetchObjectNextId(objectType: objectType, predicate: predicateForId)
@@ -125,23 +132,45 @@ class CoreDataManager {
             nextId = id!
         }
         
-        let object = NSEntityDescription.insertNewObjectForEntityForName(String(objectType), inManagedObjectContext: managedObjectContext!) as! T
+        var objects: [T] = [T]()
         
-        if updateBlock != nil {
-            updateBlock!(object: object, id: nextId)
+        for i in 0 ..< count {
+            let object = NSEntityDescription.insertNewObjectForEntityForName(String(objectType), inManagedObjectContext: managedObjectContext!) as! T
+            
+            if updateBlock != nil {
+                updateBlock!(index: i, object: object, id: nextId ?? -1)
+            }
+            
+            objects.append(object)
+            
+            if nextId != nil {
+                nextId = NSNumber(integer: nextId!.integerValue + 1)
+            }
         }
         
         if let error = save() {
-            managedObjectContext?.deleteObject(object)
-            return (nil, error)
+            return (objects, error)
         }
         
-        return (object, nil)
+        return (objects, nil)
     }
     
-    func removeObjects<T: NSManagedObject>(objectType objectType: T.Type, predicate: NSPredicate?) -> NSError? {
+    func addObject<T: NSManagedObject>(
+        objectType objectType: T.Type,
+        predicateForId: NSPredicate?,
+        updateBlock: ((object: T, id: NSNumber) -> Void)?) -> (T?, NSError?)
+    {
+        let (objects, error) = addObjects(count: 1, objectType: objectType, predicateForId: predicateForId) { (index, object, id) -> Void in
+            updateBlock!(object: object, id: id)
+        }
+        return (objects?.first, error)
+    }
+    
+    func removeObjects<T: NSManagedObject>(
+        objectType objectType: T.Type,
+        predicate: NSPredicate?) -> NSError?
+    {
         let fetchRequest = NSFetchRequest()
-        
         fetchRequest.entity = NSEntityDescription.entityForName(String(T.self), inManagedObjectContext: managedObjectContext!)
         fetchRequest.predicate = predicate
         fetchRequest.includesSubentities = false

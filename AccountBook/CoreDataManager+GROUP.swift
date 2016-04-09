@@ -22,12 +22,18 @@ extension CoreDataManager {
     
     func addGroup(name name: String, order: NSInteger) -> (group: GROUP?, error: NSError?) {
         let predicate = NSPredicate(value: true)
-        return addObject(objectType: GROUP.self, predicateForId: predicate) { (object, id) -> Void in
+        let result: (group: GROUP?, error: NSError?) = addObject(objectType: GROUP.self, predicateForId: predicate) { (object, id) -> Void in
             
             object.id = id
             object.name = name
             object.order = order
         }
+        
+        if result.error == nil {
+            addDefaultCheckCards(groupId: result.group!.id!)
+        }
+        
+        return result
     }
     
     func removeGroup(group: GROUP) -> NSError? {

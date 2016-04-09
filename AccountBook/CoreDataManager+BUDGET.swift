@@ -12,12 +12,11 @@ import Foundation
 extension CoreDataManager {
     
     func fetchBudget(
-        groupId
-        groupId: NSNumber,
+        groupId groupId: NSNumber,
         accountId: NSNumber,
         type: BUDGET_TYPE,
-        categoryId: NSNumber) -> (budget: BUDGET?, error: NSError?) {
-            
+        categoryId: NSNumber) -> (budget: BUDGET?, error: NSError?)
+    {
         let predicateFormats = [
             "\(BUDGET.PROP_NAME.GROUP_ID) = \(groupId)",
             "\(BUDGET.PROP_NAME.ACCOUNT_ID) = \(accountId)",
@@ -31,13 +30,12 @@ extension CoreDataManager {
     }
     
     func addBudget(
-        groupId
-        groupId: NSNumber,
+        groupId groupId: NSNumber,
         accountId: NSNumber,
         type: BUDGET_TYPE,
         categoryId: NSNumber,
-        money: NSInteger) -> (budget: BUDGET?, error: NSError?) {
-            
+        money: NSInteger) -> (budget: BUDGET?, error: NSError?)
+    {
         return addObject(objectType: BUDGET.self, predicateForId: nil) { (object, id) -> Void in
             
             object.group_id = groupId
@@ -49,10 +47,9 @@ extension CoreDataManager {
     }
     
     func removeBudgets(
-        groupId
-        groupId: NSNumber,
-        accountId: NSNumber) -> NSError? {
-            
+        groupId groupId: NSNumber,
+        accountId: NSNumber) -> NSError?
+    {
         let predicateFormats = [
             "\(BUDGET.PROP_NAME.GROUP_ID) = \(groupId)",
             "\(BUDGET.PROP_NAME.ACCOUNT_ID) = \(accountId)"

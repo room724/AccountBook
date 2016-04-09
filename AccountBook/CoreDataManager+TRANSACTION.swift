@@ -12,12 +12,11 @@ import Foundation
 extension CoreDataManager {
     
     func fetchTransactionCount(
-        groupId
-        groupId: NSNumber,
+        groupId groupId: NSNumber,
         accountId: NSNumber,
         type: TRANSACTION_TYPE,
-        categoryId: NSNumber) -> (count: NSInteger, error: NSError?) {
-            
+        categoryId: NSNumber) -> (count: NSInteger, error: NSError?)
+    {
         let predicateFormats = [
             "\(TRANSACTION.PROP_NAME.GROUP_ID) = \(groupId)",
             "\(TRANSACTION.PROP_NAME.ACCOUNT_ID) = \(accountId)",
@@ -30,12 +29,11 @@ extension CoreDataManager {
     }
     
     func fetchTransactions(
-        groupId
-        groupId: NSNumber,
+        groupId groupId: NSNumber,
         accountId: NSNumber,
         startDate: NSDate,
-        endDate: NSDate) -> (transactions: [TRANSACTION]?, error: NSError? ) {
-            
+        endDate: NSDate) -> (transactions: [TRANSACTION]?, error: NSError? )
+    {
         let predicateFormats = [
             "\(TRANSACTION.PROP_NAME.GROUP_ID) = \(groupId)",
             "\(TRANSACTION.PROP_NAME.ACCOUNT_ID) = \(accountId)",
@@ -49,15 +47,14 @@ extension CoreDataManager {
     }
     
     func addTransaction(
-        groupId
-        groupId: NSNumber,
+        groupId groupId: NSNumber,
         accountId: NSNumber,
         type: TRANSACTION_TYPE,
         categoryId: NSNumber,
         name: String,
         money: NSInteger,
-        cardId: NSNumber?) -> (transaction: TRANSACTION?, error: NSError?) {
-        
+        cardId: NSNumber?) -> (transaction: TRANSACTION?, error: NSError?)
+    {
         let predicateFormats = [
             "\(TRANSACTION.PROP_NAME.GROUP_ID) = \(groupId)",
             "\(TRANSACTION.PROP_NAME.ACCOUNT_ID) = \(accountId)"
@@ -80,10 +77,9 @@ extension CoreDataManager {
     }
     
     func removeTransactions(
-        groupId
-        groupId: NSNumber,
-        accountId: NSNumber) -> NSError? {
-            
+        groupId groupId: NSNumber,
+        accountId: NSNumber) -> NSError?
+    {
         let predicateFormats = [
             "\(TRANSACTION.PROP_NAME.GROUP_ID) = \(groupId)",
             "\(TRANSACTION.PROP_NAME.ACCOUNT_ID) = \(accountId)"
