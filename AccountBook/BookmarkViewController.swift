@@ -20,19 +20,20 @@ class BookmarkViewController : UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         fetchAccounts()
     }
     
     func fetchAccounts() {
-        CORE_DATA_MANAGER.fetchBookmarkAccounts { (accounts, error) in
-            if error != nil {
-                print("\(__FUNCTION__) error : \(error)")
-                return
-            }
-            
-            self.accounts = accounts
-            self.tableView.reloadData()
+        let (accounts, error) = CORE_DATA_MANAGER.fetchBookmarkAccounts()
+        
+        if error != nil {
+            print("\(__FUNCTION__) error : \(error)")
+            return
         }
+        
+        self.accounts = accounts
+        self.tableView.reloadData()
     }
     
     // MARK: - HomeViewController

@@ -11,71 +11,54 @@ import Foundation
 
 extension CoreDataManager {
     
-    func getBudget(accountId accountId: NSNumber, type: BudgetType, categoryId: NSNumber) -> (budget: BUDGET?, error: NSError?) {
-        let (budgets, error) = getBudgets(predicateFormat: "account_id = \(accountId) AND type = \(type) AND category_id = \(categoryId)")
+    func fetchBudget(
+        groupId
+        groupId: NSNumber,
+        accountId: NSNumber,
+        type: BudgetType,
+        categoryId: NSNumber) -> (budget: BUDGET?, error: NSError?) {
+            
+        let predicateFormats = [
+            "\(BUDGET.PROP_NAME.GROUP_ID) = \(groupId)",
+            "\(BUDGET.PROP_NAME.ACCOUNT_ID) = \(accountId)",
+            "\(BUDGET.PROP_NAME.TYPE) = \(type)",
+            "\(BUDGET.PROP_NAME.CATEGORY_ID) = \(categoryId)"
+        ]
+        
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator("AND"), argumentArray: nil)
+        let (budgets, error) = fetchObjects(objectType: BUDGET.self, predicate: predicate, sortDescriptors: nil)
         return (budget: budgets?.first, error: error)
     }
     
-    func addBudget(accountId accountId: NSNumber, type: BudgetType, categoryId: NSNumber, money: NSInteger) -> (budget: BUDGET?, error: NSError?) {
-        let budget = NSEntityDescription.insertNewObjectForEntityForName("BUDGET", inManagedObjectContext: managedObjectContext!) as! BUDGET
-        
-        budget.account_id = accountId
-        budget.type = type.rawValue
-        budget.category_id = categoryId
-        budget.money = money
-        
-        if let error = save() {
-            return (budget: nil, error: error)
+    func addBudget(
+        groupId
+        groupId: NSNumber,
+        accountId: NSNumber,
+        type: BudgetType,
+        categoryId: NSNumber,
+        money: NSInteger) -> (budget: BUDGET?, error: NSError?) {
+            
+        return addObject(objectType: BUDGET.self, predicateForId: nil) { (object, id) -> Void in
+            
+            object.group_id = groupId
+            object.account_id = accountId
+            object.type = type.rawValue
+            object.category_id = categoryId
+            object.money = money
         }
-        
-        return (budget: budget, error: nil)
     }
     
-    func removeBudgets(accountId accountId: NSNumber) -> NSError? {
-        return removeBudgets(predicateFormat: "account_id = \(accountId)")
-    }
-    
-    func removeBudgets(accountId accountId: NSNumber, type: BudgetType, categoryId: NSNumber) -> NSError? {
-        return removeBudgets(predicateFormat: "account_id = \(accountId) AND type = \(type) AND category_id = \(categoryId)")
-    }
-    
-    func removeBudget(budget: BUDGET) -> NSError? {
-        managedObjectContext!.deleteObject(budget)
-        return save()
-    }
-    
-    // MARK: - Private
-    
-    private func getBudgets(predicateFormat predicateFormat: String) -> (budgets: [BUDGET]?, error: NSError?) {
-        let fetchRequest = NSFetchRequest()
+    func removeBudgets(
+        groupId
+        groupId: NSNumber,
+        accountId: NSNumber) -> NSError? {
+            
+        let predicateFormats = [
+            "\(BUDGET.PROP_NAME.GROUP_ID) = \(groupId)",
+            "\(BUDGET.PROP_NAME.ACCOUNT_ID) = \(accountId)"
+        ]
         
-        fetchRequest.entity = NSEntityDescription.entityForName("BUDGET", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray: nil)
-        
-        var budgets: [BUDGET]
-        
-        do {
-            budgets = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [BUDGET]
-        } catch {
-            return (budgets: nil, error: error as NSError)
-        }
-        
-        return (budgets: budgets, error: nil)
-    }
-    
-    private func removeBudgets(predicateFormat predicateFormat: String) -> NSError? {
-        let (budgets, error) = getBudgets(predicateFormat: predicateFormat)
-        
-        if error != nil {
-            return error
-        }
-        
-        for budget in budgets! {
-            if let error = removeBudget(budget) {
-                return error
-            }
-        }
-        
-        return nil
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator("AND"), argumentArray: nil)
+        return removeObjects(objectType: BUDGET.self, predicate: predicate)
     }
 }

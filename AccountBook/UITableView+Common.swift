@@ -1,5 +1,5 @@
 //
-//  UITableView+ock.swift
+//  UITableView+Common.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 3. 30..

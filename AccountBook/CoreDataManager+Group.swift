@@ -11,67 +11,26 @@ import Foundation
 
 extension CoreDataManager {
     
-    func fetchGroups(completion: ((groups: [GROUP]?, error: NSError?) -> Void)?) {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
-        
-        let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                completion?(groups: asynchronousFetchResult.finalResult as? [GROUP], error: nil)
-            })
-        }
-        
-        do {
-            try managedObjectContext!.executeRequest(asynchronousFetchRequest)
-        } catch {
-            completion?(groups: nil, error: error as NSError)
-        }
+    func fetchGroupCount() -> (count: NSInteger, error: NSError?) {
+        return fetchObjectCount(objectType: GROUP.self, predicate: nil)
     }
     
-    func getGroupCount() -> (count: NSInteger, error: NSError?) {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("GROUP", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.includesPropertyValues = false
-        
-        var error: NSError?
-        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
-        
-        return (count : count, error: error)
+    func fetchGroups() -> (groups: [GROUP]?, error: NSError?) {
+        let sortDescriptors = [ NSSortDescriptor(key: GROUP.PROP_NAME.ORDER, ascending: true) ]
+        return fetchObjects(objectType: GROUP.self, predicate: nil, sortDescriptors: sortDescriptors)
     }
     
     func addGroup(name name: String, order: NSInteger) -> (group: GROUP?, error: NSError?) {
-        let (id, error) = nextIdOfEntity("GROUP", predicateFormat: nil)
-        
-        if error != nil {
-            return (group: nil, error: error)
+        let predicate = NSPredicate(value: true)
+        return addObject(objectType: GROUP.self, predicateForId: predicate) { (object, id) -> Void in
+            
+            object.id = id
+            object.name = name
+            object.order = order
         }
-        
-        let group = NSEntityDescription.insertNewObjectForEntityForName("GROUP", inManagedObjectContext: managedObjectContext!) as! GROUP
-        
-        group.id = id
-        group.name = name
-        group.order = order
-        
-        // todo : add entity with default values -> card_check, card_credit, category_account, category_transaction_expense, category_transaction_income
-                
-        if let error = save() {
-            return (group: nil, error: error)
-        }
-        
-        return (group: group, error: nil)
     }
     
     func removeGroup(group: GROUP) -> NSError? {
-        if let error = removeAccounts(groupId: group.id!) {
-            return error
-        }
-        
-        // todo : delete entity -> card_check, card_credit, category_account, category_transaction_expense, category_transaction_income
-        
-        managedObjectContext!.deleteObject(group)
-        return save()
+        return removeObject(group)
     }
 }

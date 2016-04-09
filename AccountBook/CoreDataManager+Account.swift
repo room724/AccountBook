@@ -10,131 +10,47 @@ import CoreData
 import Foundation
 
 extension CoreDataManager {
-
-    func fetchAccounts(groupId groupId: NSNumber, completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId)", argumentArray: nil)
-        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "order", ascending: true) ]
-        
-        let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                completion?(accounts: asynchronousFetchResult.finalResult as? [ACCOUNT], error: nil)
-            })
-        }
-        
-        do {
-            try managedObjectContext!.executeRequest(asynchronousFetchRequest)
-        } catch {
-            completion?(accounts: nil, error: error as NSError)
-        }
+    
+    func fetchAccountCount(groupId groupId: NSNumber) -> (count: NSInteger, error: NSError?) {
+        let predicate = NSPredicate(format: "\(ACCOUNT.PROP_NAME.GROUP_ID) = \(groupId)", argumentArray: nil)
+        return fetchObjectCount(objectType: ACCOUNT.self, predicate: predicate)
     }
     
-    func fetchBookmarkAccounts(completion: ((accounts: [ACCOUNT]?, error: NSError?) -> Void)?) {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "bookmark = \(true)", argumentArray: nil)
-        fetchRequest.sortDescriptors = [ NSSortDescriptor(key: "name", ascending: true) ]
-        
-        let asynchronousFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (asynchronousFetchResult) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                completion?(accounts: asynchronousFetchResult.finalResult as? [ACCOUNT], error: nil)
-            })
-        }
-        
-        do {
-            try managedObjectContext!.executeRequest(asynchronousFetchRequest)
-        } catch {
-            completion?(accounts: nil, error: error as NSError)
-        }
+    func fetchAccounts(groupId groupId: NSNumber) -> (accounts: [ACCOUNT]?, error: NSError?) {
+        let predicate = NSPredicate(format: "\(ACCOUNT.PROP_NAME.GROUP_ID) = \(groupId)", argumentArray: nil)
+        let sortDescriptors = [ NSSortDescriptor(key: ACCOUNT.PROP_NAME.ORDER, ascending: true) ]
+        return fetchObjects(objectType: ACCOUNT.self, predicate: predicate, sortDescriptors: sortDescriptors)
     }
     
-    func getAccountCount(groupId groupId: NSNumber) -> (count: NSInteger, error: NSError?) {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId)", argumentArray: nil)
-        fetchRequest.includesPropertyValues = false
-        
-        var error: NSError?
-        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
-        
-        return (count : count, error: error)
-    }
-    
-    func getAccountCount(groupId groupId: NSNumber, categoryId: NSNumber) -> (count: NSInteger, error: NSError?) {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId) AND category_id = \(categoryId)", argumentArray: nil)
-        fetchRequest.includesPropertyValues = false
-        
-        var error: NSError?
-        let count = managedObjectContext!.countForFetchRequest(fetchRequest, error: &error)
-        
-        return (count : count, error: error)
+    func fetchBookmarkAccounts() -> (accounts: [ACCOUNT]?, error: NSError?) {
+        let predicate = NSPredicate(format: "\(ACCOUNT.PROP_NAME.BOOKMARK) = \(true)", argumentArray: nil)
+        let sortDescriptors = [ NSSortDescriptor(key: ACCOUNT.PROP_NAME.NAME, ascending: true) ]
+        return fetchObjects(objectType: ACCOUNT.self, predicate: predicate, sortDescriptors: sortDescriptors)
     }
     
     func addAccount(groupId groupId: NSNumber, name: String, order: NSInteger) -> (account: ACCOUNT?, error: NSError?) {
-        let (id, error) = nextIdOfEntity("ACCOUNT", predicateFormat: "group_id = \(groupId)")
-        
-        if error != nil {
-            return (account: nil, error: error)
+        let predicate = NSPredicate(format: "\(ACCOUNT.PROP_NAME.GROUP_ID) = \(groupId)", argumentArray: nil)
+        return addObject(objectType: ACCOUNT.self, predicateForId: predicate) { (object, id) -> Void in
+            
+            object.id = id
+            object.group_id = groupId
+            object.name = name
+            object.order = order
+            object.category_id = 0 // todo : default
+            object.week_start_day = WeekStartDay.Sunday.rawValue
+            object.month_start_date = 1
+            object.carryover = false
+            object.bookmark = false
+            object.memo = String()
         }
-        
-        let account = NSEntityDescription.insertNewObjectForEntityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!) as! ACCOUNT
-        
-        account.group_id = groupId
-        account.id = id
-        account.name = name
-        account.order = order
-        account.category_id = 0
-        account.week_start_day = WeekStartDay.Sunday.rawValue
-        account.month_start_date = 1
-        account.carryover = false
-        account.bookmark = false
-        account.memo = String()
-        
-        if let error = save() {
-            return (account: nil, error: error)
-        }
-        
-        return (account: account, error: nil)
     }
     
     func removeAccounts(groupId groupId: NSNumber) -> NSError? {
-        let fetchRequest = NSFetchRequest()
-        
-        fetchRequest.entity = NSEntityDescription.entityForName("ACCOUNT", inManagedObjectContext: managedObjectContext!)
-        fetchRequest.predicate = NSPredicate(format: "group_id = \(groupId)", argumentArray: nil)
-        
-        var accounts: [ACCOUNT]
-        
-        do {
-            accounts = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [ACCOUNT]
-        } catch {
-            return error as NSError
-        }
-        
-        for account in accounts {
-            if let error = removeAccount(account) {
-                return error
-            }
-        }
-        
-        return nil
+        let predicate = NSPredicate(format: "\(ACCOUNT.PROP_NAME.GROUP_ID) = \(groupId)", argumentArray: nil)
+        return removeObjects(objectType: ACCOUNT.self, predicate: predicate)
     }
     
     func removeAccount(account: ACCOUNT) -> NSError? {
-        if let error = removeBudgets(accountId: account.id!) {
-            return error
-        }
-        
-        // todo : delete entity -> transaction
-        
-        managedObjectContext!.deleteObject(account)
-        return save()
+        return removeObject(account)
     }
 }

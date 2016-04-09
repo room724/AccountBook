@@ -15,6 +15,7 @@
     <entity name="BUDGET" representedClassName=".BUDGET" syncable="YES">
         <attribute name="account_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
@@ -58,6 +59,7 @@
         <attribute name="card_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="category_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="group_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -66,13 +68,13 @@
     </entity>
     <elements>
         <element name="ACCOUNT" positionX="-180" positionY="12" width="128" height="195"/>
-        <element name="BUDGET" positionX="-162" positionY="90" width="128" height="30"/>
+        <element name="BUDGET" positionX="-162" positionY="90" width="128" height="120"/>
         <element name="CARD_CHECK" positionX="-153" positionY="99" width="128" height="105"/>
         <element name="CARD_CREDIT" positionX="36" positionY="108" width="128" height="105"/>
         <element name="CATEGORY_ACCOUNT" positionX="0" positionY="72" width="128" height="105"/>
         <element name="CATEGORY_EXPENSE" positionX="-18" positionY="54" width="128" height="105"/>
         <element name="CATEGORY_INCOME" positionX="18" positionY="90" width="128" height="105"/>
         <element name="GROUP" positionX="-378" positionY="-9" width="128" height="90"/>
-        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="180"/>
+        <element name="TRANSACTION" positionX="-36" positionY="36" width="128" height="195"/>
     </elements>
 </model>

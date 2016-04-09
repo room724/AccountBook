@@ -18,6 +18,7 @@ extension TRANSACTION {
     @NSManaged var card_id: NSNumber?
     @NSManaged var category_id: NSNumber?
     @NSManaged var date: NSDate?
+    @NSManaged var group_id: NSNumber?
     @NSManaged var id: NSNumber?
     @NSManaged var memo: String?
     @NSManaged var money: NSNumber?

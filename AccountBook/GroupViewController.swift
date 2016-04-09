@@ -28,19 +28,20 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         fetchAccounts()
     }
     
     func fetchAccounts() {
-        CORE_DATA_MANAGER.fetchAccounts(groupId: group!.id!) { (accounts, error) in
-            if error != nil {
-                print("\(__FUNCTION__) error : \(error)")
-                return
-            }
-            
-            self.accounts = accounts
-            self.tableView.reloadData()
+        let (accounts, error) = CORE_DATA_MANAGER.fetchAccounts(groupId: group!.id!)
+        
+        if error != nil {
+            print("\(__FUNCTION__) error : \(error)")
+            return
         }
+        
+        self.accounts = accounts
+        self.tableView.reloadData()
     }
     
     func addAccount() {

@@ -20,23 +20,24 @@ class GroupListViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         fetchGroups()
     }
     
     func fetchGroups() {
-        CORE_DATA_MANAGER.fetchGroups { (groups, error) in
-            if error != nil {
-                print("\(__FUNCTION__) error : \(error)")
-                return
-            }
-            
-            self.groups = groups
-            self.tableView.reloadData()
+        let (groups, error) = CORE_DATA_MANAGER.fetchGroups()
+        
+        if error != nil {
+            print("\(__FUNCTION__) error : \(error)")
+            return
         }
+        
+        self.groups = groups
+        self.tableView.reloadData()
     }
     
     func showActionSheetForRemoveGroup(group: GROUP) {
-        let accountCount = CORE_DATA_MANAGER.getAccountCount(groupId: group.id!).count
+        let accountCount = CORE_DATA_MANAGER.fetchAccountCount(groupId: group.id!).count
         let message = "\(accountCount)개의 계좌가 존재합니다. 함께 삭제하시겠습니까?"
         let actionSheet = UIAlertController(title: nil, message: message, preferredStyle: .ActionSheet)
         
@@ -131,7 +132,7 @@ class GroupListViewController: UITableViewController {
         if (editingStyle == .Delete) {
             let group = groups![indexPath.row]
             
-            if groups!.count > 1 && CORE_DATA_MANAGER.getAccountCount(groupId: group.id!).count > 0 {
+            if groups!.count > 1 && CORE_DATA_MANAGER.fetchAccountCount(groupId: group.id!).count > 0 {
                 showActionSheetForRemoveGroup(group)
             }
             else {

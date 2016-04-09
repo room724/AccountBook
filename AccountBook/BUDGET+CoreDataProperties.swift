@@ -16,6 +16,7 @@ extension BUDGET {
 
     @NSManaged var account_id: NSNumber?
     @NSManaged var category_id: NSNumber?
+    @NSManaged var group_id: NSNumber?
     @NSManaged var money: NSNumber?
     @NSManaged var type: NSNumber?
 
