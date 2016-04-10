@@ -1,5 +1,5 @@
 //
-//  AccountCategoryListViewController.swift
+//  CategoryListViewController.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 9..
@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-class AccountCategoryListViewController: UITableViewController {
+class CategoryListViewController: UITableViewController {
     
-    /*
     var groupId: NSNumber?
     var categories: [AccountCategory]?
     
@@ -28,7 +27,7 @@ class AccountCategoryListViewController: UITableViewController {
     }
     
     func fetchCategories() {
-        let (categories, error) = CORE_DATA_MANAGER.fetchAccountCategories(groupId: group!.id!)
+        let (categories, error) = CORE_DATA_MANAGER.fetchAccountCategories(groupId: groupId!)
         
         if error != nil {
             print("\(__FUNCTION__) error : \(error)")
@@ -46,7 +45,7 @@ class AccountCategoryListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountCategoryListViewCell", forIndexPath: indexPath) as! AccountCategoryListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryListViewCell", forIndexPath: indexPath) as! CategoryListViewCell
         let category = categories![indexPath.row]
         
         //
@@ -65,5 +64,4 @@ class AccountCategoryListViewController: UITableViewController {
             //
         }
     }
-    */
 }
