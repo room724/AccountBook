@@ -12,7 +12,8 @@ import UIKit
 class CategoryListViewController: UITableViewController {
     
     var groupId: NSNumber?
-    var categories: [AccountCategory]?
+    var categoryType: CategoryType?
+    var categories: [Category]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class CategoryListViewController: UITableViewController {
     }
     
     func fetchCategories() {
-        let (categories, error) = CORE_DATA_MANAGER.fetchAccountCategories(groupId: groupId!)
+        let (categories, error) = CORE_DATA_MANAGER.fetchCategories(groupId: groupId!, type: categoryType!)
         
         if error != nil {
             print("\(__FUNCTION__) error : \(error)")
@@ -45,10 +46,10 @@ class CategoryListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryListViewCell", forIndexPath: indexPath) as! CategoryListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(CategoryListViewCell.self), forIndexPath: indexPath) as! CategoryListViewCell
         let category = categories![indexPath.row]
         
-        //
+        cell.category = category
         
         return cell
     }

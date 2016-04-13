@@ -1,5 +1,5 @@
 //
-//  IncomeCategory+CoreDataProperties.swift
+//  Category+CoreDataProperties.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 10..
@@ -12,11 +12,12 @@
 import Foundation
 import CoreData
 
-extension IncomeCategory {
+extension Category {
 
     @NSManaged var groupId: NSNumber?
     @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
+    @NSManaged var type: NSNumber?
 
 }

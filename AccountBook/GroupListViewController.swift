@@ -114,7 +114,7 @@ class GroupListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GroupListViewCell", forIndexPath: indexPath) as! GroupListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(GroupListViewCell.self), forIndexPath: indexPath) as! GroupListViewCell
         let group = groups![indexPath.row]
         
         cell.group = group
@@ -144,7 +144,7 @@ class GroupListViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "GroupViewController") {
+        if (segue.identifier == String(GroupViewController.self)) {
             let groupViewController = segue.destinationViewController as! GroupViewController
             groupViewController.group = groups![tableView.indexPathForSelectedRow!.row]
         }

@@ -1,5 +1,5 @@
 //
-//  AccountCategory+CoreDataPropertyNames.swift
+//  Category+CoreDataPropertyNames.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 9..
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension AccountCategory {
+extension Category {
     
     class PropertyName {
         
@@ -16,5 +16,6 @@ extension AccountCategory {
         static let id = "id"
         static let name = "name"
         static let order = "order"
+        static let type = "type"
     }
 }

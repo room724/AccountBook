@@ -30,7 +30,14 @@ extension CoreDataManager {
         }
         
         if result.error == nil {
-            addDefaultCheckCards(groupId: result.group!.id!)
+            let groupId = result.group!.id!
+            
+            addDefaultCards(groupId: groupId, type: .Check)
+            addDefaultCards(groupId: groupId, type: .Credit)
+            
+            addDefaultCategorys(groupId: groupId, type: .Account)
+            addDefaultCategorys(groupId: groupId, type: .Income)
+            addDefaultCategorys(groupId: groupId, type: .Expense)
         }
         
         return result

@@ -28,7 +28,7 @@ class AccountCalendarViewController : UIViewController, UITableViewDataSource, U
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountCalendarViewCell", forIndexPath: indexPath) as! AccountCalendarViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(AccountCalendarViewCell.self), forIndexPath: indexPath) as! AccountCalendarViewCell
         
         //
         

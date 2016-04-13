@@ -25,7 +25,7 @@ class AccountListViewController : UITableViewController
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountListViewCell", forIndexPath: indexPath) as! AccountListViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(AccountListViewCell.self), forIndexPath: indexPath) as! AccountListViewCell
         
         //
         

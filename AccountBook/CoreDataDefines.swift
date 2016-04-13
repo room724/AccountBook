@@ -14,6 +14,19 @@ enum BudgetType : NSNumber {
     case Expense = 1
 }
 
+enum CardType : NSNumber {
+    
+    case Check  = 0
+    case Credit = 1
+}
+
+enum CategoryType : NSNumber {
+    
+    case Account = 0
+    case Income  = 1
+    case Expense = 2
+}
+
 enum TransactionType : NSNumber {
     
     case Income   = 0

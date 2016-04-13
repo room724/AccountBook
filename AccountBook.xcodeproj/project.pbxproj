@@ -32,25 +32,19 @@
 		309DCDCD1C8721D00035B6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDCB1C8721D00035B6BE /* Main.storyboard */; };
 		309DCDD21C8721D00035B6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD11C8721D00035B6BE /* Assets.xcassets */; };
 		309DCDD51C8721D00035B6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309DCDD31C8721D00035B6BE /* LaunchScreen.storyboard */; };
-		309F428F1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F427D1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift */; };
-		309F42901CB9512B00443016 /* IncomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F427E1CB9512B00443016 /* IncomeCategory.swift */; };
-		309F42911CB9512B00443016 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F427F1CB9512B00443016 /* Transaction+CoreDataProperties.swift */; };
-		309F42921CB9512B00443016 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42801CB9512B00443016 /* Transaction.swift */; };
-		309F42931CB9512B00443016 /* AccountCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42811CB9512B00443016 /* AccountCategory+CoreDataProperties.swift */; };
-		309F42941CB9512B00443016 /* AccountCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42821CB9512B00443016 /* AccountCategory.swift */; };
-		309F42951CB9512B00443016 /* CheckCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42831CB9512B00443016 /* CheckCard+CoreDataProperties.swift */; };
-		309F42961CB9512B00443016 /* CheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42841CB9512B00443016 /* CheckCard.swift */; };
-		309F42971CB9512B00443016 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42851CB9512B00443016 /* Budget+CoreDataProperties.swift */; };
-		309F42981CB9512B00443016 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42861CB9512B00443016 /* Budget.swift */; };
-		309F42991CB9512B00443016 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42871CB9512B00443016 /* Account+CoreDataProperties.swift */; };
-		309F429A1CB9512B00443016 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42881CB9512B00443016 /* Account.swift */; };
-		309F429B1CB9512B00443016 /* CreditCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F42891CB9512B00443016 /* CreditCard+CoreDataProperties.swift */; };
-		309F429C1CB9512B00443016 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428A1CB9512B00443016 /* CreditCard.swift */; };
-		309F429D1CB9512B00443016 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428B1CB9512B00443016 /* Group+CoreDataProperties.swift */; };
-		309F429E1CB9512B00443016 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428C1CB9512B00443016 /* Group.swift */; };
-		309F429F1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428D1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift */; };
-		309F42A01CB9512B00443016 /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F428E1CB9512B00443016 /* ExpenseCategory.swift */; };
 		30A3499F1CBA7C8C004AC3F9 /* CardListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A3499E1CBA7C8C004AC3F9 /* CardListViewCell.swift */; };
+		30A349AE1CBA836E004AC3F9 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A21CBA836E004AC3F9 /* Transaction+CoreDataProperties.swift */; };
+		30A349AF1CBA836E004AC3F9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A31CBA836E004AC3F9 /* Transaction.swift */; };
+		30A349B01CBA836E004AC3F9 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A41CBA836E004AC3F9 /* Category+CoreDataProperties.swift */; };
+		30A349B11CBA836E004AC3F9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A51CBA836E004AC3F9 /* Category.swift */; };
+		30A349B21CBA836E004AC3F9 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A61CBA836E004AC3F9 /* Group+CoreDataProperties.swift */; };
+		30A349B31CBA836E004AC3F9 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A71CBA836E004AC3F9 /* Group.swift */; };
+		30A349B41CBA836E004AC3F9 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A81CBA836E004AC3F9 /* Card+CoreDataProperties.swift */; };
+		30A349B51CBA836E004AC3F9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349A91CBA836E004AC3F9 /* Card.swift */; };
+		30A349B61CBA836E004AC3F9 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349AA1CBA836E004AC3F9 /* Account+CoreDataProperties.swift */; };
+		30A349B71CBA836E004AC3F9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349AB1CBA836E004AC3F9 /* Account.swift */; };
+		30A349B81CBA836E004AC3F9 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349AC1CBA836E004AC3F9 /* Budget+CoreDataProperties.swift */; };
+		30A349B91CBA836E004AC3F9 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A349AD1CBA836E004AC3F9 /* Budget.swift */; };
 		30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A37C961CAACA04000EDB4E /* HomeViewController.swift */; };
 		30A37C991CAB3477000EDB4E /* UITableView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A37C981CAB3477000EDB4E /* UITableView+Common.swift */; };
 		30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */; };
@@ -61,21 +55,15 @@
 		30C9A4C11C88811E00596CCC /* GroupViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */; };
 		30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9A4C31C88818700596CCC /* AccountViewController.swift */; };
 		30D65E671CB41B3F000AA606 /* CoreDataManager+Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */; };
-		30D65E691CB41B55000AA606 /* CoreDataManager+CheckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E681CB41B55000AA606 /* CoreDataManager+CheckCard.swift */; };
-		30D65E6B1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E6A1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift */; };
+		30D65E691CB41B55000AA606 /* CoreDataManager+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E681CB41B55000AA606 /* CoreDataManager+Card.swift */; };
+		30D65E6B1CB41B60000AA606 /* CoreDataManager+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E6A1CB41B60000AA606 /* CoreDataManager+Category.swift */; };
 		30D65E911CB479B2000AA606 /* CoreDataDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65E901CB479B2000AA606 /* CoreDataDefines.swift */; };
 		30D65ED01CB89D38000AA606 /* Account+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ECF1CB89D38000AA606 /* Account+CoreDataPropertyNames.swift */; };
 		30D65ED21CB8A205000AA606 /* Group+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED11CB8A205000AA606 /* Group+CoreDataPropertyNames.swift */; };
-		30D65ED41CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED31CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift */; };
-		30D65ED61CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED51CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift */; };
+		30D65ED41CB8A221000AA606 /* Category+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED31CB8A221000AA606 /* Category+CoreDataPropertyNames.swift */; };
+		30D65ED61CB8A233000AA606 /* Card+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED51CB8A233000AA606 /* Card+CoreDataPropertyNames.swift */; };
 		30D65ED81CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED71CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift */; };
 		30D65EDA1CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65ED91CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift */; };
-		30D65EDC1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDB1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift */; };
-		30D65EDF1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDD1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift */; };
-		30D65EE01CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EDE1CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift */; };
-		30D65EE71CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EE61CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift */; };
-		30D65EE91CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EE81CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift */; };
-		30D65EEB1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EEA1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift */; };
 		30D65EF61CB94A59000AA606 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EF51CB94A59000AA606 /* CategoryListViewController.swift */; };
 		30D65EFC1CB94A9A000AA606 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65EFB1CB94A9A000AA606 /* CardListViewController.swift */; };
 		30D65F011CB94D1B000AA606 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D65F001CB94D1B000AA606 /* CategoryListViewCell.swift */; };
@@ -109,25 +97,19 @@
 		309DCDD11C8721D00035B6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309DCDD41C8721D00035B6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309DCDD61C8721D00035B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		309F427D1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IncomeCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F427E1CB9512B00443016 /* IncomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomeCategory.swift; sourceTree = "<group>"; };
-		309F427F1CB9512B00443016 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F42801CB9512B00443016 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		309F42811CB9512B00443016 /* AccountCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F42821CB9512B00443016 /* AccountCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCategory.swift; sourceTree = "<group>"; };
-		309F42831CB9512B00443016 /* CheckCard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F42841CB9512B00443016 /* CheckCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCard.swift; sourceTree = "<group>"; };
-		309F42851CB9512B00443016 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F42861CB9512B00443016 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
-		309F42871CB9512B00443016 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F42881CB9512B00443016 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		309F42891CB9512B00443016 /* CreditCard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreditCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F428A1CB9512B00443016 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
-		309F428B1CB9512B00443016 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F428C1CB9512B00443016 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		309F428D1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		309F428E1CB9512B00443016 /* ExpenseCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
 		30A3499E1CBA7C8C004AC3F9 /* CardListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewCell.swift; sourceTree = "<group>"; };
+		30A349A21CBA836E004AC3F9 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A349A31CBA836E004AC3F9 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		30A349A41CBA836E004AC3F9 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A349A51CBA836E004AC3F9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		30A349A61CBA836E004AC3F9 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A349A71CBA836E004AC3F9 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		30A349A81CBA836E004AC3F9 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A349A91CBA836E004AC3F9 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		30A349AA1CBA836E004AC3F9 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A349AB1CBA836E004AC3F9 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		30A349AC1CBA836E004AC3F9 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30A349AD1CBA836E004AC3F9 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		30A37C961CAACA04000EDB4E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30A37C981CAB3477000EDB4E /* UITableView+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Common.swift"; sourceTree = "<group>"; };
 		30C9A4AE1C8737D500596CCC /* GroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupListViewController.swift; sourceTree = "<group>"; };
@@ -138,21 +120,15 @@
 		30C9A4C01C88811E00596CCC /* GroupViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewHeaderView.swift; sourceTree = "<group>"; };
 		30C9A4C31C88818700596CCC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Budget.swift"; sourceTree = "<group>"; };
-		30D65E681CB41B55000AA606 /* CoreDataManager+CheckCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CheckCard.swift"; sourceTree = "<group>"; };
-		30D65E6A1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+AccountCategory.swift"; sourceTree = "<group>"; };
+		30D65E681CB41B55000AA606 /* CoreDataManager+Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Card.swift"; sourceTree = "<group>"; };
+		30D65E6A1CB41B60000AA606 /* CoreDataManager+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Category.swift"; sourceTree = "<group>"; };
 		30D65E901CB479B2000AA606 /* CoreDataDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDefines.swift; sourceTree = "<group>"; };
 		30D65ECF1CB89D38000AA606 /* Account+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
 		30D65ED11CB8A205000AA606 /* Group+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED31CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountCategory+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65ED51CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckCard+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED31CB8A221000AA606 /* Category+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
+		30D65ED51CB8A233000AA606 /* Card+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
 		30D65ED71CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
 		30D65ED91CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EDB1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreditCard+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EDD1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpenseCategory+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EDE1CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IncomeCategory+CoreDataPropertyNames.swift"; sourceTree = "<group>"; };
-		30D65EE61CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+CreditCard.swift"; sourceTree = "<group>"; };
-		30D65EE81CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+IncomeCategory.swift"; sourceTree = "<group>"; };
-		30D65EEA1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+ExpenseCategory.swift"; sourceTree = "<group>"; };
 		30D65EF51CB94A59000AA606 /* CategoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		30D65EFB1CB94A9A000AA606 /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		30D65F001CB94D1B000AA606 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
@@ -199,13 +175,10 @@
 			children = (
 				306004761C99B41700E15DCF /* CoreDataManager.swift */,
 				309872871CA4AF21004B649F /* CoreDataManager+Account.swift */,
-				30D65E6A1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift */,
 				30D65E661CB41B3F000AA606 /* CoreDataManager+Budget.swift */,
-				30D65E681CB41B55000AA606 /* CoreDataManager+CheckCard.swift */,
-				30D65EE61CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift */,
-				30D65EEA1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift */,
+				30D65E681CB41B55000AA606 /* CoreDataManager+Card.swift */,
+				30D65E6A1CB41B60000AA606 /* CoreDataManager+Category.swift */,
 				309872851CA4AE49004B649F /* CoreDataManager+Group.swift */,
-				30D65EE81CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift */,
 				309872891CA4AF30004B649F /* CoreDataManager+Transaction.swift */,
 			);
 			name = Manager;
@@ -424,24 +397,18 @@
 		30CA61781C99C88F005879F0 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
-				309F427D1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift */,
-				309F427E1CB9512B00443016 /* IncomeCategory.swift */,
-				309F427F1CB9512B00443016 /* Transaction+CoreDataProperties.swift */,
-				309F42801CB9512B00443016 /* Transaction.swift */,
-				309F42811CB9512B00443016 /* AccountCategory+CoreDataProperties.swift */,
-				309F42821CB9512B00443016 /* AccountCategory.swift */,
-				309F42831CB9512B00443016 /* CheckCard+CoreDataProperties.swift */,
-				309F42841CB9512B00443016 /* CheckCard.swift */,
-				309F42851CB9512B00443016 /* Budget+CoreDataProperties.swift */,
-				309F42861CB9512B00443016 /* Budget.swift */,
-				309F42871CB9512B00443016 /* Account+CoreDataProperties.swift */,
-				309F42881CB9512B00443016 /* Account.swift */,
-				309F42891CB9512B00443016 /* CreditCard+CoreDataProperties.swift */,
-				309F428A1CB9512B00443016 /* CreditCard.swift */,
-				309F428B1CB9512B00443016 /* Group+CoreDataProperties.swift */,
-				309F428C1CB9512B00443016 /* Group.swift */,
-				309F428D1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift */,
-				309F428E1CB9512B00443016 /* ExpenseCategory.swift */,
+				30A349A21CBA836E004AC3F9 /* Transaction+CoreDataProperties.swift */,
+				30A349A31CBA836E004AC3F9 /* Transaction.swift */,
+				30A349A41CBA836E004AC3F9 /* Category+CoreDataProperties.swift */,
+				30A349A51CBA836E004AC3F9 /* Category.swift */,
+				30A349A61CBA836E004AC3F9 /* Group+CoreDataProperties.swift */,
+				30A349A71CBA836E004AC3F9 /* Group.swift */,
+				30A349A81CBA836E004AC3F9 /* Card+CoreDataProperties.swift */,
+				30A349A91CBA836E004AC3F9 /* Card.swift */,
+				30A349AA1CBA836E004AC3F9 /* Account+CoreDataProperties.swift */,
+				30A349AB1CBA836E004AC3F9 /* Account.swift */,
+				30A349AC1CBA836E004AC3F9 /* Budget+CoreDataProperties.swift */,
+				30A349AD1CBA836E004AC3F9 /* Budget.swift */,
 			);
 			name = ManagedObject;
 			sourceTree = "<group>";
@@ -461,13 +428,10 @@
 			isa = PBXGroup;
 			children = (
 				30D65ECF1CB89D38000AA606 /* Account+CoreDataPropertyNames.swift */,
-				30D65ED31CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift */,
 				30D65ED71CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift */,
-				30D65ED51CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift */,
-				30D65EDB1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift */,
-				30D65EDD1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift */,
+				30D65ED51CB8A233000AA606 /* Card+CoreDataPropertyNames.swift */,
+				30D65ED31CB8A221000AA606 /* Category+CoreDataPropertyNames.swift */,
 				30D65ED11CB8A205000AA606 /* Group+CoreDataPropertyNames.swift */,
-				30D65EDE1CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift */,
 				30D65ED91CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift */,
 			);
 			name = "ManagedObject+Extension";
@@ -557,44 +521,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309F429C1CB9512B00443016 /* CreditCard.swift in Sources */,
 				309872B01CA955BA004B649F /* BookmarkViewCell.swift in Sources */,
-				30D65EDC1CB8A320000AA606 /* CreditCard+CoreDataPropertyNames.swift in Sources */,
-				309F42981CB9512B00443016 /* Budget.swift in Sources */,
 				3098728A1CA4AF30004B649F /* CoreDataManager+Transaction.swift in Sources */,
-				309F42941CB9512B00443016 /* AccountCategory.swift in Sources */,
+				30A349B31CBA836E004AC3F9 /* Group.swift in Sources */,
 				309872861CA4AE49004B649F /* CoreDataManager+Group.swift in Sources */,
-				309F42911CB9512B00443016 /* Transaction+CoreDataProperties.swift in Sources */,
-				309F428F1CB9512B00443016 /* IncomeCategory+CoreDataProperties.swift in Sources */,
 				30C9A4BA1C8880D500596CCC /* GroupViewController.swift in Sources */,
-				30D65EDF1CB8A379000AA606 /* ExpenseCategory+CoreDataPropertyNames.swift in Sources */,
+				30A349AE1CBA836E004AC3F9 /* Transaction+CoreDataProperties.swift in Sources */,
 				30D65ED81CB8A23C000AA606 /* Budget+CoreDataPropertyNames.swift in Sources */,
 				308E6E571CAC224000F16585 /* AccountBudgetViewController.swift in Sources */,
 				309872AD1CA95595004B649F /* BookmarkViewController.swift in Sources */,
-				309F429B1CB9512B00443016 /* CreditCard+CoreDataProperties.swift in Sources */,
 				30D65ED01CB89D38000AA606 /* Account+CoreDataPropertyNames.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
 				30A37C991CAB3477000EDB4E /* UITableView+Common.swift in Sources */,
 				30D65F011CB94D1B000AA606 /* CategoryListViewCell.swift in Sources */,
-				309F42951CB9512B00443016 /* CheckCard+CoreDataProperties.swift in Sources */,
-				309F42971CB9512B00443016 /* Budget+CoreDataProperties.swift in Sources */,
-				309F42931CB9512B00443016 /* AccountCategory+CoreDataProperties.swift in Sources */,
-				309F42901CB9512B00443016 /* IncomeCategory.swift in Sources */,
+				30A349AF1CBA836E004AC3F9 /* Transaction.swift in Sources */,
 				30C9A4C11C88811E00596CCC /* GroupViewHeaderView.swift in Sources */,
 				30D65EFC1CB94A9A000AA606 /* CardListViewController.swift in Sources */,
-				309F429D1CB9512B00443016 /* Group+CoreDataProperties.swift in Sources */,
 				308E6E5E1CAC957E00F16585 /* AccountBudgetViewCell.swift in Sources */,
-				309F42961CB9512B00443016 /* CheckCard.swift in Sources */,
-				30D65EE71CB8C6D2000AA606 /* CoreDataManager+CreditCard.swift in Sources */,
 				30A3499F1CBA7C8C004AC3F9 /* CardListViewCell.swift in Sources */,
+				30A349B01CBA836E004AC3F9 /* Category+CoreDataProperties.swift in Sources */,
 				30D65ED21CB8A205000AA606 /* Group+CoreDataPropertyNames.swift in Sources */,
-				309F429F1CB9512B00443016 /* ExpenseCategory+CoreDataProperties.swift in Sources */,
 				30C9A4BF1C88810100596CCC /* GroupViewCell.swift in Sources */,
-				309F429E1CB9512B00443016 /* Group.swift in Sources */,
+				30A349B71CBA836E004AC3F9 /* Account.swift in Sources */,
 				308E6E5C1CAC8BCF00F16585 /* GroupSettingViewController.swift in Sources */,
-				30D65E6B1CB41B60000AA606 /* CoreDataManager+AccountCategory.swift in Sources */,
-				309F42991CB9512B00443016 /* Account+CoreDataProperties.swift in Sources */,
+				30A349B11CBA836E004AC3F9 /* Category.swift in Sources */,
+				30A349B91CBA836E004AC3F9 /* Budget.swift in Sources */,
+				30D65E6B1CB41B60000AA606 /* CoreDataManager+Category.swift in Sources */,
 				3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */,
+				30A349B41CBA836E004AC3F9 /* Card+CoreDataProperties.swift in Sources */,
 				30D65E911CB479B2000AA606 /* CoreDataDefines.swift in Sources */,
 				30D65E671CB41B3F000AA606 /* CoreDataManager+Budget.swift in Sources */,
 				301A19F41C940E26002353A0 /* AccountListViewCell.swift in Sources */,
@@ -603,24 +557,22 @@
 				301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */,
 				301A19F21C940DD9002353A0 /* AccountCalendarViewController.swift in Sources */,
 				301A19F61C940E30002353A0 /* AccountCalendarViewCell.swift in Sources */,
-				30D65EE01CB8A379000AA606 /* IncomeCategory+CoreDataPropertyNames.swift in Sources */,
+				30A349B21CBA836E004AC3F9 /* Group+CoreDataProperties.swift in Sources */,
 				30C9A4AF1C8737D500596CCC /* GroupListViewController.swift in Sources */,
-				309F42A01CB9512B00443016 /* ExpenseCategory.swift in Sources */,
-				309F429A1CB9512B00443016 /* Account.swift in Sources */,
+				30A349B81CBA836E004AC3F9 /* Budget+CoreDataProperties.swift in Sources */,
 				309872881CA4AF21004B649F /* CoreDataManager+Account.swift in Sources */,
 				301A19F01C940DCA002353A0 /* AccountListViewController.swift in Sources */,
 				301A19E41C8B2D86002353A0 /* UIView+Layout.swift in Sources */,
-				30D65ED61CB8A233000AA606 /* CheckCard+CoreDataPropertyNames.swift in Sources */,
-				30D65EE91CB8C743000AA606 /* CoreDataManager+IncomeCategory.swift in Sources */,
+				30A349B61CBA836E004AC3F9 /* Account+CoreDataProperties.swift in Sources */,
+				30D65ED61CB8A233000AA606 /* Card+CoreDataPropertyNames.swift in Sources */,
+				30A349B51CBA836E004AC3F9 /* Card.swift in Sources */,
 				301A19FC1C944B5B002353A0 /* AppDefines.swift in Sources */,
-				309F42921CB9512B00443016 /* Transaction.swift in Sources */,
 				309DCDC81C8721D00035B6BE /* AppDelegate.swift in Sources */,
-				30D65E691CB41B55000AA606 /* CoreDataManager+CheckCard.swift in Sources */,
+				30D65E691CB41B55000AA606 /* CoreDataManager+Card.swift in Sources */,
 				30A37C971CAACA04000EDB4E /* HomeViewController.swift in Sources */,
 				30D65EF61CB94A59000AA606 /* CategoryListViewController.swift in Sources */,
-				30D65EEB1CB8C750000AA606 /* CoreDataManager+ExpenseCategory.swift in Sources */,
 				30C9A4C41C88818700596CCC /* AccountViewController.swift in Sources */,
-				30D65ED41CB8A221000AA606 /* AccountCategory+CoreDataPropertyNames.swift in Sources */,
+				30D65ED41CB8A221000AA606 /* Category+CoreDataPropertyNames.swift in Sources */,
 				30D65EDA1CB8A247000AA606 /* Transaction+CoreDataPropertyNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

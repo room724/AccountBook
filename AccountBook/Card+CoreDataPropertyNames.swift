@@ -1,5 +1,5 @@
 //
-//  ExpenseCategory+CoreDataPropertyNames.swift
+//  Card+CoreDataPropertyNames.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 9..
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension ExpenseCategory {
+extension Card {
     
     class PropertyName {
         
@@ -16,5 +16,6 @@ extension ExpenseCategory {
         static let id = "id"
         static let name = "name"
         static let order = "order"
+        static let type = "type"
     }
 }

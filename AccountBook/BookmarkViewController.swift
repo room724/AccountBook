@@ -49,7 +49,7 @@ class BookmarkViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BookmarkViewCell", forIndexPath: indexPath) as! BookmarkViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(BookmarkViewCell.self), forIndexPath: indexPath) as! BookmarkViewCell
         let account = accounts![indexPath.row]
         
         cell.account = account
@@ -60,7 +60,7 @@ class BookmarkViewController : UITableViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "AccountViewController") {
+        if (segue.identifier == String(AccountViewController.self)) {
             let accountViewController = segue.destinationViewController as! AccountViewController
             accountViewController.account = accounts![tableView.indexPathForSelectedRow!.row]
         }

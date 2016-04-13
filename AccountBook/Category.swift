@@ -1,5 +1,5 @@
 //
-//  AccountCategory.swift
+//  Category.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 10..
@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-@objc(AccountCategory)
-class AccountCategory: NSManagedObject {
+@objc(Category)
+class Category: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

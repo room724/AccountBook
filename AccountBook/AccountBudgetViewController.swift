@@ -52,7 +52,7 @@ class AccountBudgetViewController : UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AccountBudgetViewCell", forIndexPath: indexPath) as! AccountBudgetViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(AccountBudgetViewCell.self), forIndexPath: indexPath) as! AccountBudgetViewCell
         
         //
         

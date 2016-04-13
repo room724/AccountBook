@@ -20,11 +20,10 @@ extension CoreDataManager {
         let predicateFormats = [
             "\(Transaction.PropertyName.groupId) = \(groupId)",
             "\(Transaction.PropertyName.accountId) = \(accountId)",
-            "\(Transaction.PropertyName.type) = \(type)",
+            "\(Transaction.PropertyName.type) = \(type.rawValue)",
             "\(Transaction.PropertyName.categoryId) = \(categoryId)"
         ]
-        
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator("AND"), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
         return fetchObjectCount(objectType: Transaction.self, predicate: predicate)
     }
     
@@ -40,8 +39,7 @@ extension CoreDataManager {
             "\(Transaction.PropertyName.date) >= \(startDate)",
             "\(Transaction.PropertyName.date) <= \(endDate)"
         ]
-        
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator("AND"), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
         let sortDescriptors = [ NSSortDescriptor(key: Transaction.PropertyName.date, ascending: false) ]
         return fetchObjects(objectType: Transaction.self, predicate: predicate, sortDescriptors: sortDescriptors)
     }
@@ -59,8 +57,7 @@ extension CoreDataManager {
             "\(Transaction.PropertyName.groupId) = \(groupId)",
             "\(Transaction.PropertyName.accountId) = \(accountId)"
         ]
-        
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator("AND"), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
         return addObject(objectType: Transaction.self, predicateForId: predicate) { (object, id) -> Void in
             
             object.id = id
@@ -84,8 +81,7 @@ extension CoreDataManager {
             "\(Transaction.PropertyName.groupId) = \(groupId)",
             "\(Transaction.PropertyName.accountId) = \(accountId)"
         ]
-        
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator("AND"), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
         return removeObjects(objectType: Transaction.self, predicate: predicate)
     }
     

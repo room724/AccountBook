@@ -1,5 +1,5 @@
 //
-//  AccountCategory+CoreDataProperties.swift
+//  Card+CoreDataProperties.swift
 //  AccountBook
 //
 //  Created by inock on 2016. 4. 10..
@@ -12,11 +12,12 @@
 import Foundation
 import CoreData
 
-extension AccountCategory {
+extension Card {
 
     @NSManaged var groupId: NSNumber?
     @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var order: NSNumber?
+    @NSManaged var type: NSNumber?
 
 }

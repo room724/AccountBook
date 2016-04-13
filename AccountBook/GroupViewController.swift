@@ -90,7 +90,7 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GroupViewCell", forIndexPath: indexPath) as! GroupViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(String(GroupViewCell.self), forIndexPath: indexPath) as! GroupViewCell
         let account = accounts![indexPath.row]
         
         cell.account  = account
@@ -130,9 +130,12 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "AccountViewController") {
+        if (segue.identifier == String(AccountViewController.self)) {
             let accountViewController = segue.destinationViewController as! AccountViewController
             accountViewController.account = accounts![tableView.indexPathForSelectedRow!.row]
+        } else if (segue.identifier == String(GroupSettingViewController.self)) {
+            let groupSettingViewController = segue.destinationViewController as! GroupSettingViewController
+            groupSettingViewController.groupId = group!.id
         }
     }
 }

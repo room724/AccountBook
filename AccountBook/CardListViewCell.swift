@@ -10,6 +10,14 @@ import UIKit
 
 class CardListViewCell: UITableViewCell {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var card: Card? {
+        didSet {
+            nameLabel.text = card!.name
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
