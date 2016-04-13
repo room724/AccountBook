@@ -14,14 +14,12 @@ extension CoreDataManager {
     func defaultCardNames(type: CardType) -> [String]? {
         if type == .Check {
             return [
-                "체크카드",
-                "체크카드_테스트"
+                "체크카드"
             ]
         }
         if type == .Credit {
             return [
-                "신용카드",
-                "신용카드_테스트"
+                "신용카드"
             ]
         }
         return nil
@@ -32,8 +30,9 @@ extension CoreDataManager {
             "\(Card.PropertyName.groupId) = \(groupId)",
             "\(Card.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
-        return fetchObjects(objectType: Card.self, predicate: predicate, sortDescriptors: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
+        let sortDescriptors = [ NSSortDescriptor(key: Card.PropertyName.order, ascending: true) ]
+        return fetchObjects(objectType: Card.self, predicate: predicate, sortDescriptors: sortDescriptors)
     }
     
     func addDefaultCards(groupId groupId: NSNumber, type: CardType) -> (card: [Card]?, error: NSError?) {
@@ -42,7 +41,7 @@ extension CoreDataManager {
             "\(Card.PropertyName.groupId) = \(groupId)",
             "\(Card.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return addObjects(count: names!.count, objectType: Card.self, predicateForId: predicate) { (index, object, id) -> Void in
             
             object.id = index
@@ -58,7 +57,7 @@ extension CoreDataManager {
             "\(Card.PropertyName.groupId) = \(groupId)",
             "\(Card.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return addObject(objectType: Card.self, predicateForId: predicate) { (object, id) -> Void in
             
             object.id = id
@@ -74,7 +73,7 @@ extension CoreDataManager {
             "\(Card.PropertyName.groupId) = \(groupId)",
             "\(Card.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return removeObjects(objectType: Card.self, predicate: predicate)
     }
     

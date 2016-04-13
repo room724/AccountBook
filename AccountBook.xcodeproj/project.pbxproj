@@ -20,6 +20,7 @@
 		301A19FF1C9595CA002353A0 /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301A19FE1C9595CA002353A0 /* AccountSettingViewController.swift */; };
 		306004771C99B41700E15DCF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306004761C99B41700E15DCF /* CoreDataManager.swift */; };
 		3060047D1C99BD5500E15DCF /* AccountBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3060047A1C99BD5500E15DCF /* AccountBook.xcdatamodeld */; };
+		3087B78D1CBE88F400CD80FF /* NSPredicate+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3087B78C1CBE88F400CD80FF /* NSPredicate+Format.swift */; };
 		308E6E571CAC224000F16585 /* AccountBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E561CAC224000F16585 /* AccountBudgetViewController.swift */; };
 		308E6E5C1CAC8BCF00F16585 /* GroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E5B1CAC8BCF00F16585 /* GroupSettingViewController.swift */; };
 		308E6E5E1CAC957E00F16585 /* AccountBudgetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E6E5D1CAC957E00F16585 /* AccountBudgetViewCell.swift */; };
@@ -83,6 +84,7 @@
 		301A19FE1C9595CA002353A0 /* AccountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
 		306004761C99B41700E15DCF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3060047C1C99BD5500E15DCF /* AccountBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccountBook.xcdatamodel; sourceTree = "<group>"; };
+		3087B78C1CBE88F400CD80FF /* NSPredicate+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Format.swift"; sourceTree = "<group>"; };
 		308E6E561CAC224000F16585 /* AccountBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBudgetViewController.swift; sourceTree = "<group>"; };
 		308E6E5B1CAC8BCF00F16585 /* GroupSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSettingViewController.swift; sourceTree = "<group>"; };
 		308E6E5D1CAC957E00F16585 /* AccountBudgetViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBudgetViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 				309872891CA4AF30004B649F /* CoreDataManager+Transaction.swift */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		3087B78B1CBE88C400CD80FF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3087B78C1CBE88F400CD80FF /* NSPredicate+Format.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		308E6E5A1CAC8BB900F16585 /* GroupSetting */ = {
@@ -416,6 +426,7 @@
 		30D65E8F1CB47998000AA606 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3087B78B1CBE88C400CD80FF /* Extension */,
 				30D65ECE1CB89CF7000AA606 /* ManagedObject+Extension */,
 				30CA61781C99C88F005879F0 /* ManagedObject */,
 				306004751C99B3F500E15DCF /* Manager */,
@@ -532,6 +543,7 @@
 				309872AD1CA95595004B649F /* BookmarkViewController.swift in Sources */,
 				30D65ED01CB89D38000AA606 /* Account+CoreDataPropertyNames.swift in Sources */,
 				30C9A4B11C8737DF00596CCC /* SettingViewController.swift in Sources */,
+				3087B78D1CBE88F400CD80FF /* NSPredicate+Format.swift in Sources */,
 				30A37C991CAB3477000EDB4E /* UITableView+Common.swift in Sources */,
 				30D65F011CB94D1B000AA606 /* CategoryListViewCell.swift in Sources */,
 				30A349AF1CBA836E004AC3F9 /* Transaction.swift in Sources */,

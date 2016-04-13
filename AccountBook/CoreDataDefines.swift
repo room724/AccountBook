@@ -16,8 +16,8 @@ enum BudgetType : NSNumber {
 
 enum CardType : NSNumber {
     
-    case Check  = 0
-    case Credit = 1
+    case Credit = 0
+    case Check  = 1
 }
 
 enum CategoryType : NSNumber {

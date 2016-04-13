@@ -23,7 +23,7 @@ extension CoreDataManager {
             "\(Budget.PropertyName.type) = \(type.rawValue)",
             "\(Budget.PropertyName.categoryId) = \(categoryId)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         let (budgets, error) = fetchObjects(objectType: Budget.self, predicate: predicate, sortDescriptors: nil)
         return (budget: budgets?.first, error: error)
     }
@@ -53,7 +53,7 @@ extension CoreDataManager {
             "\(Budget.PropertyName.groupId) = \(groupId)",
             "\(Budget.PropertyName.accountId) = \(accountId)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return removeObjects(objectType: Budget.self, predicate: predicate)
     }
 }

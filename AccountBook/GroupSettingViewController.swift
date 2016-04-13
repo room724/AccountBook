@@ -24,11 +24,11 @@ class GroupSettingViewController: UITableViewController {
         if (segue.identifier == String(CategoryListViewController.self)) {
             let categoryViewController = segue.destinationViewController as! CategoryListViewController
             categoryViewController.groupId = groupId!
-            categoryViewController.categoryType = .Account // todo
+            categoryViewController.categoryType = CategoryType(rawValue: tableView.indexPathForSelectedRow!.row)
         } else if (segue.identifier == String(CardListViewController.self)) {
             let cardViewController = segue.destinationViewController as! CardListViewController
             cardViewController.groupId = groupId!
-            cardViewController.cardType = .Credit // todo
+            cardViewController.cardType = CardType(rawValue: tableView.indexPathForSelectedRow!.row)
         }
     }
 }

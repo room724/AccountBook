@@ -48,8 +48,9 @@ extension CoreDataManager {
             "\(Category.PropertyName.groupId) = \(groupId)",
             "\(Category.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
-        return fetchObjects(objectType: Category.self, predicate: predicate, sortDescriptors: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
+        let sortDescriptors = [ NSSortDescriptor(key: Category.PropertyName.order, ascending: true) ]
+        return fetchObjects(objectType: Category.self, predicate: predicate, sortDescriptors: sortDescriptors)
     }
     
     func addDefaultCategorys(groupId groupId: NSNumber, type: CategoryType) -> (category: [Category]?, error: NSError?) {
@@ -58,7 +59,7 @@ extension CoreDataManager {
             "\(Category.PropertyName.groupId) = \(groupId)",
             "\(Category.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return addObjects(count: names!.count, objectType: Category.self, predicateForId: predicate) { (index, object, id) -> Void in
             
             object.id = index
@@ -74,7 +75,7 @@ extension CoreDataManager {
             "\(Category.PropertyName.groupId) = \(groupId)",
             "\(Category.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return addObject(objectType: Category.self, predicateForId: predicate) { (object, id) -> Void in
             
             object.id = id
@@ -90,7 +91,7 @@ extension CoreDataManager {
             "\(Category.PropertyName.groupId) = \(groupId)",
             "\(Category.PropertyName.type) = \(type.rawValue)"
         ]
-        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(" AND "), argumentArray: nil)
+        let predicate = NSPredicate(format: predicateFormats.joinWithSeparator(NSPredicate.joinSeparator), argumentArray: nil)
         return removeObjects(objectType: Category.self, predicate: predicate)
     }
     
